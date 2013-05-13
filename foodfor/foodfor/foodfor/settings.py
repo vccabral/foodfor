@@ -137,6 +137,7 @@ INSTALLED_APPS = [
     
     # project
     "foodfor.profiles",
+    'product',
 ]
 
 # A sample logging configuration. The only tangible logging
