@@ -1,0 +1,25 @@
+{% extends "banner_base.html" %}
+
+{% load bootstrap_tags %}
+{% load i18n %}
+
+{% block head_title %}{% trans "Welcome" %}{% endblock %}
+
+{% block body_class %}edit{% endblock %}
+
+{% block body %}
+<form method="POST" action='.'>{% csrf_token %}
+	{{ form|as_bootstrap }}
+	{{ formsets.management_form }}
+	{% for formset in formsets %}
+		{% for value, text in formset.nutrient.field.choices %}
+			{% if value|add:0 == formset.nutrient.value|add:0 %}
+				{{ text }}
+			{% endif %}
+		{% endfor %}
+		{{ formset|as_bootstrap }}
+	{% endfor %}
+	<br/>
+	<input type="submit" value="submit" class="btn btn-primary"/>
+</form>
+{% endblock %}
