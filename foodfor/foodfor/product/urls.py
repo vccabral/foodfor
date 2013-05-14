@@ -4,9 +4,11 @@ from django.views.generic.edit import CreateView, UpdateView
 from django.views.generic import DetailView
 from django.forms.models import inlineformset_factory
 from django.contrib.auth.decorators import login_required
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, Http404
 from product.models import MealPlan, Product, Nutrient, MealPlanNutrient, ProductNutrient
 from product.forms import NutrientForm, ProductForm, MealPlanForm, MealPlanNutrientForm, ProductNutrientForm
+from pulp import *
+import re
 
 class MealPlanCreateView(CreateView):
     def get_context_data(self, **kwargs):
@@ -34,8 +36,11 @@ class MealPlanCreateView(CreateView):
             return self.render_to_response(self.get_context_data(form=form))
 
 class MealPlanUpdateView(UpdateView):
-    def dispatch(self, request, *args, **kwargs):
-        return  super(MealPlanUpdateView, self).dispatch(request, *args, **kwargs)
+    def get_object(self, *args, **kwargs):
+        object = super(MealPlanUpdateView, self).get_object(**kwargs) 
+        if object.user != self.request.user:
+            raise Http404
+        return object
     def get_context_data(self, **kwargs):
         NutrientFormSet = inlineformset_factory(MealPlan, MealPlanNutrient, form=MealPlanNutrientForm, max_num=Nutrient.objects.count(), can_delete=False)
         context = super(MealPlanUpdateView, self).get_context_data(**kwargs)
@@ -104,10 +109,33 @@ class ProductCreateView(CreateView):
         else:
             return self.render_to_response(self.get_context_data(form=form))
 
+
+def solve_soylent(A,b,p):
+    prob = LpProblem("soylentcost", LpMinimize)
+    x = []
+    for index in range(0,len(b)):
+        x.append(LpVariable("x_"+str(index),0, None, "Integer"))
+    prob += reduce(lambda x,y: x+y, [x_var*p_constant for x_var,p_constant in zip(x,p)])
+    for row, b_constant in zip(A, b):
+        prob += reduce(lambda x,y: x+y, [x_var*rc_constant for x_var,rc_constant in zip(x,row)]) >= b_constant
+    GLPK().solve(prob)
+    return prob.variables(), value(prob.objective), re.split(r"(MINIMIZE|SUBJECT TO|_C|VARIABLES|Integer)", str(prob))
+
 class MealPlanDetailView(DetailView):
     def get_context_data(self, **kwargs):
         context = super(MealPlanDetailView, self).get_context_data(**kwargs)
-        context['object_extra'] = self.object
+        products = Product.objects.filter(tags__in=self.object.desired_tags.values_list("pk", flat=True))
+        nutrients = self.object.mealplannutrient_set.all().order_by("pk")
+        p = map(lambda x: x.price, products)
+        b = map(lambda x: self.object.number_of_days * x.minimum, nutrients)
+        A = map(lambda x: map(lambda y: ProductNutrient.objects.get(nutrient=x.pk,product=y.pk).quantity if ProductNutrient.objects.filter(nutrient=x.pk,product=y.pk).exists() else 0, products), nutrients)
+        A_p = map(lambda p: map(lambda n: ProductNutrient.objects.get(nutrient=n.pk,product=p.pk).quantity if ProductNutrient.objects.filter(nutrient=n.pk,product=p.pk).exists() else 0, nutrients), products)
+        solution, cost, output = solve_soylent(A, b, p)
+        context["nutrients"] = nutrients
+        context["solution"] = zip(products, sorted(solution, key=lambda x: int(x.name.split('_')[1])), A_p)
+        print(context["solution"])
+        context["cost"] = cost
+        context["output"] = output
         return context
 
 urlpatterns = patterns('',

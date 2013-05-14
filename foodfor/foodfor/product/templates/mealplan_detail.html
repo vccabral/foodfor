@@ -7,9 +7,61 @@
 {% block body_class %}home{% endblock %}
 
 {% block body %}
-	{% if request.user.is_authenticated %}
+	{% if request.user.is_authenticated and request.user == object.user %}
 		<a href="{% url 'update_mealplan' object.pk %}">{{ object }}</a>
 	{% else %}
 		{{ object }}
 	{% endif %}
+
+<table class='table'>
+  <caption>MealPlan: {{ object }}</caption>
+  <thead>
+    <tr>
+      <th>Product</th>
+      <th>Quantity</th>
+      {% for nutrient in nutrients %}
+      <th>{{ nutrient.nutrient }}</th>
+      {% endfor %}
+    </tr>
+  </thead>
+  <tbody>
+<!--     <tr>
+      <td>Total</td>
+      <td></td>
+      <td>6g</td>
+      <td>6mg</td>
+      <td>6g</td>
+    </tr>--> 
+    <tr>
+      <td>RDI min.</td>
+      <td></td>
+      {% for desired_nutrient in object.mealplannutrient_set.all %}
+      <td>{{ desired_nutrient.minimum }}</td>
+      {% endfor %}
+    </tr>
+    <tr>
+      <td>RDI max.</td>
+      <td></td>
+      {% for desired_nutrient in object.mealplannutrient_set.all %}
+      <td>{{ desired_nutrient.maximum }}</td>
+      {% endfor %}
+    </tr>
+    <tr>
+      <td>RDI Sum for {{ object.number_of_days }} days</td>
+      <td></td>
+      {% for desired_nutrient in object.mealplannutrient_set.all %}
+      <td>{% widthratio desired_nutrient.minimum 1 object.number_of_days %}</td>
+      {% endfor %}
+    </tr>
+    {% for product, s, a_row in solution %}
+    <tr>
+      <td>{{ product }}</td>
+      <td>{{ s.varValue }}</td>
+      {% for a in a_row %}
+      	<td>{% widthratio a 1 s.varValue %}</td>
+      {% endfor %}
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
 {% endblock %}
