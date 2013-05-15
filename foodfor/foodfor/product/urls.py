@@ -7,6 +7,7 @@ from django.contrib.auth.decorators import login_required, user_passes_test
 from django.http import HttpResponseRedirect, Http404
 from product.models import MealPlan, Product, Nutrient, MealPlanNutrient, ProductNutrient
 from product.forms import NutrientForm, ProductForm, MealPlanForm, MealPlanNutrientForm, ProductNutrientForm
+from product.views import getinfo
 from pulp import *
 import re
 
@@ -158,6 +159,7 @@ urlpatterns = patterns('',
                        url(r'^mealplan/(?P<pk>\d+)/details/$',  MealPlanDetailView.as_view(model=MealPlan, template_name="mealplan_detail.html"), name="read_mealplan"),
                        url(r'^mealplan/(?P<pk>\d+)/edit/$', login_required(MealPlanUpdateView.as_view(model=MealPlan,form_class=MealPlanForm, template_name="mealplan_form.html")), name="update_mealplan"),
                        #products
+                       url(r'^product/getinfo/', getinfo, name="getinfo"),
                        url(r'^product/$', ListView.as_view(model=Product, template_name="product_list.html"), name="read_products"),
                        url(r'^product/create/$', login_required(ProductCreateView.as_view(form_class=ProductForm, template_name="product_form.html")), name="create_product"),
                        url(r'^product/(?P<pk>\d+)/details/$',  DetailView.as_view(model=Product, template_name="product_detail.html"), name="read_product"),

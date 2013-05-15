@@ -1,6 +1,6 @@
 from django.forms import ModelForm
 from product.models import Nutrient, Product, MealPlan, MealPlanNutrient, ProductNutrient
-from django.forms.widgets import HiddenInput, TextInput
+from django.forms.widgets import HiddenInput, TextInput, CheckboxSelectMultiple
 
 class NutrientForm(ModelForm):
     class Meta:
@@ -10,7 +10,7 @@ class ProductForm(ModelForm):
     class Meta:
         model = Product
         exclude = ('up_votes', 'down_votes')
-        widgets = {"user": HiddenInput}
+        widgets = {"user": HiddenInput, "url": TextInput(attrs={"class":"span8"}), "name": TextInput(attrs={"class":"span8"}), "price": TextInput(attrs={"class":"span1"}), "tags": CheckboxSelectMultiple()}
 
 class ProductNutrientForm(ModelForm):
     class Meta:
@@ -30,5 +30,5 @@ class MealPlanForm(ModelForm):
     class Meta:
         model = MealPlan
         exclude = ('up_votes', 'down_votes', 'balanced', 'price')
-        widgets = {"user": HiddenInput, "number_of_days": TextInput(attrs={"class":"span1"})}  
+        widgets = {"user": HiddenInput, "number_of_days": TextInput(attrs={"class":"span1"}), "desired_tags": CheckboxSelectMultiple()}  
     

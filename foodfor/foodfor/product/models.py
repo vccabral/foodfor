@@ -18,10 +18,10 @@ class Nutrient(models.Model):
     get_absolute_url = lambda x: "/product/nutrient/"
 
 class Product(models.Model):
-    name = models.CharField(max_length=50)
+    url = models.URLField()
+    name = models.CharField(max_length=200)
     price = models.DecimalField(decimal_places=2, max_digits=10)
     serving_per_container = models.DecimalField(decimal_places=2, max_digits=10)
-    url = models.URLField()
     up_votes = models.ManyToManyField(User, related_name="product_up", blank=True)
     down_votes = models.ManyToManyField(User, related_name="product_down", blank=True)
     tags = models.ManyToManyField(Tag, blank=True)

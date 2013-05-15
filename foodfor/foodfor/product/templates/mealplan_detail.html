@@ -7,26 +7,48 @@
 {% block body_class %}home{% endblock %}
 
 {% block body %}
+<div class="well">
 <h2>
 	{% if request.user.is_authenticated and request.user == object.user %}
-		<a href="{% url 'update_mealplan' object.pk %}">{{ object }}</a>
+		Name: <a href="{% url 'update_mealplan' object.pk %}">{{ object }}</a>
 	{% else %}
 		{{ object }}
 	{% endif %}
 </h2>
-<h4>Percent Complete ({{ count }}%)</h4>
-<div class="progress progress-striped active">
-  <div class="bar" style="width: {{ count }}%;"></div>
+<table class="table">
+	<thead>
+		<tr>
+			<th>complete</th>
+			<th>balance</th>
+			<th>days</th>
+			<th>total cost</th>
+			<th>daily cost</th>
+		</tr>
+	</thead>
+	<tr>
+		<td>
+			{{ count }}%
+			<div class="progress progress-striped active">
+			  	<div class="bar" style="width: {{ count }}%;"></div>
+			</div>
+		</td>
+		<td>
+			{% if object.balanced %}
+				Yes
+			{% else %}
+				Not yet.
+			{% endif %}
+		</td>
+		<td>{{ object.number_of_days }}</td>
+		<td>
+			${{ cost|floatformat:2 }}
+		</td>
+		<td>
+			${{ cost_ppd|floatformat:2 }}
+		</td>
+	</tr>
+</table>
 </div>
-<h4>Balanced?</h4>
-{% if object.balanced %}
-Yes
-{% else %}
-Not yet.
-{% endif %}
-<h4>Cost</h4>
-<p>Current Total: ${{ cost|floatformat:2 }}</p>
-<p>Daily: ${{ cost_ppd|floatformat:2 }}</p>
 <table class='table table-striped table-bordered table-hover table-condensed'>
   <caption>MealPlan: {{ object }}</caption>
   <thead>

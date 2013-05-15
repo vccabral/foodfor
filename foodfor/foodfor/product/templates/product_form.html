@@ -88,6 +88,12 @@ $(document).ready(function(){
 			$(v).trigger("change");
 		});
 	});
+	$("#id_url").live("change", function(){
+		$.getJSON("/product/product/getinfo/?url="+$(this).val(), function(data){
+			$("#id_name").val(data["name"]);
+			$("#id_price").val(data["price"])
+		});
+	})
 });	
 </script>
 {% endblock %}
