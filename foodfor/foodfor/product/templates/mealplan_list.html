@@ -14,6 +14,7 @@
 			<td>owner</td>
 			<td>price per day</td>
 			<td>balanced?</td>
+			<td>tags</td>
 		</tr>
     	{% for object in object_list %}
     		<tr>
@@ -22,6 +23,7 @@
     			<td>{{ object.user }}</td>
     			<td>${{ object.price|floatformat:2 }}</td>
     			<td>{% if object.balanced  %}Yes{% else %}Not yet.{% endif %}</td>
+    			<td>{% for tag in object.desired_tags.all %}{{ tag.name }}{% if not forloop.last %}, {% endif %}{% endfor %}</td>
     		</tr>
     	{% endfor %}
     </table>

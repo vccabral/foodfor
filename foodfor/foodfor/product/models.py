@@ -3,7 +3,11 @@ from django.contrib.auth.models import User
 
 class Tag(models.Model):
     name = models.CharField(max_length=50)
-    __str__ = lambda x: x.name
+    __str__ = lambda x: x.str_with_product_count()
+    def str_with_product_count(self):
+        from product.models import Product
+        count = Product.objects.filter(tags__in=[self.pk]).count()
+        return "%s (%d products)" % (self.name, count) 
 
 class Nutrient(models.Model):
     name = models.CharField(max_length=50)
@@ -16,6 +20,7 @@ class Nutrient(models.Model):
 class Product(models.Model):
     name = models.CharField(max_length=50)
     price = models.DecimalField(decimal_places=2, max_digits=10)
+    serving_per_container = models.DecimalField(decimal_places=2, max_digits=10)
     url = models.URLField()
     up_votes = models.ManyToManyField(User, related_name="product_up", blank=True)
     down_votes = models.ManyToManyField(User, related_name="product_down", blank=True)
@@ -26,6 +31,7 @@ class Product(models.Model):
 class ProductNutrient(models.Model):
     product = models.ForeignKey(Product)
     nutrient = models.ForeignKey(Nutrient)
+    serving_quantity = models.DecimalField(decimal_places=2, max_digits=10)
     quantity = models.DecimalField(decimal_places=2, max_digits=10)
     
 class MealPlan(models.Model):

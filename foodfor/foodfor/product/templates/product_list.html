@@ -21,7 +21,7 @@
     			<td>{% if request.user.is_authenticated %}<a href="{% url 'update_product' object.pk %}">{{ object }}</a>{% else %}{{ object }}{% endif %}</td>
     			<td>${{ object.price|floatformat:2 }}</td>
     			<td><a href="{{ object.url }}">live site</a></td>
-    			<td>{% for tag in object.tags.all %}{{ tag }}{% if not forloop.last %},{% endif %}{% endfor %}</td>
+    			<td>{% for tag in object.tags.all %}{{ tag.name }}{% if not forloop.last %}, {% endif %}{% endfor %}</td>
     		</tr>
     		</li>
     	{% endfor %}

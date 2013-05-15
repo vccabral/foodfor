@@ -48,6 +48,7 @@ class MealPlanUpdateView(UpdateView):
             context['formsets'] = NutrientFormSet(self.request.POST, instance=self.object)
         else:
             context['formsets'] = NutrientFormSet(instance=self.object)
+            print(context['formsets'].forms[0].__dict__)
             for form, nutrient in zip(context['formsets'], Nutrient.objects.all()):
                 if not form.initial:
                     form.initial = {"nutrient": nutrient}
@@ -59,7 +60,7 @@ class MealPlanUpdateView(UpdateView):
             self.object = form.save()
             formsets.instance = self.object
             formsets.save()
-            return HttpResponseRedirect('/product/mealplan/')
+            return HttpResponseRedirect('/product/mealplan/%d/details/' % self.object.pk)
         else:
             return self.render_to_response(self.get_context_data(form=form))
 
