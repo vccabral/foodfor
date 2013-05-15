@@ -33,7 +33,7 @@
 					{% endfor %}
 				</td>
 				<td>
-					{{ formset.initial.nutrient.recommended_min_intake }} {{ formset.initial.nutrient.unit }}
+					{{ formset.instance.nutrient.recommended_min_intake }} {{ formset.instance.nutrient.unit }}
 				</td>
 				<td>
 					{{ formset.nutrient }}
@@ -43,7 +43,7 @@
 					{{ formset.minimum.errors }}
 				</td>
 				<td>
-					{{ formset.initial.nutrient.recommended_max_intake }} {{ formset.initial.nutrient.unit }}
+					{{ formset.instance.nutrient.recommended_max_intake }} {{ formset.instance.nutrient.unit }}
 				</td>
 				<td>
 					{{ formset.maximum }}

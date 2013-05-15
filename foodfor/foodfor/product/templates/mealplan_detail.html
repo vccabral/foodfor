@@ -7,12 +7,26 @@
 {% block body_class %}home{% endblock %}
 
 {% block body %}
+<h2>
 	{% if request.user.is_authenticated and request.user == object.user %}
 		<a href="{% url 'update_mealplan' object.pk %}">{{ object }}</a>
 	{% else %}
 		{{ object }}
 	{% endif %}
-
+</h2>
+<h4>Percent Complete ({{ count }}%)</h4>
+<div class="progress progress-striped active">
+  <div class="bar" style="width: {{ count }}%;"></div>
+</div>
+<h4>Balanced?</h4>
+{% if object.balanced %}
+Yes
+{% else %}
+Not yet.
+{% endif %}
+<h4>Cost</h4>
+<p>Current Total: ${{ cost|floatformat:2 }}</p>
+<p>Daily: ${{ cost_ppd|floatformat:2 }}</p>
 <table class='table table-striped table-bordered table-hover table-condensed'>
   <caption>MealPlan: {{ object }}</caption>
   <thead>
@@ -20,7 +34,7 @@
       <th>Product</th>
       <th>Quantity</th>
       {% for nutrient, a_row in nutrients %}
-      <th colspan='3'>{{ nutrient.nutrient }}</th>
+      <th colspan='3' style="text-align: center;">{{ nutrient.nutrient }}</th>
       {% endfor %}
     </tr>
   </thead>
@@ -62,21 +76,21 @@
       <td><b>is&nbsp;balanced?</b></td>
       <td></td>
       {% for nutrient, a_row, total, day_total, meets_min, meets_max in nutrients %}
-      	<td>
+      	<td style="text-align: center;">
       		{% if meets_min %}
       			<span class="label label-success"><i class="icon-thumbs-up"></i></span>	
       		{% else %}
       			<span class="label label-important"><i class="icon-thumbs-down"></i></span>	
       		{% endif %}
       	</td>
-      	<td>
+      	<td style="text-align: center;">
       		{% if meets_min and meets_max %}
       			<span class="label label-success"><i class="icon-thumbs-up"></i></span>	
       		{% else %}
       			<span class="label label-important"><i class="icon-thumbs-down"></i></span>	
       		{% endif %}
       	</td>
-      	<td>
+      	<td style="text-align: center;">
       		{% if meets_max %}
       			<span class="label label-success"><i class="icon-thumbs-up"></i></span>	
       		{% else %}
@@ -109,17 +123,21 @@
       {% for nutrient, a_row, total, day_total, meets_min, meets_max in nutrients %}
       	<td colspan="3">
       		{% if not meets_min %}
-      			You need <b>more</b> {{ nutrient.nutrient.name }}.<br/>
-      			<ul>
-      				<li>Either add more tags to the diet.</li>
-      				<li>or lower the minimum required.</li>
-      			</ul>
+				<div class="alert alert-error">
+	      			You need <b>more</b> {{ nutrient.nutrient.name }}.<br/>
+	      			<ul>
+	      				<li>Either add more tags to the diet.</li>
+	      				<li>or lower the minimum required.</li>
+	      			</ul>
+				</div>
       		{% elif not meets_max %}
-      			You have <b>too much</b> {{ nutrient.nutrient.name }}.
-      			<ul>
-      				<li>Either add more tags to the diet.</li>
-      				<li>or raise the maximum required.</li>
-      			</ul>
+				<div class="alert alert-info">
+	      			You have <b>too much</b> {{ nutrient.nutrient.name }}.
+	      			<ul>
+	      				<li>Either add more tags to the diet.</li>
+	      				<li>or raise the maximum required.</li>
+	      			</ul>
+				</div>
       		{% endif %}
       	</td>
       {% endfor %}

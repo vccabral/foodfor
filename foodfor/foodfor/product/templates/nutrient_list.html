@@ -18,7 +18,7 @@
 		</thead>
     	{% for object in object_list %}
     	<tr>
-    		<td><a href="{% url 'read_nutrient' object.pk %}">{{ object }}</a></td>
+    		<td>{% if request.user.is_staff %}<a href="{% url 'read_nutrient' object.pk %}">{{ object }}</a>{% else %}{{ object }}{% endif %}</td>
     		<td>{{ object.unit }}</td>
     		<td>{{ object.recommended_min_intake }} {{ object.unit }}</td>
     		<td>{{ object.recommended_max_intake }} {{ object.unit }}</td>
@@ -26,7 +26,7 @@
     		
     	{% endfor %}
     </table>
-	{% if request.user.is_authenticated %}
+	{% if request.user.is_staff %}
     	<a href="{% url 'create_nutrient' %}" class="btn btn-primary">add new nutrient</a>
 	{% endif %}
 {% endblock %}

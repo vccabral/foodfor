@@ -3,7 +3,7 @@ from django.views.generic.list import ListView
 from django.views.generic.edit import CreateView, UpdateView
 from django.views.generic import DetailView
 from django.forms.models import inlineformset_factory
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required, user_passes_test
 from django.http import HttpResponseRedirect, Http404
 from product.models import MealPlan, Product, Nutrient, MealPlanNutrient, ProductNutrient
 from product.forms import NutrientForm, ProductForm, MealPlanForm, MealPlanNutrientForm, ProductNutrientForm
@@ -136,15 +136,19 @@ class MealPlanDetailView(DetailView):
         day_totals = map(lambda x: reduce(lambda x,y: x+y[0]*y[1].varValue/self.object.number_of_days, zip(x,solution_vars),0),A)
         meets_min = [daytotal>=nutrient.minimum for daytotal,nutrient in zip(day_totals,nutrients)] 
         meets_max = [not nutrient.maximum or daytotal<=nutrient.maximum for daytotal,nutrient in zip(day_totals,nutrients)] 
+        context['count'] = int((sum(meets_min)+sum(meets_max) / (len(meets_min)*2.0)))
         context["balanced"] = all(meets_min) and all(meets_max)
         context["nutrients"] = zip(nutrients, A, totals, day_totals, meets_min, meets_max)
         context["solution"] = zip(products, solution_vars, A_p)
         context["cost"] = cost
+        context["cost_ppd"] = cost/self.object.number_of_days
         context["output"] = output
         self.object.price = cost/self.object.number_of_days
         self.object.balanced = context["balanced"]
         self.object.save()
         return context
+
+staff_required = user_passes_test(lambda u: u.is_staff)
 
 urlpatterns = patterns('',
                        #mealplans
@@ -159,7 +163,7 @@ urlpatterns = patterns('',
                        url(r'^product/(?P<pk>\d+)/edit/$', login_required(ProductUpdateView.as_view(model=Product, form_class=ProductForm, template_name="product_form.html")), name="update_product"),
                       #nutrients
                        url(r'^nutrient/$', ListView.as_view(model=Nutrient, template_name="nutrient_list.html"), name="read_nutrients"),
-                       url(r'^nutrient/create/$', login_required(CreateView.as_view(form_class=NutrientForm, template_name="nutrient_form.html")), name="create_nutrient"),
+                       url(r'^nutrient/create/$', staff_required(CreateView.as_view(form_class=NutrientForm, template_name="nutrient_form.html")), name="create_nutrient"),
                        url(r'^nutrient/(?P<pk>\d+)/details/$',  DetailView.as_view(model=Nutrient, template_name="nutrient_detail.html"), name="read_nutrient"),
-                       url(r'^nutrient/(?P<pk>\d+)/edit/$', login_required(UpdateView.as_view(model=Nutrient,form_class=NutrientForm, template_name="nutrient_form.html")), name="update_nutrient"),
+                       url(r'^nutrient/(?P<pk>\d+)/edit/$', staff_required(UpdateView.as_view(model=Nutrient,form_class=NutrientForm, template_name="nutrient_form.html")), name="update_nutrient"),
 )
