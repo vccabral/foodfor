@@ -15,7 +15,7 @@ class ProductForm(ModelForm):
 class ProductNutrientForm(ModelForm):
     class Meta:
         model = ProductNutrient
-        widgets = {"nutrient": HiddenInput, "quantity": TextInput(attrs={"class":"span1"})}
+        widgets = {"nutrient": HiddenInput, "quantity": TextInput(attrs={"class":"span1 total"}), "serving_quantity": TextInput(attrs={"class":"span1 serving"})}
 
 class MealPlanNutrientForm(ModelForm):
     class Meta:

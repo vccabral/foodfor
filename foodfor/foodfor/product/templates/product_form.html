@@ -14,7 +14,7 @@
 	<div class="control-group">
 		<label>Servings per Container</label>
 		<div class="controls">
-			<input class="span1" id="serving_per_container" type="text" />
+			{{ serving_per_container }}
 		</div>
 	</div>
 	<table class="table table-condensed">
@@ -35,15 +35,18 @@
 				{% endfor %}
 			</td>
 			<td>
+				{{ formset.id }}
 				<div class="control-group">
 					<label>Quantity</label>
 					<div class="controls">
-						<input class="span1 inputserving" type="text" />
+						{{ formset.serving_quantity }}
 					</div>
 				</div>
 			</td>
 			<td>
-				{{ formset|as_bootstrap }}
+				{{ formset.nutrient }}<br/>
+				{{ formset.quantity }}<br/>
+				<br/>
 			</td>
 		</tr>
 	{% endfor %}
@@ -56,17 +59,34 @@
 
 {% block extra_body %}
 <script>
+function round_me(d){
+	return Math.round(d * 100000) / 100000;
+}
+function get_value(item, d){
+	var r = item.val();
+	var q = d;
+	if ($.isNumeric(r)) q = parseFloat(r);
+	item.val(q);
+	return q;
+}
 $(document).ready(function(){
-	$(".inputserving").live("focusout", function(){
-		var r = $(this).val();
-		var q = 0;
-		if ($.isNumeric(r)) q = parseFloat(r);
-		var w = $("#serving_per_container").val();
-		var p = 1;
-		if($.isNumeric(w)) p = parseFloat(w);
-		$(this).val(q);
-		$("#serving_per_container").val(p);
-		$(this).parent().parent().parent().next().find("input[type='text']").val(q*p);
+	function change_servings(){
+		var t = get_value($(this), 0);
+		var c = get_value($("#id_serving_per_container"),1);
+		var partial_id = "#"+$(this).attr("id").replace("quantity", "serving_quantity");
+		$(partial_id).val(round_me(t/c));
+	}
+	$(".serving").live("change", function(){
+		var s = get_value($(this), 0);
+		var c = get_value($("#id_serving_per_container"),1);
+		var total_id = "#"+$(this).attr("id").replace("serving_quantity", "quantity");
+		$(total_id).val(round_me(s*c));
+	});
+	$(".total").live("change", change_servings);
+	$("#id_serving_per_container").live("change", function(){
+		$.each($(".serving"), function(i,v){
+			$(v).trigger("change");
+		});
 	});
 });	
 </script>
