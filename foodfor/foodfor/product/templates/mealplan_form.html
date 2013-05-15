@@ -11,15 +11,51 @@
 <form method="POST" action='.'>{% csrf_token %}
 	{{ form|as_bootstrap }}
 	{{ formsets.management_form }}
-	{% for formset in formsets %}
-		{% for value, text in formset.nutrient.field.choices %}
-			{% if value|add:0 == formset.nutrient.value|add:0 %}
-				{{ text }}
-			{% endif %}
+	<table class="table">
+		<thead>
+			<tr>
+				<th>nutrient</th>
+				<th>recommended</th>
+				<th>minimum</th>
+				<th></th>
+				<th>recommended</th>
+				<th>maximum</th>
+				<th></th>
+			</tr>
+		</thead>
+		{% for formset in formsets %}
+			<tr>
+				<td>
+					{% for value, text in formset.nutrient.field.choices %}
+						{% if value|add:0 == formset.nutrient.value|add:0 %}
+							{{ text }}
+						{% endif %}
+					{% endfor %}
+				</td>
+				<td>
+					{{ formset.initial.nutrient.recommended_min_intake }} {{ formset.initial.nutrient.unit }}
+				</td>
+				<td>
+					{{ formset.nutrient }}
+					{{ formset.minimum }}
+				</td>
+				<td>
+					{{ formset.minimum.errors }}
+				</td>
+				<td>
+					{{ formset.initial.nutrient.recommended_max_intake }} {{ formset.initial.nutrient.unit }}
+				</td>
+				<td>
+					{{ formset.maximum }}
+				</td>
+				<td>
+					{{ formset.minimum.error }}
+				</td>
+			</tr>
 		{% endfor %}
-		{{ formset|as_bootstrap }}
-	{% endfor %}
-	<br/>
-	<input type="submit" value="submit" class="btn btn-primary"/>
+	</table>
+	<p>
+		<input type="submit" value="submit" class="btn btn-primary"/>
+	</p>
 </form>
 {% endblock %}

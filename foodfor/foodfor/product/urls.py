@@ -12,7 +12,7 @@ import re
 
 class MealPlanCreateView(CreateView):
     def get_context_data(self, **kwargs):
-        NutrientFormSet = inlineformset_factory(MealPlan, MealPlanNutrient, form=MealPlanNutrientForm, max_num=Nutrient.objects.count(), can_delete=False)
+        NutrientFormSet = inlineformset_factory(MealPlan, MealPlanNutrient, form=MealPlanNutrientForm, max_num=Nutrient.objects.count(), extra=Nutrient.objects.count(), can_delete=False)
         context = super(MealPlanCreateView, self).get_context_data(**kwargs)
         if self.request.POST:
             context['formsets'] = NutrientFormSet(self.request.POST)
@@ -20,7 +20,7 @@ class MealPlanCreateView(CreateView):
             context['formsets'] = NutrientFormSet()
             for form, nutrient in zip(context['formsets'], Nutrient.objects.all()):
                 if not form.initial:
-                    form.initial = {"nutrient": nutrient, "minimum": nutrient.recommended_intake}
+                    form.initial = {"nutrient": nutrient, "minimum": nutrient.recommended_min_intake, "maximum": nutrient.recommended_max_intake}
         return context
     def get_initial(self):
         return {"user": self.request.user}
@@ -31,7 +31,7 @@ class MealPlanCreateView(CreateView):
             self.object = form.save()
             formsets.instance = self.object
             formsets.save()
-            return HttpResponseRedirect('/product/mealplan/%s/details/' % self.object.pk)
+            return HttpResponseRedirect('/product/mealplan/')
         else:
             return self.render_to_response(self.get_context_data(form=form))
 
@@ -42,7 +42,7 @@ class MealPlanUpdateView(UpdateView):
             raise Http404
         return object
     def get_context_data(self, **kwargs):
-        NutrientFormSet = inlineformset_factory(MealPlan, MealPlanNutrient, form=MealPlanNutrientForm, max_num=Nutrient.objects.count(), can_delete=False)
+        NutrientFormSet = inlineformset_factory(MealPlan, MealPlanNutrient, form=MealPlanNutrientForm, max_num=Nutrient.objects.count(), extra=Nutrient.objects.count(), can_delete=False)
         context = super(MealPlanUpdateView, self).get_context_data(**kwargs)
         if self.request.POST:
             context['formsets'] = NutrientFormSet(self.request.POST, instance=self.object)
@@ -59,13 +59,13 @@ class MealPlanUpdateView(UpdateView):
             self.object = form.save()
             formsets.instance = self.object
             formsets.save()
-            return HttpResponseRedirect('/product/mealplan/%s/details/' % self.object.pk)
+            return HttpResponseRedirect('/product/mealplan/')
         else:
             return self.render_to_response(self.get_context_data(form=form))
 
 class ProductUpdateView(UpdateView):
     def get_context_data(self, **kwargs):
-        ProductNutrientFormSet = inlineformset_factory(Product, ProductNutrient, form=ProductNutrientForm, max_num=Nutrient.objects.count(), can_delete=False)
+        ProductNutrientFormSet = inlineformset_factory(Product, ProductNutrient, form=ProductNutrientForm, max_num=Nutrient.objects.count(), extra=Nutrient.objects.count(), can_delete=False)
         context = super(ProductUpdateView, self).get_context_data(**kwargs)
         if self.request.POST:
             context['formsets'] = ProductNutrientFormSet(self.request.POST, instance=self.object)
@@ -82,13 +82,13 @@ class ProductUpdateView(UpdateView):
             self.object = form.save()
             formsets.instance = self.object
             formsets.save()
-            return HttpResponseRedirect('/product/product/%s/details/' % self.object.pk)
+            return HttpResponseRedirect('/product/product/')
         else:
             return self.render_to_response(self.get_context_data(form=form))
 
 class ProductCreateView(CreateView):
     def get_context_data(self, **kwargs):
-        ProductNutrientFormSet = inlineformset_factory(Product, ProductNutrient, form=ProductNutrientForm, max_num=Nutrient.objects.count(), can_delete=False)
+        ProductNutrientFormSet = inlineformset_factory(Product, ProductNutrient, form=ProductNutrientForm, max_num=Nutrient.objects.count(), extra=Nutrient.objects.count(), can_delete=False)
         context = super(ProductCreateView, self).get_context_data(**kwargs)
         if self.request.POST:
             context['formsets'] = ProductNutrientFormSet(self.request.POST)
@@ -96,7 +96,7 @@ class ProductCreateView(CreateView):
             context['formsets'] = ProductNutrientFormSet()
             for form, nutrient in zip(context['formsets'], Nutrient.objects.all()):
                 if not form.initial:
-                    form.initial = {"nutrient": nutrient}
+                    form.initial = {"nutrient": nutrient, "quantity": 0}
         return context
     def form_valid(self, form):
         context = self.get_context_data()
@@ -105,7 +105,7 @@ class ProductCreateView(CreateView):
             self.object = form.save()
             formsets.instance = self.object
             formsets.save()
-            return HttpResponseRedirect('/product/product/%s/details/' % self.object.pk)
+            return HttpResponseRedirect('/product/product/')
         else:
             return self.render_to_response(self.get_context_data(form=form))
 
@@ -124,18 +124,26 @@ def solve_soylent(A,b,p):
 class MealPlanDetailView(DetailView):
     def get_context_data(self, **kwargs):
         context = super(MealPlanDetailView, self).get_context_data(**kwargs)
-        products = Product.objects.filter(tags__in=self.object.desired_tags.values_list("pk", flat=True))
+        products = Product.objects.filter(tags__in=self.object.desired_tags.values_list("pk", flat=True)).distinct()
         nutrients = self.object.mealplannutrient_set.all().order_by("pk")
         p = map(lambda x: x.price, products)
         b = map(lambda x: self.object.number_of_days * x.minimum, nutrients)
         A = map(lambda x: map(lambda y: ProductNutrient.objects.get(nutrient=x.pk,product=y.pk).quantity if ProductNutrient.objects.filter(nutrient=x.pk,product=y.pk).exists() else 0, products), nutrients)
-        A_p = map(lambda p: map(lambda n: ProductNutrient.objects.get(nutrient=n.pk,product=p.pk).quantity if ProductNutrient.objects.filter(nutrient=n.pk,product=p.pk).exists() else 0, nutrients), products)
+        A_p = map(lambda p: map(lambda n: ProductNutrient.objects.get(nutrient=n.pk,product=p.pk) if ProductNutrient.objects.filter(nutrient=n.pk,product=p.pk).exists() else 0, nutrients), products)
         solution, cost, output = solve_soylent(A, b, p)
-        context["nutrients"] = nutrients
-        context["solution"] = zip(products, sorted(solution, key=lambda x: int(x.name.split('_')[1])), A_p)
-        print(context["solution"])
+        solution_vars = sorted(solution, key=lambda x: int(x.name.split('_')[1]))
+        totals = map(lambda x: reduce(lambda x,y: x+y[0]*y[1].varValue, zip(x,solution_vars),0),A)
+        day_totals = map(lambda x: reduce(lambda x,y: x+y[0]*y[1].varValue/self.object.number_of_days, zip(x,solution_vars),0),A)
+        meets_min = [daytotal>=nutrient.minimum for daytotal,nutrient in zip(day_totals,nutrients)] 
+        meets_max = [not nutrient.maximum or daytotal<=nutrient.maximum for daytotal,nutrient in zip(day_totals,nutrients)] 
+        context["balanced"] = all(meets_min) and all(meets_max)
+        context["nutrients"] = zip(nutrients, A, totals, day_totals, meets_min, meets_max)
+        context["solution"] = zip(products, solution_vars, A_p)
         context["cost"] = cost
         context["output"] = output
+        self.object.price = cost/self.object.number_of_days
+        self.object.balanced = context["balanced"]
+        self.object.save()
         return context
 
 urlpatterns = patterns('',

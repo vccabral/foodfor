@@ -7,12 +7,26 @@
 {% block body_class %}All{% endblock %}
 
 {% block body %}
-    <ul>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>name</th>
+				<th>unit</th>
+				<th>minimum recommended</th>
+				<th>maximum recommended</th>
+			</tr>
+		</thead>
     	{% for object in object_list %}
-    		<li><a href="{% url 'read_nutrient' object.pk %}">{{ object }}</a></li>
+    	<tr>
+    		<td><a href="{% url 'read_nutrient' object.pk %}">{{ object }}</a></td>
+    		<td>{{ object.unit }}</td>
+    		<td>{{ object.recommended_min_intake }} {{ object.unit }}</td>
+    		<td>{{ object.recommended_max_intake }} {{ object.unit }}</td>
+		</tr>
+    		
     	{% endfor %}
-    	{% if request.user.is_authenticated %}
-	    	<li><a href="{% url 'create_nutrient' %}">create new nutrient</a></li>
-    	{% endif %}
-    </ul>
+    </table>
+	{% if request.user.is_authenticated %}
+    	<a href="{% url 'create_nutrient' %}" class="btn btn-primary">add new nutrient</a>
+	{% endif %}
 {% endblock %}

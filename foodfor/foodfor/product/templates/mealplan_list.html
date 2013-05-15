@@ -7,12 +7,25 @@
 {% block body_class %}All{% endblock %}
 
 {% block body %}
-    <ul>
+	<table class="table">
+		<tr>
+			<td>name</td>
+			<td>days</td>
+			<td>owner</td>
+			<td>price per day</td>
+			<td>balanced?</td>
+		</tr>
     	{% for object in object_list %}
-    		<li><a href="{% url 'read_mealplan' object.pk %}">{{ object }}</a></li>
+    		<tr>
+    			<td><a href="{% url 'read_mealplan' object.pk %}">{{ object }}</a></td>
+    			<td>{{ object.number_of_days }}</td>
+    			<td>{{ object.user }}</td>
+    			<td>${{ object.price|floatformat:2 }}</td>
+    			<td>{% if object.balanced  %}Yes{% else %}Not yet.{% endif %}</td>
+    		</tr>
     	{% endfor %}
-    	{% if request.user.is_authenticated %}
-	    	<li><a href="{% url 'create_mealplan' %}">add mealplan</a></li>
-    	{% endif %}
-    </ul>
+    </table>
+	{% if request.user.is_authenticated %}
+    	<a href="{% url 'create_mealplan' %}" class="btn btn-primary">add mealplan</a>
+	{% endif %}
 {% endblock %}

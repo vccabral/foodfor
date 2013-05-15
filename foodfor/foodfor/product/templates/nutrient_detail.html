@@ -12,4 +12,7 @@
 	{% else %}
 		{{ object }}
 	{% endif %}
+	<p>
+		<a href="{% url 'read_nutrients' %}" class="btn btn-primary">back to list</a>
+	</p>
 {% endblock %}

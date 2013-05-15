@@ -7,12 +7,26 @@
 {% block body_class %}All{% endblock %}
 
 {% block body %}
-    <ul>
+    <table class="table">
+    	<thead>
+    		<tr>
+    			<th>product</th>
+    			<th>price</tH>
+    			<th>see</th>
+    			<th>tags</th>
+			</tr>
+    	</thead>
     	{% for object in object_list %}
-    		<li><a href="{% url 'read_product' object.pk %}">{{ object }}</a></li>
+    		<tr>
+    			<td><a href="{% url 'update_product' object.pk %}">{{ object }}</a></td>
+    			<td>${{ object.price|floatformat:2 }}</td>
+    			<td><a href="{{ object.url }}">live site</a></td>
+    			<td>{% for tag in object.tags.all %}{{ tag }}{% if not forloop.last %},{% endif %}{% endfor %}</td>
+    		</tr>
+    		</li>
     	{% endfor %}
-    	{% if request.user.is_authenticated %}
-	    	<li><a href="{% url 'create_product' %}">add new product</a></li>
-    	{% endif %}
-    </ul>
+    </table>
+	{% if request.user.is_authenticated %}
+    	<a href="{% url 'create_product' %}" class="btn btn-primary">add new product</a>
+	{% endif %}
 {% endblock %}

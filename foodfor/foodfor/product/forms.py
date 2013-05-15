@@ -25,6 +25,6 @@ class MealPlanNutrientForm(ModelForm):
 class MealPlanForm(ModelForm):
     class Meta:
         model = MealPlan
-        exclude = ('up_votes', 'down_votes')
-        widgets = {"user": HiddenInput}  
+        exclude = ('up_votes', 'down_votes', 'balanced', 'price')
+        widgets = {"user": HiddenInput, "number_of_days": TextInput(attrs={"class":"span1"})}  
     
