@@ -38,12 +38,15 @@
 				{{ formset.id }}
 				<div class="control-group">
 					<label>Quantity</label>
+					{{ formset.serving_quantity.errors }}
 					<div class="controls">
 						{{ formset.serving_quantity }}
 					</div>
 				</div>
 			</td>
 			<td>
+				{{ formset.nutrient.errors }}
+				{{ formset.quantity.errors }}
 				{{ formset.nutrient }}<br/>
 				{{ formset.quantity }}<br/>
 				<br/>

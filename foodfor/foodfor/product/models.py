@@ -12,8 +12,8 @@ class Tag(models.Model):
 class Nutrient(models.Model):
     name = models.CharField(max_length=50)
     unit = models.CharField(max_length=50, choices=(("grams","grams"),("milligrams","milligrams"), ("ugrams", "ugrams"), ("IU", "IU"),))
-    recommended_min_intake = models.DecimalField(decimal_places=2, max_digits=10)
-    recommended_max_intake = models.DecimalField(decimal_places=2, max_digits=10, blank=True)
+    recommended_min_intake = models.DecimalField(decimal_places=5, max_digits=12)
+    recommended_max_intake = models.DecimalField(decimal_places=5, max_digits=12, blank=True)
     __str__ = lambda x: "%s (%s)" % (x.name, x.unit)
     get_absolute_url = lambda x: "/product/nutrient/"
 
@@ -21,7 +21,7 @@ class Product(models.Model):
     url = models.URLField()
     name = models.CharField(max_length=200)
     price = models.DecimalField(decimal_places=2, max_digits=10)
-    serving_per_container = models.DecimalField(decimal_places=2, max_digits=10)
+    serving_per_container = models.DecimalField(decimal_places=5, max_digits=12)
     up_votes = models.ManyToManyField(User, related_name="product_up", blank=True)
     down_votes = models.ManyToManyField(User, related_name="product_down", blank=True)
     tags = models.ManyToManyField(Tag, blank=True)
@@ -31,8 +31,8 @@ class Product(models.Model):
 class ProductNutrient(models.Model):
     product = models.ForeignKey(Product)
     nutrient = models.ForeignKey(Nutrient)
-    serving_quantity = models.DecimalField(decimal_places=2, max_digits=10)
-    quantity = models.DecimalField(decimal_places=2, max_digits=10)
+    serving_quantity = models.DecimalField(decimal_places=5, max_digits=12)
+    quantity = models.DecimalField(decimal_places=5, max_digits=12)
     
 class MealPlan(models.Model):
     name = models.CharField(max_length=50)

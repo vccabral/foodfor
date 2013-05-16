@@ -49,7 +49,6 @@ class MealPlanUpdateView(UpdateView):
             context['formsets'] = NutrientFormSet(self.request.POST, instance=self.object)
         else:
             context['formsets'] = NutrientFormSet(instance=self.object)
-            print(context['formsets'].forms[0].__dict__)
             for form, nutrient in zip(context['formsets'], Nutrient.objects.all()):
                 if not form.initial:
                     form.initial = {"nutrient": nutrient}
@@ -131,16 +130,17 @@ class MealPlanDetailView(DetailView):
         p = map(lambda x: x.price, products)
         b = map(lambda x: self.object.number_of_days * x.minimum, nutrients)
         A = map(lambda x: map(lambda y: ProductNutrient.objects.get(nutrient=x.pk,product=y.pk).quantity if ProductNutrient.objects.filter(nutrient=x.pk,product=y.pk).exists() else 0, products), nutrients)
-        A_p = map(lambda p: map(lambda n: ProductNutrient.objects.get(nutrient=n.pk,product=p.pk) if ProductNutrient.objects.filter(nutrient=n.pk,product=p.pk).exists() else 0, nutrients), products)
         solution, cost, output = solve_soylent(A, b, p)
         solution_vars = sorted(solution, key=lambda x: int(x.name.split('_')[1]))
         totals = map(lambda x: reduce(lambda x,y: x+y[0]*y[1].varValue, zip(x,solution_vars),0),A)
         day_totals = map(lambda x: reduce(lambda x,y: x+y[0]*y[1].varValue/self.object.number_of_days, zip(x,solution_vars),0),A)
         meets_min = [daytotal>=nutrient.minimum for daytotal,nutrient in zip(day_totals,nutrients)] 
-        meets_max = [not nutrient.maximum or daytotal<=nutrient.maximum for daytotal,nutrient in zip(day_totals,nutrients)] 
+        meets_max = [not nutrient.maximum or daytotal<=nutrient.maximum for daytotal,nutrient in zip(day_totals,nutrients)]
+        meets_both = [a and b for a, b in zip(meets_min, meets_max)]
+        A_p = map(lambda p: [[ProductNutrient.objects.get(nutrient=nutrient.pk,product=p.pk),meets] for nutrient, meets in zip(nutrients, meets_both)], products)
         context['count'] = int((sum(meets_min)+sum(meets_max) / (len(meets_min)*2.0)))
         context["balanced"] = all(meets_min) and all(meets_max)
-        context["nutrients"] = zip(nutrients, A, totals, day_totals, meets_min, meets_max)
+        context["nutrients"] = zip(nutrients, A, totals, day_totals, meets_min, meets_max, meets_both)
         context["solution"] = zip(products, solution_vars, A_p)
         context["cost"] = cost
         context["cost_ppd"] = cost/self.object.number_of_days
