@@ -1,11 +1,13 @@
+<h2>Products</h2>
 <table class="table">
 	<thead>
 		<tr>
-			<th>Product</th>
-			<th>Price</th>
-			<th>Servings per Container</th>
+			<th>product</th>
+			<th>see</th>
+			<th>price</th>
+			<th>servings per container</th>
 			<th># to buy</th>
-			<th>How much to use</th>
+			<th>how much to use</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -19,6 +21,7 @@
 				      		{{ product }}
 			      		{% endif %}
 					</td>
+			      	<td><a href="{{ product.url }}">live site</a></td>
 			      	<td>${{ product.price }}</td>
 			      	<td>{{ product.serving_per_container }}</td>
 			      	<td>{{ solution_vars_int.varValue }}</td>

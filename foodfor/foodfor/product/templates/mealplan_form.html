@@ -9,7 +9,42 @@
 
 {% block body %}
 <form method="POST" action='.'>{% csrf_token %}
-	{{ form|as_bootstrap }}
+	{% if False %}
+		{{ form|as_bootstrap }}
+	{% else %}
+		{% if form.non_field_errors %}
+		    <div class="alert alert-error">
+		        {% if form_error_title %}
+		            <strong>{{ form_error_title }}</strong>
+		        {% endif %}
+		        {% for error in form.non_field_errors %}
+		            {{ error }}<br />
+		        {% endfor %}
+		    </div>
+		{% endif %}
+		{{ form.user }}		
+		{{ form.user }}		
+	    {% include "bootstrap/field.html" with field=form.name %}
+	    {% include "bootstrap/field.html" with field=form.number_of_days %}
+	    <div class="row">
+	    	<div class="span6">
+	    		<label class="checkbox">
+      				<input id="select_all" type="checkbox"> select all
+    			</label>
+		    </div>
+	    	<div class="span6">
+	    		
+		    </div>
+		</div>
+	    <div class="row">
+	    	<div class="span6">
+			    {% include "bootstrap/field.html" with field=form.desired_tags %}
+		    </div>
+	    	<div class="span6">
+			    {% include "bootstrap/field.html" with field=form.excluded_tags %}
+		    </div>
+		</div>
+	{% endif %}
 	{{ formsets.management_form }}
 	<table class="table">
 		<thead>
@@ -65,3 +100,14 @@
 	</p>
 </form>
 {% endblock %}
+{% block extra_body %}
+<script>
+$(document).ready(function(){
+	$("#select_all").live("change", function(){
+		var checked = $(this).is(':checked');
+		$("input[name='desired_tags']").prop('checked', checked);
+	});
+});	
+</script>
+{% endblock %}
+

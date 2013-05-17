@@ -8,7 +8,6 @@
 
 {% block body %}
 <div class="well">
-<h2>Name:</h2>
 <h2>
 	{% if request.user.is_authenticated and request.user == object.user %}
 		<a href="{% url 'update_mealplan' object.pk %}">{{ object }}</a>
@@ -49,34 +48,66 @@
 		</td>
 	</tr>
 </table>
+	{% if has_products %}
+		{% if not balanced %}
+			<p>
+				{% if solution|length < 10 %}
+					<div class="alert alert-error">
+						<button type="button" class="close" data-dismiss="alert">&times;</button>
+						<h4>Warning!</h4>
+						There are only {{ solution|length }} product(s) given your tags. We highly suggest you be more inclusive in your meal plan.  
+					</div>	
+				{% endif %}
+				<div class="alert alert-error">
+					<button type="button" class="close" data-dismiss="alert">&times;</button>
+					<h4>Warning!</h4>
+					It was impossible to make an acceptable meal plan with your constraints. We have raised your upper limit thresholds for now until you edit your meal plan.
+				</div>	
+			</p>
+		{% endif %}
+	{% else %}
+		<div class="alert alert-error">
+			<button type="button" class="close" data-dismiss="alert">&times;</button>
+			<h4>Warning!</h4>
+			You need to edit your meal plan, your current tags are so restrictive that ZERO products can even be evaluated. Add some desired tags for the meal plan and/or remove some excluded tags. 
+		</div>	
+	{% endif %}
 	<p>
 		<a href="{% url 'read_mealplans' %}" class="btn btn-primary">back to list</a>
+		<a href="{% url 'update_mealplan' object.pk %}" class="btn btn-primary">edit meal plan</a>
 	</p>
 </div>
+{% if has_products %}
 
-<ul class="nav nav-tabs">
-  <li><a href="#buy" data-toggle="tab">What to Buy</a></li>
-  <li><a href="#nutrient" data-toggle="tab">Nutrient Summary</a></li>
-  <li><a href="#summary" data-toggle="tab">Summary</a></li>
-</ul>
+	<ul class="nav nav-tabs">
+	  <li class="active"><a href="#buy" data-toggle="tab">What to Buy</a></li>
+	  <li><a href="#nutrient" data-toggle="tab">Nutrient Summary</a></li>
+	  {% if not object.balanced %}
+	  	<li><a href="#issues" data-toggle="tab">Summary of Nutrients with Issues</a></li>
+	  {% endif %}
+	  <li><a href="#summary" data-toggle="tab">Summary</a></li>
+	</ul>
 
-<div class="tab-content">
-  	<div class="tab-pane active" id="buy">
-  		{% include "mealplan_partials/whattobuy.html" %}
-  	</div>
-  	<div class="tab-pane" id="nutrient">
-  		{% include "mealplan_partials/nutrients.html" %}
-  	</div>
-  	<div class="tab-pane" id="issues">
-  		{% include "mealplan_partials/issues.html" %}
+	<div class="tab-content">
+	  	<div class="tab-pane active" id="buy">
+	  		{% include "mealplan_partials/whattobuy.html" %}
+	  	</div>
+	  	<div class="tab-pane" id="nutrient">
+	  		{% include "mealplan_partials/nutrients.html" %}
+	  	</div>
+	  	{% if not object.balanced %}
+	  	<div class="tab-pane" id="issues">
+	  		{% include "mealplan_partials/summary.html" with exclude_balanced=True %}
+		</div>
+		{% endif %}
+	  	<div class="tab-pane" id="summary">
+	  		{% include "mealplan_partials/summary.html" with exclude_balanced=False %}
+	  	</div>
 	</div>
-  	<div class="tab-pane" id="summary">
-  		{% include "mealplan_partials/summary.html" %}
-  	</div>
-</div>
-
-<a href="{% url 'read_mealplans' %}" class="btn btn-primary">back to list</a>
-
+	
+	<a href="{% url 'read_mealplans' %}" class="btn btn-primary">back to list</a>
+	<a href="{% url 'update_mealplan' object.pk %}" class="btn btn-primary">edit meal plan</a>
+{% endif %}
 {% endblock %}
 {% block extra_body %}
 <script>

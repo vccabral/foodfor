@@ -112,14 +112,17 @@ class ProductCreateView(CreateView):
             return self.render_to_response(self.get_context_data(form=form))
 
 
-def solve_soylent(A, b, p, b_max):
+def solve_soylent(A, b, p, b_max, error_to_min=True):
     prob = LpProblem("soylentcost", LpMinimize)
     x = []
     x_serving = []
     for index in range(0,len(b)):
         x.append(LpVariable("x_"+str(index),0, None, "Integer"))
         x_serving.append(LpVariable("x_"+str(index)+"_servings",0, None))
-    prob += reduce(lambda x,y: x+y, [x_var*p_constant for x_var,p_constant in zip(x,p)])
+    if error_to_min:
+        prob += reduce(lambda x,y: x+y, [x_var*float(p_constant)+0.0000001*x_serve for x_var, p_constant, x_serve in zip(x, p, x_serving)]) #+ reduce(lambda x,y: x+y, [-x_serve for x_serve in x_serving])
+    else:
+        prob += reduce(lambda x,y: x+y, [x_var*float(p_constant)-0.0000001*x_serve for x_var, p_constant, x_serve in zip(x, p, x_serving)]) #+ reduce(lambda x,y: x+y, [-x_serve for x_serve in x_serving])
     for row, b_constant, b_max_constant in zip(A, b, b_max):
         prob += reduce(lambda x,y: x+y, [x_var*rc_constant for x_var,rc_constant in zip(x,row)]) >= b_constant
         prob += reduce(lambda x,y: x+y, [x_serv*rc_constant for x_serv,rc_constant in zip(x_serving,row)]) >= b_constant
@@ -139,37 +142,40 @@ def nutrient_is_undermax(daytotal, nutrient, solution_vars, products):
     else:
         return True
 
+def get_object_context(self_object, multiplier):
+    products = Product.objects.filter(tags__in=self_object.desired_tags.values_list("pk", flat=True)).exclude(tags__in=self_object.excluded_tags.values_list("pk", flat=True)).distinct().order_by("name")
+    nutrients = self_object.mealplannutrient_set.all().order_by("pk")
+    p = [product.price for product in products] #map(lambda x: x.price, products)
+    b = [self_object.number_of_days * nutrient.minimum for nutrient in nutrients] #map(lambda x: self.object.number_of_days * x.minimum, nutrients)
+    b_max = [self_object.number_of_days * nutrient.maximum * multiplier for nutrient in nutrients]
+    A = [[ProductNutrient.objects.get(nutrient=nutrient.nutrient.pk,product=product.pk).quantity if ProductNutrient.objects.filter(nutrient=nutrient.nutrient.pk,product=product.pk).exists() else 0 for product in products] for nutrient in nutrients]
+    solution, cost, output = solve_soylent(A, b, p, b_max)
+    solution_vars = sorted([solved for solved in solution if solved.name.endswith("_servings")], key=lambda x: int(x.name.split('_')[1]))
+    solution_vars_ints = sorted([solved for solved in solution if not solved.name.endswith("_servings")], key=lambda x: int(x.name.split('_')[1]))
+    solution_vars_percent = [solved.varValue*100/solved_int.varValue if solved_int.varValue != 0 else 0 for solved, solved_int in zip(solution_vars,solution_vars_ints)]
+    totals = [reduce(lambda x,y: x+y[0]*Decimal(y[1].varValue), zip(x,solution_vars),0) for x in A]
+    day_totals = [reduce(lambda x,y: x+y[0]*Decimal(y[1].varValue)/self_object.number_of_days, zip(x,solution_vars),0) for x in A]
+    day_totals_int = [reduce(lambda x,y: x+y[0]*Decimal(y[1].varValue)/self_object.number_of_days, zip(x,solution_vars_ints),0) for x in A]
+    meets_min = [daytotal >= (nutrient.minimum-Decimal(.1)) for daytotal,nutrient in zip(day_totals,nutrients)] 
+    meets_max = [nutrient_is_undermax(daytotal, nutrient, solution_vars, products) for daytotal,nutrient in zip(day_totals,nutrients)]
+    meets_both = [a and b for a, b in zip(meets_min, meets_max)]
+    A_p = map(lambda p: [[ProductNutrient.objects.get(nutrient=nutrient.nutrient.pk,product=p.pk) if ProductNutrient.objects.filter(nutrient=nutrient.nutrient.pk,product=p.pk).exists() else 0, meets] for nutrient, meets in zip(nutrients, meets_both)], products)
+    total_met = sum(meets_min)+sum(meets_max)
+    return int(100*total_met / (len(meets_min)*2.0)), all(meets_min) and all(meets_max), zip(nutrients, A, totals, day_totals, meets_min, meets_max, meets_both), zip(products, solution_vars, A_p, solution_vars_ints, solution_vars_percent), cost, cost/self_object.number_of_days, output
+
 class MealPlanDetailView(DetailView):
     def get_context_data(self, **kwargs):
         context = super(MealPlanDetailView, self).get_context_data(**kwargs)
-        products = Product.objects.filter(tags__in=self.object.desired_tags.values_list("pk", flat=True)).distinct().order_by("name")
-        nutrients = self.object.mealplannutrient_set.all().order_by("pk")
-        p = [product.price for product in products] #map(lambda x: x.price, products)
-        b = [self.object.number_of_days * nutrient.minimum for nutrient in nutrients] #map(lambda x: self.object.number_of_days * x.minimum, nutrients)
-        b_max = [self.object.number_of_days * nutrient.maximum for nutrient in nutrients]
-        A = [[ProductNutrient.objects.get(nutrient=nutrient.nutrient.pk,product=product.pk).quantity if ProductNutrient.objects.filter(nutrient=nutrient.nutrient.pk,product=product.pk).exists() else 0 for product in products] for nutrient in nutrients]
-        solution, cost, output = solve_soylent(A, b, p, b_max)
-        solution_vars = sorted([solved for solved in solution if solved.name.endswith("_servings")], key=lambda x: int(x.name.split('_')[1]))
-        solution_vars_ints = sorted([solved for solved in solution if not solved.name.endswith("_servings")], key=lambda x: int(x.name.split('_')[1]))
-        solution_vars_percent = [solved.varValue*100/solved_int.varValue if solved_int.varValue != 0 else 0 for solved, solved_int in zip(solution_vars,solution_vars_ints)]
-        totals = [reduce(lambda x,y: x+y[0]*Decimal(y[1].varValue), zip(x,solution_vars),0) for x in A]
-        day_totals = [reduce(lambda x,y: x+y[0]*Decimal(y[1].varValue)/self.object.number_of_days, zip(x,solution_vars),0) for x in A]
-        day_totals_int = [reduce(lambda x,y: x+y[0]*Decimal(y[1].varValue)/self.object.number_of_days, zip(x,solution_vars_ints),0) for x in A]
-        meets_min = [daytotal >= (nutrient.minimum-Decimal(.1)) for daytotal,nutrient in zip(day_totals,nutrients)] 
-        meets_max = [nutrient_is_undermax(daytotal, nutrient, solution_vars, products) for daytotal,nutrient in zip(day_totals,nutrients)]
-        meets_both = [a and b for a, b in zip(meets_min, meets_max)]
-        A_p = map(lambda p: [[ProductNutrient.objects.get(nutrient=nutrient.nutrient.pk,product=p.pk) if ProductNutrient.objects.filter(nutrient=nutrient.nutrient.pk,product=p.pk).exists() else 0, meets] for nutrient, meets in zip(nutrients, meets_both)], products)
-        total_met = sum(meets_min)+sum(meets_max)
-        context['count'] = int(100*total_met / (len(meets_min)*2.0))
-        context["balanced"] = all(meets_min) and all(meets_max)
-        context["nutrients"] = zip(nutrients, A, totals, day_totals, meets_min, meets_max, meets_both)
-        context["solution"] = zip(products, solution_vars, A_p, solution_vars_ints, solution_vars_percent)
-        context["cost"] = cost
-        context["cost_ppd"] = cost/self.object.number_of_days
-        context["output"] = output
-        self.object.price = cost/self.object.number_of_days
-        self.object.balanced = context["balanced"]
-        self.object.save()
+        if Product.objects.filter(tags__in=self.object.desired_tags.values_list("pk", flat=True)).exclude(tags__in=self.object.excluded_tags.values_list("pk", flat=True)).exists():
+            context['count'], context["balanced"], context["nutrients"], context["solution"], context["cost"], context["cost_ppd"], context["output"] = get_object_context(self.object, 1)
+            if not context["balanced"]:
+                context['count'], context["balanced"], context["nutrients"], context["solution"], context["cost"], context["cost_ppd"], context["output"] = get_object_context(self.object, 10)
+            context['has_products'] = True
+            self.object.price = context["cost_ppd"]
+            self.object.balanced = context["balanced"]
+            self.object.save()
+        else:
+            context['has_products'] = False
         return context
 
 staff_required = user_passes_test(lambda u: u.is_staff)

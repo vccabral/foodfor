@@ -30,5 +30,5 @@ class MealPlanForm(ModelForm):
     class Meta:
         model = MealPlan
         exclude = ('up_votes', 'down_votes', 'balanced', 'price')
-        widgets = {"user": HiddenInput, "number_of_days": TextInput(attrs={"class":"span1"}), "desired_tags": CheckboxSelectMultiple()}  
+        widgets = {"user": HiddenInput, "number_of_days": TextInput(attrs={"class":"span1"}), "desired_tags": CheckboxSelectMultiple(), "excluded_tags": CheckboxSelectMultiple()}  
     

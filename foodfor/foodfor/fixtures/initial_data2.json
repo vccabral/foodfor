@@ -1,0 +1,763 @@
+[
+{
+    "pk": 1, 
+    "model": "auth.user", 
+    "fields": {
+        "username": "victor", 
+        "first_name": "", 
+        "last_name": "", 
+        "is_active": true, 
+        "is_superuser": true, 
+        "is_staff": true, 
+        "last_login": "2013-05-15T02:54:30.288Z", 
+        "groups": [], 
+        "user_permissions": [], 
+        "password": "pbkdf2_sha256$10000$5d6yeW6VT8MB$SmVaEnCcw3zBl8E1YY4YbocOF25qKXBXCGXAGbXznYw=", 
+        "email": "vccabral@gmail.com", 
+        "date_joined": "2013-05-15T02:53:49.189Z"
+    }
+},
+{
+    "pk": "s4772hjho7vcz0al9dex56s53hoewl62", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2013-05-29T02:54:30.293Z", 
+        "session_data": "OTcxMGM3NTBjMzQ0ZDFiZDczMGVkNjFmMmM1MzUxNTU3MzMzZmQ4YTqAAn1xAShYDwAAAF9zZXNzaW9uX2V4cGlyeXECSwBVEl9hdXRoX3VzZXJfYmFja2VuZHEDVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEEVQ1fYXV0aF91c2VyX2lkcQVLAXUu"
+    }
+},
+{
+    "pk": 1, 
+    "model": "sites.site", 
+    "fields": {
+        "domain": "localhost:8000", 
+        "name": "foodasfuel.me [localhost]"
+    }
+},
+{
+    "pk": 2, 
+    "model": "sites.site", 
+    "fields": {
+        "domain": "foodasfuel.me", 
+        "name": "foodasfuel.me"
+    }
+},
+{
+    "pk": 1, 
+    "model": "account.account", 
+    "fields": {
+        "timezone": "", 
+        "user": [
+            "victor"
+        ], 
+        "language": "en-us"
+    }
+},
+{
+    "pk": 1, 
+    "model": "account.emailaddress", 
+    "fields": {
+        "verified": false, 
+        "user": [
+            "victor"
+        ], 
+        "primary": true, 
+        "email": "vccabral@gmail.com"
+    }
+},
+{
+    "pk": 1, 
+    "model": "profiles.profile", 
+    "fields": {
+        "user": [
+            "victor"
+        ], 
+        "birthdate": null
+    }
+},
+{
+    "pk": 1, 
+    "model": "product.tag", 
+    "fields": {
+        "name": "Oil"
+    }
+},
+{
+    "pk": 2, 
+    "model": "product.tag", 
+    "fields": {
+        "name": "Soylent"
+    }
+},
+{
+    "pk": 1, 
+    "model": "product.nutrient", 
+    "fields": {
+        "recommended_min_intake": "200", 
+        "recommended_max_intake": "300", 
+        "name": "Carbohydrates", 
+        "unit": "grams"
+    }
+},
+{
+    "pk": 2, 
+    "model": "product.nutrient", 
+    "fields": {
+        "recommended_min_intake": "50", 
+        "recommended_max_intake": "70", 
+        "name": "Protein", 
+        "unit": "grams"
+    }
+},
+{
+    "pk": 3, 
+    "model": "product.nutrient", 
+    "fields": {
+        "recommended_min_intake": "65", 
+        "recommended_max_intake": "100", 
+        "name": "Fat", 
+        "unit": "grams"
+    }
+},
+{
+    "pk": 4, 
+    "model": "product.nutrient", 
+    "fields": {
+        "recommended_min_intake": "2.4", 
+        "recommended_max_intake": "4.8", 
+        "name": "Sodium", 
+        "unit": "grams"
+    }
+},
+{
+    "pk": 5, 
+    "model": "product.nutrient", 
+    "fields": {
+        "recommended_min_intake": "3.5", 
+        "recommended_max_intake": "6", 
+        "name": "Potassium", 
+        "unit": "grams"
+    }
+},
+{
+    "pk": 6, 
+    "model": "product.nutrient", 
+    "fields": {
+        "recommended_min_intake": "3.4", 
+        "recommended_max_intake": "6.8", 
+        "name": "Chloride", 
+        "unit": "grams"
+    }
+},
+{
+    "pk": 7, 
+    "model": "product.nutrient", 
+    "fields": {
+        "recommended_min_intake": "4", 
+        "recommended_max_intake": "8", 
+        "name": "Fiber", 
+        "unit": "grams"
+    }
+},
+{
+    "pk": 8, 
+    "model": "product.nutrient", 
+    "fields": {
+        "recommended_min_intake": "1", 
+        "recommended_max_intake": "1.5", 
+        "name": "Calcium", 
+        "unit": "grams"
+    }
+},
+{
+    "pk": 9, 
+    "model": "product.nutrient", 
+    "fields": {
+        "recommended_min_intake": "18", 
+        "recommended_max_intake": "22", 
+        "name": "Iron", 
+        "unit": "milligrams"
+    }
+},
+{
+    "pk": 10, 
+    "model": "product.nutrient", 
+    "fields": {
+        "recommended_min_intake": "1", 
+        "recommended_max_intake": "1.2", 
+        "name": "Phosphorous", 
+        "unit": "grams"
+    }
+},
+{
+    "pk": 11, 
+    "model": "product.nutrient", 
+    "fields": {
+        "recommended_min_intake": "150", 
+        "recommended_max_intake": "160", 
+        "name": "Iodine", 
+        "unit": "ugrams"
+    }
+},
+{
+    "pk": 12, 
+    "model": "product.nutrient", 
+    "fields": {
+        "recommended_min_intake": "400", 
+        "recommended_max_intake": "500", 
+        "name": "Magnesium", 
+        "unit": "milligrams"
+    }
+},
+{
+    "pk": 13, 
+    "model": "product.nutrient", 
+    "fields": {
+        "recommended_min_intake": "15", 
+        "recommended_max_intake": "20", 
+        "name": "Zinc", 
+        "unit": "milligrams"
+    }
+},
+{
+    "pk": 14, 
+    "model": "product.nutrient", 
+    "fields": {
+        "recommended_min_intake": "70", 
+        "recommended_max_intake": "75", 
+        "name": "Selenium", 
+        "unit": "ugrams"
+    }
+},
+{
+    "pk": 15, 
+    "model": "product.nutrient", 
+    "fields": {
+        "recommended_min_intake": "2", 
+        "recommended_max_intake": "3", 
+        "name": "Copper", 
+        "unit": "milligrams"
+    }
+},
+{
+    "pk": 16, 
+    "model": "product.nutrient", 
+    "fields": {
+        "recommended_min_intake": "2", 
+        "recommended_max_intake": "3", 
+        "name": "Manganese", 
+        "unit": "milligrams"
+    }
+},
+{
+    "pk": 17, 
+    "model": "product.nutrient", 
+    "fields": {
+        "recommended_min_intake": "120", 
+        "recommended_max_intake": "130", 
+        "name": "Chromium", 
+        "unit": "ugrams"
+    }
+},
+{
+    "pk": 18, 
+    "model": "product.nutrient", 
+    "fields": {
+        "recommended_min_intake": "75", 
+        "recommended_max_intake": "80", 
+        "name": "Molybdenum", 
+        "unit": "ugrams"
+    }
+},
+{
+    "pk": 19, 
+    "model": "product.nutrient", 
+    "fields": {
+        "recommended_min_intake": "5000", 
+        "recommended_max_intake": "100000", 
+        "name": "Vitamin A", 
+        "unit": "IU"
+    }
+},
+{
+    "pk": 20, 
+    "model": "product.nutrient", 
+    "fields": {
+        "recommended_min_intake": "2", 
+        "recommended_max_intake": "3", 
+        "name": "Vitamin B6", 
+        "unit": "milligrams"
+    }
+},
+{
+    "pk": 21, 
+    "model": "product.nutrient", 
+    "fields": {
+        "recommended_min_intake": "6", 
+        "recommended_max_intake": "7", 
+        "name": "Vitamin B1", 
+        "unit": "ugrams"
+    }
+},
+{
+    "pk": 22, 
+    "model": "product.nutrient", 
+    "fields": {
+        "recommended_min_intake": "60", 
+        "recommended_max_intake": "70", 
+        "name": "Vitamin C", 
+        "unit": "milligrams"
+    }
+},
+{
+    "pk": 23, 
+    "model": "product.nutrient", 
+    "fields": {
+        "recommended_min_intake": "400", 
+        "recommended_max_intake": "500", 
+        "name": "Vitamin D", 
+        "unit": "IU"
+    }
+},
+{
+    "pk": 24, 
+    "model": "product.nutrient", 
+    "fields": {
+        "recommended_min_intake": "30", 
+        "recommended_max_intake": "40", 
+        "name": "Vitamin E", 
+        "unit": "IU"
+    }
+},
+{
+    "pk": 25, 
+    "model": "product.nutrient", 
+    "fields": {
+        "recommended_min_intake": "80", 
+        "recommended_max_intake": "90", 
+        "name": "Vitamin K", 
+        "unit": "ugrams"
+    }
+},
+{
+    "pk": 26, 
+    "model": "product.nutrient", 
+    "fields": {
+        "recommended_min_intake": "1.5", 
+        "recommended_max_intake": "2", 
+        "name": "Thiamin", 
+        "unit": "milligrams"
+    }
+},
+{
+    "pk": 27, 
+    "model": "product.nutrient", 
+    "fields": {
+        "recommended_min_intake": "1.7", 
+        "recommended_max_intake": "2", 
+        "name": "Riboflavin", 
+        "unit": "milligrams"
+    }
+},
+{
+    "pk": 28, 
+    "model": "product.nutrient", 
+    "fields": {
+        "recommended_min_intake": "20", 
+        "recommended_max_intake": "30", 
+        "name": "Niacin", 
+        "unit": "milligrams"
+    }
+},
+{
+    "pk": 29, 
+    "model": "product.nutrient", 
+    "fields": {
+        "recommended_min_intake": "400", 
+        "recommended_max_intake": "500", 
+        "name": "Folate", 
+        "unit": "ugrams"
+    }
+},
+{
+    "pk": 30, 
+    "model": "product.nutrient", 
+    "fields": {
+        "recommended_min_intake": "300", 
+        "recommended_max_intake": "400", 
+        "name": "Biotin", 
+        "unit": "ugrams"
+    }
+},
+{
+    "pk": 31, 
+    "model": "product.nutrient", 
+    "fields": {
+        "recommended_min_intake": "10", 
+        "recommended_max_intake": "15", 
+        "name": "Panthothenic Acid", 
+        "unit": "milligrams"
+    }
+},
+{
+    "pk": 1, 
+    "model": "product.product", 
+    "fields": {
+        "name": "Kirkland Signature Extra Virgin Olive Oil, 2 Liter", 
+        "serving_per_container": "1", 
+         "tags": [
+            1, 
+            2
+        ], 
+        "url": "http://www.amazon.com/Kirkland-Signature-Virgin-Liters-Product/dp/B0027EOTKO", 
+        "price": "23.9", 
+        "down_votes": [], 
+        "up_votes": []
+    }
+},
+{
+    "pk": 1, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 1, 
+        "product": 1, 
+        "serving_quantity": "1",
+        "quantity": "0"
+    }
+},
+{
+    "pk": 2, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 2, 
+        "product": 1, 
+        "serving_quantity": "1",
+        "quantity": "0"
+    }
+},
+{
+    "pk": 3, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 3, 
+        "product": 1, 
+        "serving_quantity": "1",
+        "quantity": "1862"
+    }
+},
+{
+    "pk": 4, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 4, 
+        "product": 1, 
+        "serving_quantity": "1",
+        "quantity": "0"
+    }
+},
+{
+    "pk": 5, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 5, 
+        "product": 1, 
+        "serving_quantity": "1",
+        "quantity": "0"
+    }
+},
+{
+    "pk": 6, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 6, 
+        "product": 1, 
+        "serving_quantity": "1",
+        "quantity": "0"
+    }
+},
+{
+    "pk": 7, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 7, 
+        "product": 1, 
+        "serving_quantity": "1",
+        "quantity": "0"
+    }
+},
+{
+    "pk": 8, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 8, 
+        "product": 1, 
+        "serving_quantity": "1",
+        "quantity": "0"
+    }
+},
+{
+    "pk": 9, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 9, 
+        "product": 1, 
+        "serving_quantity": "1",
+        "quantity": "0"
+    }
+},
+{
+    "pk": 10, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 10, 
+        "product": 1, 
+        "serving_quantity": "1",
+        "quantity": "0"
+    }
+},
+{
+    "pk": 11, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 11, 
+        "product": 1, 
+        "serving_quantity": "1",
+        "quantity": "0"
+    }
+},
+{
+    "pk": 12, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 12, 
+        "product": 1, 
+        "serving_quantity": "1",
+        "quantity": "0"
+    }
+},
+{
+    "pk": 13, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 13, 
+        "product": 1, 
+        "serving_quantity": "1",
+        "quantity": "0"
+    }
+},
+{
+    "pk": 14, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 14, 
+        "product": 1, 
+        "serving_quantity": "1",
+        "quantity": "0"
+    }
+},
+{
+    "pk": 15, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 15, 
+        "product": 1, 
+        "serving_quantity": "1",
+        "quantity": "0"
+    }
+},
+{
+    "pk": 16, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 16, 
+        "product": 1, 
+        "serving_quantity": "1",
+        "quantity": "0"
+    }
+},
+{
+    "pk": 17, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 17, 
+        "product": 1, 
+        "serving_quantity": "1",
+        "quantity": "0"
+    }
+},
+{
+    "pk": 18, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 18, 
+        "product": 1, 
+        "serving_quantity": "1",
+        "quantity": "0"
+    }
+},
+{
+    "pk": 19, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 19, 
+        "product": 1, 
+        "serving_quantity": "1",
+        "quantity": "0"
+    }
+},
+{
+    "pk": 20, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 20, 
+        "product": 1, 
+        "serving_quantity": "1",
+        "quantity": "0"
+    }
+},
+{
+    "pk": 21, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 21, 
+        "product": 1, 
+        "serving_quantity": "1",
+        "quantity": "0"
+    }
+},
+{
+    "pk": 22, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 22, 
+        "product": 1, 
+        "serving_quantity": "1",
+        "quantity": "0"
+    }
+},
+{
+    "pk": 23, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 23, 
+        "product": 1, 
+        "serving_quantity": "1",
+        "quantity": "0"
+    }
+},
+{
+    "pk": 24, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 24, 
+        "product": 1, 
+        "serving_quantity": "1",
+        "quantity": "0"
+    }
+},
+{
+    "pk": 25, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 25, 
+        "product": 1, 
+        "serving_quantity": "1",
+        "quantity": "0"
+    }
+},
+{
+    "pk": 26, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 26, 
+        "product": 1, 
+        "serving_quantity": "1",
+        "quantity": "0"
+    }
+},
+{
+    "pk": 27, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 27, 
+        "product": 1, 
+        "serving_quantity": "1",
+        "quantity": "0"
+    }
+},
+{
+    "pk": 28, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 28, 
+        "product": 1, 
+        "serving_quantity": "1",
+        "quantity": "0"
+    }
+},
+{
+    "pk": 29, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 29, 
+        "product": 1, 
+        "serving_quantity": "1",
+        "quantity": "0"
+    }
+},
+{
+    "pk": 30, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 30, 
+        "product": 1, 
+        "serving_quantity": "1",
+        "quantity": "0"
+    }
+},
+{
+    "pk": 31, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 31, 
+        "product": 1, 
+        "serving_quantity": "1",
+        "quantity": "0"
+    }
+},
+{
+    "pk": 1, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 1, 
+        "action_time": "2013-05-15T04:41:42.635Z", 
+        "object_repr": "Oil", 
+        "object_id": "1", 
+        "change_message": "", 
+        "user": [
+            "victor"
+        ], 
+        "content_type": [
+            "product", 
+            "tag"
+        ]
+    }
+},
+{
+    "pk": 2, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 1, 
+        "action_time": "2013-05-15T04:41:49.857Z", 
+        "object_repr": "Soylent", 
+        "object_id": "2", 
+        "change_message": "", 
+        "user": [
+            "victor"
+        ], 
+        "content_type": [
+            "product", 
+            "tag"
+        ]
+    }
+}
+]

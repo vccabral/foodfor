@@ -9,7 +9,7 @@
         "is_active": true, 
         "is_superuser": true, 
         "is_staff": true, 
-        "last_login": "2013-05-15T02:54:30.288Z", 
+        "last_login": "2013-05-16T19:46:33.908Z", 
         "groups": [], 
         "user_permissions": [], 
         "password": "pbkdf2_sha256$10000$5d6yeW6VT8MB$SmVaEnCcw3zBl8E1YY4YbocOF25qKXBXCGXAGbXznYw=", 
@@ -18,10 +18,34 @@
     }
 },
 {
+    "pk": "2r9ppb9637jrglob1s76sggsjkoz3bvj", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2013-05-29T18:18:24.535Z", 
+        "session_data": "OTcxMGM3NTBjMzQ0ZDFiZDczMGVkNjFmMmM1MzUxNTU3MzMzZmQ4YTqAAn1xAShYDwAAAF9zZXNzaW9uX2V4cGlyeXECSwBVEl9hdXRoX3VzZXJfYmFja2VuZHEDVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEEVQ1fYXV0aF91c2VyX2lkcQVLAXUu"
+    }
+},
+{
+    "pk": "qpb9y6v7dnfyc9oujiha0bygyg7l7k7q", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2013-05-30T12:26:33.542Z", 
+        "session_data": "OTcxMGM3NTBjMzQ0ZDFiZDczMGVkNjFmMmM1MzUxNTU3MzMzZmQ4YTqAAn1xAShYDwAAAF9zZXNzaW9uX2V4cGlyeXECSwBVEl9hdXRoX3VzZXJfYmFja2VuZHEDVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEEVQ1fYXV0aF91c2VyX2lkcQVLAXUu"
+    }
+},
+{
     "pk": "s4772hjho7vcz0al9dex56s53hoewl62", 
     "model": "sessions.session", 
     "fields": {
         "expire_date": "2013-05-29T02:54:30.293Z", 
+        "session_data": "OTcxMGM3NTBjMzQ0ZDFiZDczMGVkNjFmMmM1MzUxNTU3MzMzZmQ4YTqAAn1xAShYDwAAAF9zZXNzaW9uX2V4cGlyeXECSwBVEl9hdXRoX3VzZXJfYmFja2VuZHEDVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEEVQ1fYXV0aF91c2VyX2lkcQVLAXUu"
+    }
+},
+{
+    "pk": "y4h8g2givpya05ivncvdnhkww5feii6n", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2013-05-30T19:46:33.913Z", 
         "session_data": "OTcxMGM3NTBjMzQ0ZDFiZDczMGVkNjFmMmM1MzUxNTU3MzMzZmQ4YTqAAn1xAShYDwAAAF9zZXNzaW9uX2V4cGlyeXECSwBVEl9hdXRoX3VzZXJfYmFja2VuZHEDVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEEVQ1fYXV0aF91c2VyX2lkcQVLAXUu"
     }
 },
@@ -89,6 +113,202 @@
     }
 },
 {
+    "pk": 3, 
+    "model": "product.tag", 
+    "fields": {
+        "name": "Vegetarian"
+    }
+},
+{
+    "pk": 4, 
+    "model": "product.tag", 
+    "fields": {
+        "name": "Vegan"
+    }
+},
+{
+    "pk": 5, 
+    "model": "product.tag", 
+    "fields": {
+        "name": "Dairy"
+    }
+},
+{
+    "pk": 6, 
+    "model": "product.tag", 
+    "fields": {
+        "name": "Fruit"
+    }
+},
+{
+    "pk": 7, 
+    "model": "product.tag", 
+    "fields": {
+        "name": "Supplement"
+    }
+},
+{
+    "pk": 8, 
+    "model": "product.tag", 
+    "fields": {
+        "name": "Exotic Fruit"
+    }
+},
+{
+    "pk": 9, 
+    "model": "product.tag", 
+    "fields": {
+        "name": "Kirkland Signature Extra Virgin Olive Oil, 2 Liters (Product of Italy)"
+    }
+},
+{
+    "pk": 10, 
+    "model": "product.tag", 
+    "fields": {
+        "name": "Optimum Nutrition Serious Mass"
+    }
+},
+{
+    "pk": 11, 
+    "model": "product.tag", 
+    "fields": {
+        "name": "Nature's Way Alive Liquid Multi-Vitamin"
+    }
+},
+{
+    "pk": 12, 
+    "model": "product.tag", 
+    "fields": {
+        "name": "Potassium Gluconate (99mg)"
+    }
+},
+{
+    "pk": 13, 
+    "model": "product.tag", 
+    "fields": {
+        "name": "Now Foods Iron Ferrochel(r)"
+    }
+},
+{
+    "pk": 14, 
+    "model": "product.tag", 
+    "fields": {
+        "name": "NOW Foods Calcium/magnesium 1000/500 mg"
+    }
+},
+{
+    "pk": 15, 
+    "model": "product.tag", 
+    "fields": {
+        "name": "100% Pure Monosodium Phosphate 4 oz (113 grams) Pwdr"
+    }
+},
+{
+    "pk": 16, 
+    "model": "product.tag", 
+    "fields": {
+        "name": "Nature's Way Choline"
+    }
+},
+{
+    "pk": 17, 
+    "model": "product.tag", 
+    "fields": {
+        "name": "Morton Salt 26 oz"
+    }
+},
+{
+    "pk": 18, 
+    "model": "product.tag", 
+    "fields": {
+        "name": "Whole Oat Powder 8 Pounds"
+    }
+},
+{
+    "pk": 19, 
+    "model": "product.tag", 
+    "fields": {
+        "name": "100% Whey Protein - Gold Standard"
+    }
+},
+{
+    "pk": 20, 
+    "model": "product.tag", 
+    "fields": {
+        "name": "Fitness Fiber"
+    }
+},
+{
+    "pk": 21, 
+    "model": "product.tag", 
+    "fields": {
+        "name": "Now Foods, Carbo Gain 100% Complex Carbohydrate"
+    }
+},
+{
+    "pk": 22, 
+    "model": "product.tag", 
+    "fields": {
+        "name": "Optimum Nutrition Serious Mass 18 lbs"
+    }
+},
+{
+    "pk": 23, 
+    "model": "product.tag", 
+    "fields": {
+        "name": "Now Foods Calcium Carbonate"
+    }
+},
+{
+    "pk": 24, 
+    "model": "product.tag", 
+    "fields": {
+        "name": "NOW Foods Magnesium Citrate Powder"
+    }
+},
+{
+    "pk": 25, 
+    "model": "product.tag", 
+    "fields": {
+        "name": "Coromega Omega-3 Supplement, Orange Flavor, Squeeze Packets, 90-Count Box"
+    }
+},
+{
+    "pk": 26, 
+    "model": "product.tag", 
+    "fields": {
+        "name": "NOW Foods Chromium Picolinate 200mcg"
+    }
+},
+{
+    "pk": 27, 
+    "model": "product.tag", 
+    "fields": {
+        "name": "Now Foods Vitamin D-3 & K-2"
+    }
+},
+{
+    "pk": 28, 
+    "model": "product.tag", 
+    "fields": {
+        "name": "Solgar - Folate (Metafolin)800 Mcg, 100 tablets"
+    }
+},
+{
+    "pk": 29, 
+    "model": "product.tag", 
+    "fields": {
+        "name": "One-A-Day Energy Multivitamin 100 Tablets"
+    }
+},
+{
+    "pk": 30, 
+    "model": "product.tag", 
+    "fields": {
+        "name": "Now Foods Choline & Inositol, 100 caps / 500mg ( Multi-Pack)"
+    }
+},
+{
     "pk": 1, 
     "model": "product.nutrient", 
     "fields": {
@@ -122,8 +342,8 @@
     "pk": 4, 
     "model": "product.nutrient", 
     "fields": {
-        "recommended_min_intake": "2.4", 
-        "recommended_max_intake": "4.8", 
+        "recommended_min_intake": "2.3", 
+        "recommended_max_intake": "2.4", 
         "name": "Sodium", 
         "unit": "grams"
     }
@@ -133,7 +353,7 @@
     "model": "product.nutrient", 
     "fields": {
         "recommended_min_intake": "3.5", 
-        "recommended_max_intake": "6", 
+        "recommended_max_intake": "1000", 
         "name": "Potassium", 
         "unit": "grams"
     }
@@ -143,7 +363,7 @@
     "model": "product.nutrient", 
     "fields": {
         "recommended_min_intake": "3.4", 
-        "recommended_max_intake": "6.8", 
+        "recommended_max_intake": "3.6", 
         "name": "Chloride", 
         "unit": "grams"
     }
@@ -153,7 +373,7 @@
     "model": "product.nutrient", 
     "fields": {
         "recommended_min_intake": "4", 
-        "recommended_max_intake": "8", 
+        "recommended_max_intake": "40", 
         "name": "Fiber", 
         "unit": "grams"
     }
@@ -163,7 +383,7 @@
     "model": "product.nutrient", 
     "fields": {
         "recommended_min_intake": "1", 
-        "recommended_max_intake": "1.5", 
+        "recommended_max_intake": "2.5", 
         "name": "Calcium", 
         "unit": "grams"
     }
@@ -173,7 +393,7 @@
     "model": "product.nutrient", 
     "fields": {
         "recommended_min_intake": "18", 
-        "recommended_max_intake": "22", 
+        "recommended_max_intake": "45", 
         "name": "Iron", 
         "unit": "milligrams"
     }
@@ -183,7 +403,7 @@
     "model": "product.nutrient", 
     "fields": {
         "recommended_min_intake": "1", 
-        "recommended_max_intake": "1.2", 
+        "recommended_max_intake": "3", 
         "name": "Phosphorous", 
         "unit": "grams"
     }
@@ -193,7 +413,7 @@
     "model": "product.nutrient", 
     "fields": {
         "recommended_min_intake": "150", 
-        "recommended_max_intake": "160", 
+        "recommended_max_intake": "1100", 
         "name": "Iodine", 
         "unit": "ugrams"
     }
@@ -203,7 +423,7 @@
     "model": "product.nutrient", 
     "fields": {
         "recommended_min_intake": "400", 
-        "recommended_max_intake": "500", 
+        "recommended_max_intake": "4000", 
         "name": "Magnesium", 
         "unit": "milligrams"
     }
@@ -213,7 +433,7 @@
     "model": "product.nutrient", 
     "fields": {
         "recommended_min_intake": "15", 
-        "recommended_max_intake": "20", 
+        "recommended_max_intake": "40", 
         "name": "Zinc", 
         "unit": "milligrams"
     }
@@ -223,7 +443,7 @@
     "model": "product.nutrient", 
     "fields": {
         "recommended_min_intake": "70", 
-        "recommended_max_intake": "75", 
+        "recommended_max_intake": "400", 
         "name": "Selenium", 
         "unit": "ugrams"
     }
@@ -233,7 +453,7 @@
     "model": "product.nutrient", 
     "fields": {
         "recommended_min_intake": "2", 
-        "recommended_max_intake": "3", 
+        "recommended_max_intake": "10", 
         "name": "Copper", 
         "unit": "milligrams"
     }
@@ -243,7 +463,7 @@
     "model": "product.nutrient", 
     "fields": {
         "recommended_min_intake": "2", 
-        "recommended_max_intake": "3", 
+        "recommended_max_intake": "11", 
         "name": "Manganese", 
         "unit": "milligrams"
     }
@@ -253,7 +473,7 @@
     "model": "product.nutrient", 
     "fields": {
         "recommended_min_intake": "120", 
-        "recommended_max_intake": "130", 
+        "recommended_max_intake": "1200", 
         "name": "Chromium", 
         "unit": "ugrams"
     }
@@ -263,7 +483,7 @@
     "model": "product.nutrient", 
     "fields": {
         "recommended_min_intake": "75", 
-        "recommended_max_intake": "80", 
+        "recommended_max_intake": "2000", 
         "name": "Molybdenum", 
         "unit": "ugrams"
     }
@@ -273,7 +493,7 @@
     "model": "product.nutrient", 
     "fields": {
         "recommended_min_intake": "5000", 
-        "recommended_max_intake": "100000", 
+        "recommended_max_intake": "25000", 
         "name": "Vitamin A", 
         "unit": "IU"
     }
@@ -283,7 +503,7 @@
     "model": "product.nutrient", 
     "fields": {
         "recommended_min_intake": "2", 
-        "recommended_max_intake": "3", 
+        "recommended_max_intake": "100", 
         "name": "Vitamin B6", 
         "unit": "milligrams"
     }
@@ -292,9 +512,9 @@
     "pk": 21, 
     "model": "product.nutrient", 
     "fields": {
-        "recommended_min_intake": "6", 
-        "recommended_max_intake": "7", 
-        "name": "Vitamin B1", 
+        "recommended_min_intake": "1.5", 
+        "recommended_max_intake": "150", 
+        "name": "Vitamin B1 (Thiamin)", 
         "unit": "ugrams"
     }
 },
@@ -303,7 +523,7 @@
     "model": "product.nutrient", 
     "fields": {
         "recommended_min_intake": "60", 
-        "recommended_max_intake": "70", 
+        "recommended_max_intake": "2000", 
         "name": "Vitamin C", 
         "unit": "milligrams"
     }
@@ -313,7 +533,7 @@
     "model": "product.nutrient", 
     "fields": {
         "recommended_min_intake": "400", 
-        "recommended_max_intake": "500", 
+        "recommended_max_intake": "2000", 
         "name": "Vitamin D", 
         "unit": "IU"
     }
@@ -323,7 +543,7 @@
     "model": "product.nutrient", 
     "fields": {
         "recommended_min_intake": "30", 
-        "recommended_max_intake": "40", 
+        "recommended_max_intake": "1363", 
         "name": "Vitamin E", 
         "unit": "IU"
     }
@@ -333,19 +553,9 @@
     "model": "product.nutrient", 
     "fields": {
         "recommended_min_intake": "80", 
-        "recommended_max_intake": "90", 
+        "recommended_max_intake": "800", 
         "name": "Vitamin K", 
         "unit": "ugrams"
-    }
-},
-{
-    "pk": 26, 
-    "model": "product.nutrient", 
-    "fields": {
-        "recommended_min_intake": "1.5", 
-        "recommended_max_intake": "2", 
-        "name": "Thiamin", 
-        "unit": "milligrams"
     }
 },
 {
@@ -353,7 +563,7 @@
     "model": "product.nutrient", 
     "fields": {
         "recommended_min_intake": "1.7", 
-        "recommended_max_intake": "2", 
+        "recommended_max_intake": "170", 
         "name": "Riboflavin", 
         "unit": "milligrams"
     }
@@ -363,7 +573,7 @@
     "model": "product.nutrient", 
     "fields": {
         "recommended_min_intake": "20", 
-        "recommended_max_intake": "30", 
+        "recommended_max_intake": "150", 
         "name": "Niacin", 
         "unit": "milligrams"
     }
@@ -373,7 +583,7 @@
     "model": "product.nutrient", 
     "fields": {
         "recommended_min_intake": "400", 
-        "recommended_max_intake": "500", 
+        "recommended_max_intake": "1000", 
         "name": "Folate", 
         "unit": "ugrams"
     }
@@ -383,7 +593,7 @@
     "model": "product.nutrient", 
     "fields": {
         "recommended_min_intake": "300", 
-        "recommended_max_intake": "400", 
+        "recommended_max_intake": "3000", 
         "name": "Biotin", 
         "unit": "ugrams"
     }
@@ -393,8 +603,18 @@
     "model": "product.nutrient", 
     "fields": {
         "recommended_min_intake": "10", 
-        "recommended_max_intake": "15", 
+        "recommended_max_intake": "100", 
         "name": "Panthothenic Acid", 
+        "unit": "milligrams"
+    }
+},
+{
+    "pk": 32, 
+    "model": "product.nutrient", 
+    "fields": {
+        "recommended_min_intake": "550", 
+        "recommended_max_intake": "3500", 
+        "name": "Choline", 
         "unit": "milligrams"
     }
 },
@@ -402,16 +622,384 @@
     "pk": 1, 
     "model": "product.product", 
     "fields": {
-        "name": "Kirkland Signature Extra Virgin Olive Oil, 2 Liter", 
-        "serving_per_container": "1", 
-         "tags": [
+        "name": "Kirkland Signature Extra Virgin Olive Oil, 2 Liters (Product of Italy)", 
+        "tags": [
             1, 
-            2
+            2, 
+            9
         ], 
         "url": "http://www.amazon.com/Kirkland-Signature-Virgin-Liters-Product/dp/B0027EOTKO", 
-        "price": "23.9", 
+        "price": "23.89", 
         "down_votes": [], 
-        "up_votes": []
+        "up_votes": [], 
+        "serving_per_container": "100"
+    }
+},
+{
+    "pk": 2, 
+    "model": "product.product", 
+    "fields": {
+        "name": "Optimum Nutrition Serious Mass", 
+        "tags": [
+            2, 
+            10
+        ], 
+        "url": "http://www.amazon.com/dp/B000GIPJ0M/ref=as_li_ss_til?tag=soylmake-20&camp=213381&creative=390973&linkCode=as4&creativeASIN=B000GIPJ0M&adid=15WY6MD0WKCVX04W9T5B&&ref-refURL=http%3A%2F%2Fsoylentmaker.co", 
+        "price": "62.99", 
+        "down_votes": [], 
+        "up_votes": [], 
+        "serving_per_container": "16.29"
+    }
+},
+{
+    "pk": 3, 
+    "model": "product.product", 
+    "fields": {
+        "name": "Nature's Way Alive Liquid Multi-Vitamin", 
+        "tags": [
+            11
+        ], 
+        "url": "http://www.amazon.com/dp/B0019I8NXS/ref=as_li_ss_til?tag=soylmake-20&camp=213381&creative=390973&linkCode=as4&creativeASIN=B0019I8NXS&adid=0MJX5M6KMA5GVB1MWD6R&&ref-refURL=http%3A%2F%2Fsoylentmaker.co", 
+        "price": "19.09", 
+        "down_votes": [], 
+        "up_votes": [], 
+        "serving_per_container": "30"
+    }
+},
+{
+    "pk": 4, 
+    "model": "product.product", 
+    "fields": {
+        "name": "Potassium Gluconate (99mg)", 
+        "tags": [
+            2, 
+            12
+        ], 
+        "url": "http://www.amazon.com/dp/B0015C2ZI2/ref=as_li_ss_til?tag=soylmake-20&camp=213381&creative=390973&linkCode=as4&creativeASIN=B0015C2ZI2&adid=09Z6AQYFJBXHAGBSMPME&&ref-refURL=http%3A%2F%2Fsoylentmaker.co", 
+        "price": "9.48", 
+        "down_votes": [], 
+        "up_votes": [], 
+        "serving_per_container": "130"
+    }
+},
+{
+    "pk": 5, 
+    "model": "product.product", 
+    "fields": {
+        "name": "Now Foods Iron Ferrochel(r)", 
+        "tags": [
+            2, 
+            13
+        ], 
+        "url": "http://www.amazon.com/dp/B000WQDD2O/ref=as_li_qf_sp_asin_til?tag=soylmake-20&camp=0&creative=0&linkCode=as1&creativeASIN=B000WQDD2O&adid=1BM0JQD9G4XG8TKZZ3NJ", 
+        "price": "7.78", 
+        "down_votes": [], 
+        "up_votes": [], 
+        "serving_per_container": "120"
+    }
+},
+{
+    "pk": 6, 
+    "model": "product.product", 
+    "fields": {
+        "name": "NOW Foods Calcium/magnesium 1000/500 mg", 
+        "tags": [
+            2, 
+            14
+        ], 
+        "url": "http://www.amazon.com/dp/B000F3X5TA/ref=as_li_ss_til?tag=soylmake-20&camp=213381&creative=390973&linkCode=as4&creativeASIN=B000F3X5TA&adid=1XT260030JE1STXG7D5S&&ref-refURL=http%3A%2F%2Fsoylentmaker.co", 
+        "price": "7.99", 
+        "down_votes": [], 
+        "up_votes": [], 
+        "serving_per_container": "60"
+    }
+},
+{
+    "pk": 7, 
+    "model": "product.product", 
+    "fields": {
+        "name": "100% Pure Monosodium Phosphate 4 oz (113 grams) Pwdr", 
+        "tags": [
+            2, 
+            15
+        ], 
+        "url": "http://www.amazon.com/gp/product/B008BRBVZW?ie=UTF8&camp=1789&creativeASIN=B008BRBVZW&linkCode=xm2&tag=soylmake-20", 
+        "price": "3.99", 
+        "down_votes": [], 
+        "up_votes": [], 
+        "serving_per_container": "113"
+    }
+},
+{
+    "pk": 8, 
+    "model": "product.product", 
+    "fields": {
+        "name": "Nature's Way Choline", 
+        "tags": [
+            2, 
+            16
+        ], 
+        "url": "http://www.amazon.com/NATURES-WAY-Choline-500mg-CAPS/dp/B00024CRC8", 
+        "price": "9.23", 
+        "down_votes": [], 
+        "up_votes": [], 
+        "serving_per_container": "100"
+    }
+},
+{
+    "pk": 9, 
+    "model": "product.product", 
+    "fields": {
+        "name": "Morton Salt 26 oz", 
+        "tags": [
+            2, 
+            17
+        ], 
+        "url": "http://www.amazon.com/Morton-Salt-26-oz/dp/B0005ZV1CQ/ref=sr_1_5?s=grocery&ie=UTF8&qid=1368715435&sr=1-5&keywords=table+salt", 
+        "price": "6.99", 
+        "down_votes": [], 
+        "up_votes": [], 
+        "serving_per_container": "491"
+    }
+},
+{
+    "pk": 10, 
+    "model": "product.product", 
+    "fields": {
+        "name": "Nature's Way Alive Liquid Multi-Vitamin", 
+        "tags": [
+            2, 
+            11
+        ], 
+        "url": "http://www.amazon.com/dp/B0019I8NXS/ref=as_li_ss_til?tag=soylmake-20&camp=213381&creative=390973&linkCode=as4&creativeASIN=B0019I8NXS&adid=0MJX5M6KMA5GVB1MWD6R&&ref-refURL=http%3A%2F%2Fsoylentmaker.co", 
+        "price": "19.09", 
+        "down_votes": [], 
+        "up_votes": [], 
+        "serving_per_container": "30"
+    }
+},
+{
+    "pk": 11, 
+    "model": "product.product", 
+    "fields": {
+        "name": "Whole Oat Powder 8 Pounds", 
+        "tags": [
+            2, 
+            18
+        ], 
+        "url": "http://www.amazon.com/dp/B008QHPVO4/ref=as_li_tf_til?tag=soylmake-20&camp=0&creative=0&linkCode=as1&creativeASIN=B008QHPVO4&adid=1RA85DNA3BXJN4GTRKYBhttp://www.amazon.com/dp/B008QHPVO4/ref=as_li_tf_ti", 
+        "price": "27.99", 
+        "down_votes": [], 
+        "up_votes": [], 
+        "serving_per_container": "45"
+    }
+},
+{
+    "pk": 12, 
+    "model": "product.product", 
+    "fields": {
+        "name": "100% Whey Protein - Gold Standard", 
+        "tags": [
+            2, 
+            19
+        ], 
+        "url": "http://www.amazon.com/dp/B000QSNYGI/ref=as_li_tf_til?tag=soylmake-20&camp=0&creative=0&linkCode=as1&creativeASIN=B000QSNYGI&adid=0EDHT4W8Q4BN1W183A53", 
+        "price": "51.34", 
+        "down_votes": [], 
+        "up_votes": [], 
+        "serving_per_container": "74"
+    }
+},
+{
+    "pk": 13, 
+    "model": "product.product", 
+    "fields": {
+        "name": "Fitness Fiber", 
+        "tags": [
+            2, 
+            20
+        ], 
+        "url": "http://www.amazon.com/dp/B003VUHU0O/ref=as_li_tf_til?tag=soylmake-20&camp=0&creative=0&linkCode=as1&creativeASIN=B003VUHU0O&adid=05JZE0GHJB3YT1A4DX63", 
+        "price": "8.85", 
+        "down_votes": [], 
+        "up_votes": [], 
+        "serving_per_container": "30"
+    }
+},
+{
+    "pk": 14, 
+    "model": "product.product", 
+    "fields": {
+        "name": "Now Foods, Carbo Gain 100% Complex Carbohydrate", 
+        "tags": [
+            2, 
+            21
+        ], 
+        "url": "http://www.amazon.com/dp/B0013OUNRM/ref=as_li_tf_til?tag=soylmake-20&camp=0&creative=0&linkCode=as1&creativeASIN=B0013OUNRM&adid=08E2CR0B1PHAJZ1NCBZW", 
+        "price": "23.48", 
+        "down_votes": [], 
+        "up_votes": [], 
+        "serving_per_container": "18"
+    }
+},
+{
+    "pk": 15, 
+    "model": "product.product", 
+    "fields": {
+        "name": "Optimum Nutrition Serious Mass 18 lbs", 
+        "tags": [
+            2, 
+            22
+        ], 
+        "url": "http://www.amazon.com/dp/B000GIPJ0M/ref=as_li_ss_til?tag=soylmake-20&camp=213381&creative=390973&linkCode=as4&creativeASIN=B000GIPJ0M&adid=15WY6MD0WKCVX04W9T5B&&ref-refURL=http%3A%2F%2Fsoylentmaker.co", 
+        "price": "119.99", 
+        "down_votes": [], 
+        "up_votes": [], 
+        "serving_per_container": "24.445"
+    }
+},
+{
+    "pk": 16, 
+    "model": "product.product", 
+    "fields": {
+        "name": "Potassium Gluconate (99mg)", 
+        "tags": [
+            2, 
+            12
+        ], 
+        "url": "http://www.amazon.com/gp/product/B0015C2ZI2/ref=oh_details_o03_s00_i00?ie=UTF8&psc=1", 
+        "price": "9.48", 
+        "down_votes": [], 
+        "up_votes": [], 
+        "serving_per_container": "130"
+    }
+},
+{
+    "pk": 17, 
+    "model": "product.product", 
+    "fields": {
+        "name": "Now Foods Calcium Carbonate", 
+        "tags": [
+            2, 
+            23
+        ], 
+        "url": "http://www.amazon.com/gp/product/B000ZL1XUK/ref=oh_details_o03_s00_i04?ie=UTF8&psc=1", 
+        "price": "10.23", 
+        "down_votes": [], 
+        "up_votes": [], 
+        "serving_per_container": "227"
+    }
+},
+{
+    "pk": 18, 
+    "model": "product.product", 
+    "fields": {
+        "name": "NOW Foods Magnesium Citrate Powder", 
+        "tags": [
+            2, 
+            24
+        ], 
+        "url": "http://www.amazon.com/Foods-Magnesium-Citrate-Powder-Ounces/dp/B004189JCW/ref=lh_ni_t?ie=UTF8&psc=1&smid=ATVPDKIKX0DER", 
+        "price": "6.99", 
+        "down_votes": [], 
+        "up_votes": [], 
+        "serving_per_container": "119"
+    }
+},
+{
+    "pk": 19, 
+    "model": "product.product", 
+    "fields": {
+        "name": "Coromega Omega-3 Supplement, Orange Flavor, Squeeze Packets, 90-Count Box", 
+        "tags": [
+            2, 
+            25
+        ], 
+        "url": "http://www.amazon.com/gp/product/B000FFQATA/ref=oh_details_o03_s00_i02?ie=UTF8&psc=1", 
+        "price": "23.51", 
+        "down_votes": [], 
+        "up_votes": [], 
+        "serving_per_container": "90"
+    }
+},
+{
+    "pk": 20, 
+    "model": "product.product", 
+    "fields": {
+        "name": "NOW Foods Chromium Picolinate 200mcg", 
+        "tags": [
+            2, 
+            26
+        ], 
+        "url": "http://www.amazon.com/gp/product/B000MGWGP4/ref=oh_details_o02_s00_i00?ie=UTF8&psc=1", 
+        "price": "5.8", 
+        "down_votes": [], 
+        "up_votes": [], 
+        "serving_per_container": "100"
+    }
+},
+{
+    "pk": 21, 
+    "model": "product.product", 
+    "fields": {
+        "name": "Now Foods Vitamin D-3 & K-2", 
+        "tags": [
+            2, 
+            27
+        ], 
+        "url": "http://www.amazon.com/gp/product/B0019QT9LA/ref=oh_details_o03_s00_i03?ie=UTF8&psc=1", 
+        "price": "6.99", 
+        "down_votes": [], 
+        "up_votes": [], 
+        "serving_per_container": "120"
+    }
+},
+{
+    "pk": 22, 
+    "model": "product.product", 
+    "fields": {
+        "name": "Solgar - Folate (Metafolin)800 Mcg, 100 tablets", 
+        "tags": [
+            2, 
+            28
+        ], 
+        "url": "http://www.amazon.com/gp/product/B001LR2RVQ/ref=oh_details_o03_s01_i00?ie=UTF8&psc=1", 
+        "price": "12.4", 
+        "down_votes": [], 
+        "up_votes": [], 
+        "serving_per_container": "100"
+    }
+},
+{
+    "pk": 23, 
+    "model": "product.product", 
+    "fields": {
+        "name": "One-A-Day Energy Multivitamin 100 Tablets", 
+        "tags": [
+            2, 
+            29
+        ], 
+        "url": "http://www.amazon.com/One-A-Day-Energy-Multivitamin-100-Tablets/dp/B001LRPUL0", 
+        "price": "14.96", 
+        "down_votes": [], 
+        "up_votes": [], 
+        "serving_per_container": "100"
+    }
+},
+{
+    "pk": 24, 
+    "model": "product.product", 
+    "fields": {
+        "name": "Now Foods Choline & Inositol, 100 caps / 500mg ( Multi-Pack)", 
+        "tags": [
+            2, 
+            30
+        ], 
+        "url": "http://www.amazon.com/Foods-Choline-Inositol-Capsules-500mg/dp/B001F0R65Q/ref=sr_1_5?ie=UTF8&qid=1365655338&sr=8-5&keywords=choline", 
+        "price": "21.99", 
+        "down_votes": [], 
+        "up_votes": [], 
+        "serving_per_container": "100"
     }
 },
 {
@@ -420,7 +1008,7 @@
     "fields": {
         "nutrient": 1, 
         "product": 1, 
-        "serving_quantity": "1",
+        "serving_quantity": "0", 
         "quantity": "0"
     }
 },
@@ -430,7 +1018,7 @@
     "fields": {
         "nutrient": 2, 
         "product": 1, 
-        "serving_quantity": "1",
+        "serving_quantity": "0", 
         "quantity": "0"
     }
 },
@@ -440,7 +1028,7 @@
     "fields": {
         "nutrient": 3, 
         "product": 1, 
-        "serving_quantity": "1",
+        "serving_quantity": "18.62", 
         "quantity": "1862"
     }
 },
@@ -450,7 +1038,7 @@
     "fields": {
         "nutrient": 4, 
         "product": 1, 
-        "serving_quantity": "1",
+        "serving_quantity": "0", 
         "quantity": "0"
     }
 },
@@ -460,7 +1048,7 @@
     "fields": {
         "nutrient": 5, 
         "product": 1, 
-        "serving_quantity": "1",
+        "serving_quantity": "0", 
         "quantity": "0"
     }
 },
@@ -470,7 +1058,7 @@
     "fields": {
         "nutrient": 6, 
         "product": 1, 
-        "serving_quantity": "1",
+        "serving_quantity": "0", 
         "quantity": "0"
     }
 },
@@ -480,7 +1068,7 @@
     "fields": {
         "nutrient": 7, 
         "product": 1, 
-        "serving_quantity": "1",
+        "serving_quantity": "0", 
         "quantity": "0"
     }
 },
@@ -490,7 +1078,7 @@
     "fields": {
         "nutrient": 8, 
         "product": 1, 
-        "serving_quantity": "1",
+        "serving_quantity": "0", 
         "quantity": "0"
     }
 },
@@ -500,7 +1088,7 @@
     "fields": {
         "nutrient": 9, 
         "product": 1, 
-        "serving_quantity": "1",
+        "serving_quantity": "0", 
         "quantity": "0"
     }
 },
@@ -510,7 +1098,7 @@
     "fields": {
         "nutrient": 10, 
         "product": 1, 
-        "serving_quantity": "1",
+        "serving_quantity": "0", 
         "quantity": "0"
     }
 },
@@ -520,7 +1108,7 @@
     "fields": {
         "nutrient": 11, 
         "product": 1, 
-        "serving_quantity": "1",
+        "serving_quantity": "0", 
         "quantity": "0"
     }
 },
@@ -530,7 +1118,7 @@
     "fields": {
         "nutrient": 12, 
         "product": 1, 
-        "serving_quantity": "1",
+        "serving_quantity": "0", 
         "quantity": "0"
     }
 },
@@ -540,7 +1128,7 @@
     "fields": {
         "nutrient": 13, 
         "product": 1, 
-        "serving_quantity": "1",
+        "serving_quantity": "0", 
         "quantity": "0"
     }
 },
@@ -550,7 +1138,7 @@
     "fields": {
         "nutrient": 14, 
         "product": 1, 
-        "serving_quantity": "1",
+        "serving_quantity": "0", 
         "quantity": "0"
     }
 },
@@ -560,7 +1148,7 @@
     "fields": {
         "nutrient": 15, 
         "product": 1, 
-        "serving_quantity": "1",
+        "serving_quantity": "0", 
         "quantity": "0"
     }
 },
@@ -570,7 +1158,7 @@
     "fields": {
         "nutrient": 16, 
         "product": 1, 
-        "serving_quantity": "1",
+        "serving_quantity": "0", 
         "quantity": "0"
     }
 },
@@ -580,7 +1168,7 @@
     "fields": {
         "nutrient": 17, 
         "product": 1, 
-        "serving_quantity": "1",
+        "serving_quantity": "0", 
         "quantity": "0"
     }
 },
@@ -590,7 +1178,7 @@
     "fields": {
         "nutrient": 18, 
         "product": 1, 
-        "serving_quantity": "1",
+        "serving_quantity": "0", 
         "quantity": "0"
     }
 },
@@ -600,7 +1188,7 @@
     "fields": {
         "nutrient": 19, 
         "product": 1, 
-        "serving_quantity": "1",
+        "serving_quantity": "0", 
         "quantity": "0"
     }
 },
@@ -610,7 +1198,7 @@
     "fields": {
         "nutrient": 20, 
         "product": 1, 
-        "serving_quantity": "1",
+        "serving_quantity": "0", 
         "quantity": "0"
     }
 },
@@ -620,7 +1208,7 @@
     "fields": {
         "nutrient": 21, 
         "product": 1, 
-        "serving_quantity": "1",
+        "serving_quantity": "0", 
         "quantity": "0"
     }
 },
@@ -630,7 +1218,7 @@
     "fields": {
         "nutrient": 22, 
         "product": 1, 
-        "serving_quantity": "1",
+        "serving_quantity": "0", 
         "quantity": "0"
     }
 },
@@ -640,7 +1228,7 @@
     "fields": {
         "nutrient": 23, 
         "product": 1, 
-        "serving_quantity": "1",
+        "serving_quantity": "0", 
         "quantity": "0"
     }
 },
@@ -650,7 +1238,7 @@
     "fields": {
         "nutrient": 24, 
         "product": 1, 
-        "serving_quantity": "1",
+        "serving_quantity": "0", 
         "quantity": "0"
     }
 },
@@ -660,17 +1248,7 @@
     "fields": {
         "nutrient": 25, 
         "product": 1, 
-        "serving_quantity": "1",
-        "quantity": "0"
-    }
-},
-{
-    "pk": 26, 
-    "model": "product.productnutrient", 
-    "fields": {
-        "nutrient": 26, 
-        "product": 1, 
-        "serving_quantity": "1",
+        "serving_quantity": "0", 
         "quantity": "0"
     }
 },
@@ -680,7 +1258,7 @@
     "fields": {
         "nutrient": 27, 
         "product": 1, 
-        "serving_quantity": "1",
+        "serving_quantity": "0", 
         "quantity": "0"
     }
 },
@@ -690,7 +1268,7 @@
     "fields": {
         "nutrient": 28, 
         "product": 1, 
-        "serving_quantity": "1",
+        "serving_quantity": "0", 
         "quantity": "0"
     }
 },
@@ -700,7 +1278,7 @@
     "fields": {
         "nutrient": 29, 
         "product": 1, 
-        "serving_quantity": "1",
+        "serving_quantity": "0", 
         "quantity": "0"
     }
 },
@@ -710,7 +1288,7 @@
     "fields": {
         "nutrient": 30, 
         "product": 1, 
-        "serving_quantity": "1",
+        "serving_quantity": "0", 
         "quantity": "0"
     }
 },
@@ -720,8 +1298,7477 @@
     "fields": {
         "nutrient": 31, 
         "product": 1, 
-        "serving_quantity": "1",
+        "serving_quantity": "0", 
         "quantity": "0"
+    }
+},
+{
+    "pk": 32, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 1, 
+        "product": 2, 
+        "serving_quantity": "252", 
+        "quantity": "4105.08"
+    }
+},
+{
+    "pk": 33, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 2, 
+        "product": 2, 
+        "serving_quantity": "50", 
+        "quantity": "814.5"
+    }
+},
+{
+    "pk": 34, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 3, 
+        "product": 2, 
+        "serving_quantity": "4.5", 
+        "quantity": "73.305"
+    }
+},
+{
+    "pk": 35, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 4, 
+        "product": 2, 
+        "serving_quantity": "0.41", 
+        "quantity": "6.6789"
+    }
+},
+{
+    "pk": 36, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 5, 
+        "product": 2, 
+        "serving_quantity": "1.56", 
+        "quantity": "25.4124"
+    }
+},
+{
+    "pk": 37, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 6, 
+        "product": 2, 
+        "serving_quantity": "0.6638", 
+        "quantity": "10.8133"
+    }
+},
+{
+    "pk": 38, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 7, 
+        "product": 2, 
+        "serving_quantity": "4", 
+        "quantity": "65.16"
+    }
+},
+{
+    "pk": 39, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 8, 
+        "product": 2, 
+        "serving_quantity": "0.59", 
+        "quantity": "9.6111"
+    }
+},
+{
+    "pk": 40, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 9, 
+        "product": 2, 
+        "serving_quantity": "8", 
+        "quantity": "130.32"
+    }
+},
+{
+    "pk": 41, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 10, 
+        "product": 2, 
+        "serving_quantity": "0.43", 
+        "quantity": "7.0047"
+    }
+},
+{
+    "pk": 42, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 11, 
+        "product": 2, 
+        "serving_quantity": "150", 
+        "quantity": "2443.5"
+    }
+},
+{
+    "pk": 43, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 12, 
+        "product": 2, 
+        "serving_quantity": "140", 
+        "quantity": "2280.6"
+    }
+},
+{
+    "pk": 44, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 13, 
+        "product": 2, 
+        "serving_quantity": "15", 
+        "quantity": "244.35"
+    }
+},
+{
+    "pk": 45, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 14, 
+        "product": 2, 
+        "serving_quantity": "70", 
+        "quantity": "1140.3"
+    }
+},
+{
+    "pk": 46, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 15, 
+        "product": 2, 
+        "serving_quantity": "1.6", 
+        "quantity": "26.064"
+    }
+},
+{
+    "pk": 47, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 16, 
+        "product": 2, 
+        "serving_quantity": "2", 
+        "quantity": "32.58"
+    }
+},
+{
+    "pk": 48, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 17, 
+        "product": 2, 
+        "serving_quantity": "120", 
+        "quantity": "1954.8"
+    }
+},
+{
+    "pk": 49, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 18, 
+        "product": 2, 
+        "serving_quantity": "75", 
+        "quantity": "1221.75"
+    }
+},
+{
+    "pk": 50, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 19, 
+        "product": 2, 
+        "serving_quantity": "5000", 
+        "quantity": "81450"
+    }
+},
+{
+    "pk": 51, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 20, 
+        "product": 2, 
+        "serving_quantity": "5", 
+        "quantity": "81.45"
+    }
+},
+{
+    "pk": 52, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 21, 
+        "product": 2, 
+        "serving_quantity": "4.8", 
+        "quantity": "78.192"
+    }
+},
+{
+    "pk": 53, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 22, 
+        "product": 2, 
+        "serving_quantity": "60", 
+        "quantity": "977.4"
+    }
+},
+{
+    "pk": 54, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 23, 
+        "product": 2, 
+        "serving_quantity": "200", 
+        "quantity": "3258"
+    }
+},
+{
+    "pk": 55, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 24, 
+        "product": 2, 
+        "serving_quantity": "30", 
+        "quantity": "488.7"
+    }
+},
+{
+    "pk": 56, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 25, 
+        "product": 2, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 58, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 27, 
+        "product": 2, 
+        "serving_quantity": "4", 
+        "quantity": "65.16"
+    }
+},
+{
+    "pk": 59, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 28, 
+        "product": 2, 
+        "serving_quantity": "50", 
+        "quantity": "814.5"
+    }
+},
+{
+    "pk": 60, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 29, 
+        "product": 2, 
+        "serving_quantity": "400", 
+        "quantity": "6516"
+    }
+},
+{
+    "pk": 61, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 30, 
+        "product": 2, 
+        "serving_quantity": "300", 
+        "quantity": "4887"
+    }
+},
+{
+    "pk": 62, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 31, 
+        "product": 2, 
+        "serving_quantity": "25", 
+        "quantity": "407.25"
+    }
+},
+{
+    "pk": 63, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 1, 
+        "product": 3, 
+        "serving_quantity": "12", 
+        "quantity": "360"
+    }
+},
+{
+    "pk": 64, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 2, 
+        "product": 3, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 65, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 3, 
+        "product": 3, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 66, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 4, 
+        "product": 3, 
+        "serving_quantity": "0.015", 
+        "quantity": "0.45"
+    }
+},
+{
+    "pk": 67, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 5, 
+        "product": 3, 
+        "serving_quantity": "0.05", 
+        "quantity": "1.5"
+    }
+},
+{
+    "pk": 68, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 6, 
+        "product": 3, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 69, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 7, 
+        "product": 3, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 70, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 8, 
+        "product": 3, 
+        "serving_quantity": "0.1", 
+        "quantity": "3"
+    }
+},
+{
+    "pk": 71, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 9, 
+        "product": 3, 
+        "serving_quantity": "1", 
+        "quantity": "30"
+    }
+},
+{
+    "pk": 72, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 10, 
+        "product": 3, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 73, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 11, 
+        "product": 3, 
+        "serving_quantity": "150", 
+        "quantity": "4500"
+    }
+},
+{
+    "pk": 74, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 12, 
+        "product": 3, 
+        "serving_quantity": "40", 
+        "quantity": "1200"
+    }
+},
+{
+    "pk": 75, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 13, 
+        "product": 3, 
+        "serving_quantity": "15", 
+        "quantity": "450"
+    }
+},
+{
+    "pk": 76, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 14, 
+        "product": 3, 
+        "serving_quantity": "70", 
+        "quantity": "2100"
+    }
+},
+{
+    "pk": 77, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 15, 
+        "product": 3, 
+        "serving_quantity": "2", 
+        "quantity": "60"
+    }
+},
+{
+    "pk": 78, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 16, 
+        "product": 3, 
+        "serving_quantity": "4", 
+        "quantity": "120"
+    }
+},
+{
+    "pk": 79, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 17, 
+        "product": 3, 
+        "serving_quantity": "120", 
+        "quantity": "3600"
+    }
+},
+{
+    "pk": 80, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 18, 
+        "product": 3, 
+        "serving_quantity": "75", 
+        "quantity": "2250"
+    }
+},
+{
+    "pk": 81, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 19, 
+        "product": 3, 
+        "serving_quantity": "10000", 
+        "quantity": "300000"
+    }
+},
+{
+    "pk": 82, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 20, 
+        "product": 3, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 83, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 21, 
+        "product": 3, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 84, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 22, 
+        "product": 3, 
+        "serving_quantity": "500", 
+        "quantity": "15000"
+    }
+},
+{
+    "pk": 85, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 23, 
+        "product": 3, 
+        "serving_quantity": "400", 
+        "quantity": "12000"
+    }
+},
+{
+    "pk": 86, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 24, 
+        "product": 3, 
+        "serving_quantity": "200", 
+        "quantity": "6000"
+    }
+},
+{
+    "pk": 87, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 25, 
+        "product": 3, 
+        "serving_quantity": "80", 
+        "quantity": "2400"
+    }
+},
+{
+    "pk": 89, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 27, 
+        "product": 3, 
+        "serving_quantity": "25", 
+        "quantity": "750"
+    }
+},
+{
+    "pk": 90, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 28, 
+        "product": 3, 
+        "serving_quantity": "20", 
+        "quantity": "600"
+    }
+},
+{
+    "pk": 91, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 29, 
+        "product": 3, 
+        "serving_quantity": "400", 
+        "quantity": "12000"
+    }
+},
+{
+    "pk": 92, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 30, 
+        "product": 3, 
+        "serving_quantity": "300", 
+        "quantity": "9000"
+    }
+},
+{
+    "pk": 93, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 31, 
+        "product": 3, 
+        "serving_quantity": "125", 
+        "quantity": "3750"
+    }
+},
+{
+    "pk": 94, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 1, 
+        "product": 4, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 95, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 2, 
+        "product": 4, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 96, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 3, 
+        "product": 4, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 97, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 4, 
+        "product": 4, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 98, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 5, 
+        "product": 4, 
+        "serving_quantity": "0.54", 
+        "quantity": "70.2"
+    }
+},
+{
+    "pk": 99, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 6, 
+        "product": 4, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 100, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 7, 
+        "product": 4, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 101, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 8, 
+        "product": 4, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 102, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 9, 
+        "product": 4, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 103, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 10, 
+        "product": 4, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 104, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 11, 
+        "product": 4, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 105, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 12, 
+        "product": 4, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 106, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 13, 
+        "product": 4, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 107, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 14, 
+        "product": 4, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 108, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 15, 
+        "product": 4, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 109, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 16, 
+        "product": 4, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 110, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 17, 
+        "product": 4, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 111, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 18, 
+        "product": 4, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 112, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 19, 
+        "product": 4, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 113, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 20, 
+        "product": 4, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 114, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 21, 
+        "product": 4, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 115, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 22, 
+        "product": 4, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 116, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 23, 
+        "product": 4, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 117, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 24, 
+        "product": 4, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 118, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 25, 
+        "product": 4, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 120, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 27, 
+        "product": 4, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 121, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 28, 
+        "product": 4, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 122, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 29, 
+        "product": 4, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 123, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 30, 
+        "product": 4, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 124, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 31, 
+        "product": 4, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 125, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 1, 
+        "product": 5, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 126, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 2, 
+        "product": 5, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 127, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 3, 
+        "product": 5, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 128, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 4, 
+        "product": 5, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 129, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 5, 
+        "product": 5, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 130, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 6, 
+        "product": 5, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 131, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 7, 
+        "product": 5, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 132, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 8, 
+        "product": 5, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 133, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 9, 
+        "product": 5, 
+        "serving_quantity": "18", 
+        "quantity": "2160"
+    }
+},
+{
+    "pk": 134, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 10, 
+        "product": 5, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 135, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 11, 
+        "product": 5, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 136, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 12, 
+        "product": 5, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 137, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 13, 
+        "product": 5, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 138, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 14, 
+        "product": 5, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 139, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 15, 
+        "product": 5, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 140, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 16, 
+        "product": 5, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 141, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 17, 
+        "product": 5, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 142, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 18, 
+        "product": 5, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 143, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 19, 
+        "product": 5, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 144, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 20, 
+        "product": 5, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 145, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 21, 
+        "product": 5, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 146, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 22, 
+        "product": 5, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 147, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 23, 
+        "product": 5, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 148, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 24, 
+        "product": 5, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 149, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 25, 
+        "product": 5, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 151, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 27, 
+        "product": 5, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 152, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 28, 
+        "product": 5, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 153, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 29, 
+        "product": 5, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 154, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 30, 
+        "product": 5, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 155, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 31, 
+        "product": 5, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 156, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 1, 
+        "product": 6, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 157, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 2, 
+        "product": 6, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 158, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 3, 
+        "product": 6, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 159, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 4, 
+        "product": 6, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 160, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 5, 
+        "product": 6, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 161, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 6, 
+        "product": 6, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 162, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 7, 
+        "product": 6, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 163, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 8, 
+        "product": 6, 
+        "serving_quantity": "1", 
+        "quantity": "60"
+    }
+},
+{
+    "pk": 164, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 9, 
+        "product": 6, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 165, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 10, 
+        "product": 6, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 166, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 11, 
+        "product": 6, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 167, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 12, 
+        "product": 6, 
+        "serving_quantity": "500", 
+        "quantity": "30000"
+    }
+},
+{
+    "pk": 168, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 13, 
+        "product": 6, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 169, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 14, 
+        "product": 6, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 170, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 15, 
+        "product": 6, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 171, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 16, 
+        "product": 6, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 172, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 17, 
+        "product": 6, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 173, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 18, 
+        "product": 6, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 174, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 19, 
+        "product": 6, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 175, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 20, 
+        "product": 6, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 176, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 21, 
+        "product": 6, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 177, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 22, 
+        "product": 6, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 178, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 23, 
+        "product": 6, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 179, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 24, 
+        "product": 6, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 180, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 25, 
+        "product": 6, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 182, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 27, 
+        "product": 6, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 183, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 28, 
+        "product": 6, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 184, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 29, 
+        "product": 6, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 185, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 30, 
+        "product": 6, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 186, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 31, 
+        "product": 6, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 187, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 1, 
+        "product": 7, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 188, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 2, 
+        "product": 7, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 189, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 3, 
+        "product": 7, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 190, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 4, 
+        "product": 7, 
+        "serving_quantity": "0.19", 
+        "quantity": "21.47"
+    }
+},
+{
+    "pk": 191, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 5, 
+        "product": 7, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 192, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 6, 
+        "product": 7, 
+        "serving_quantity": "0.3076", 
+        "quantity": "34.7588"
+    }
+},
+{
+    "pk": 193, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 7, 
+        "product": 7, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 194, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 8, 
+        "product": 7, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 195, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 9, 
+        "product": 7, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 196, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 10, 
+        "product": 7, 
+        "serving_quantity": "0.25", 
+        "quantity": "28.25"
+    }
+},
+{
+    "pk": 197, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 11, 
+        "product": 7, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 198, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 12, 
+        "product": 7, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 199, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 13, 
+        "product": 7, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 200, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 14, 
+        "product": 7, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 201, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 15, 
+        "product": 7, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 202, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 16, 
+        "product": 7, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 203, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 17, 
+        "product": 7, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 204, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 18, 
+        "product": 7, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 205, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 19, 
+        "product": 7, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 206, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 20, 
+        "product": 7, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 207, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 21, 
+        "product": 7, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 208, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 22, 
+        "product": 7, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 209, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 23, 
+        "product": 7, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 210, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 24, 
+        "product": 7, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 211, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 25, 
+        "product": 7, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 213, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 27, 
+        "product": 7, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 214, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 28, 
+        "product": 7, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 215, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 29, 
+        "product": 7, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 216, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 30, 
+        "product": 7, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 217, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 31, 
+        "product": 7, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 218, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 32, 
+        "product": 1, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 219, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 32, 
+        "product": 2, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 220, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 32, 
+        "product": 3, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 221, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 32, 
+        "product": 4, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 222, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 32, 
+        "product": 5, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 223, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 32, 
+        "product": 6, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 224, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 32, 
+        "product": 7, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 225, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 1, 
+        "product": 8, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 226, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 2, 
+        "product": 8, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 227, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 3, 
+        "product": 8, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 228, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 4, 
+        "product": 8, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 229, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 5, 
+        "product": 8, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 230, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 6, 
+        "product": 8, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 231, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 7, 
+        "product": 8, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 232, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 8, 
+        "product": 8, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 233, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 9, 
+        "product": 8, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 234, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 10, 
+        "product": 8, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 235, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 11, 
+        "product": 8, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 236, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 12, 
+        "product": 8, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 237, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 13, 
+        "product": 8, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 238, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 14, 
+        "product": 8, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 239, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 15, 
+        "product": 8, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 240, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 16, 
+        "product": 8, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 241, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 17, 
+        "product": 8, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 242, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 18, 
+        "product": 8, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 243, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 19, 
+        "product": 8, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 244, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 20, 
+        "product": 8, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 245, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 21, 
+        "product": 8, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 246, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 22, 
+        "product": 8, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 247, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 23, 
+        "product": 8, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 248, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 24, 
+        "product": 8, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 249, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 25, 
+        "product": 8, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 250, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 27, 
+        "product": 8, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 251, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 28, 
+        "product": 8, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 252, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 29, 
+        "product": 8, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 253, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 30, 
+        "product": 8, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 254, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 31, 
+        "product": 8, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 255, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 32, 
+        "product": 8, 
+        "serving_quantity": "500", 
+        "quantity": "50000"
+    }
+},
+{
+    "pk": 256, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 1, 
+        "product": 9, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 257, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 2, 
+        "product": 9, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 258, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 3, 
+        "product": 9, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 259, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 4, 
+        "product": 9, 
+        "serving_quantity": "0.49", 
+        "quantity": "240.59"
+    }
+},
+{
+    "pk": 260, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 5, 
+        "product": 9, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 261, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 6, 
+        "product": 9, 
+        "serving_quantity": "0.79332", 
+        "quantity": "389.52"
+    }
+},
+{
+    "pk": 262, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 7, 
+        "product": 9, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 263, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 8, 
+        "product": 9, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 264, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 9, 
+        "product": 9, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 265, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 10, 
+        "product": 9, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 266, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 11, 
+        "product": 9, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 267, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 12, 
+        "product": 9, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 268, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 13, 
+        "product": 9, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 269, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 14, 
+        "product": 9, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 270, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 15, 
+        "product": 9, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 271, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 16, 
+        "product": 9, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 272, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 17, 
+        "product": 9, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 273, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 18, 
+        "product": 9, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 274, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 19, 
+        "product": 9, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 275, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 20, 
+        "product": 9, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 276, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 21, 
+        "product": 9, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 277, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 22, 
+        "product": 9, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 278, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 23, 
+        "product": 9, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 279, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 24, 
+        "product": 9, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 280, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 25, 
+        "product": 9, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 281, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 27, 
+        "product": 9, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 282, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 28, 
+        "product": 9, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 283, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 29, 
+        "product": 9, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 284, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 30, 
+        "product": 9, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 285, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 31, 
+        "product": 9, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 286, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 32, 
+        "product": 9, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 287, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 1, 
+        "product": 10, 
+        "serving_quantity": "12", 
+        "quantity": "360"
+    }
+},
+{
+    "pk": 288, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 2, 
+        "product": 10, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 289, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 3, 
+        "product": 10, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 290, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 4, 
+        "product": 10, 
+        "serving_quantity": "0.015", 
+        "quantity": "0.45"
+    }
+},
+{
+    "pk": 291, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 5, 
+        "product": 10, 
+        "serving_quantity": "0.05", 
+        "quantity": "1.5"
+    }
+},
+{
+    "pk": 292, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 6, 
+        "product": 10, 
+        "serving_quantity": "0.0243", 
+        "quantity": "0.729"
+    }
+},
+{
+    "pk": 293, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 7, 
+        "product": 10, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 294, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 8, 
+        "product": 10, 
+        "serving_quantity": "0.1", 
+        "quantity": "3"
+    }
+},
+{
+    "pk": 295, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 9, 
+        "product": 10, 
+        "serving_quantity": "1", 
+        "quantity": "30"
+    }
+},
+{
+    "pk": 296, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 10, 
+        "product": 10, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 297, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 11, 
+        "product": 10, 
+        "serving_quantity": "150", 
+        "quantity": "4500"
+    }
+},
+{
+    "pk": 298, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 12, 
+        "product": 10, 
+        "serving_quantity": "40", 
+        "quantity": "1200"
+    }
+},
+{
+    "pk": 299, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 13, 
+        "product": 10, 
+        "serving_quantity": "15", 
+        "quantity": "450"
+    }
+},
+{
+    "pk": 300, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 14, 
+        "product": 10, 
+        "serving_quantity": "70", 
+        "quantity": "2100"
+    }
+},
+{
+    "pk": 301, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 15, 
+        "product": 10, 
+        "serving_quantity": "2", 
+        "quantity": "60"
+    }
+},
+{
+    "pk": 302, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 16, 
+        "product": 10, 
+        "serving_quantity": "4", 
+        "quantity": "120"
+    }
+},
+{
+    "pk": 303, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 17, 
+        "product": 10, 
+        "serving_quantity": "120", 
+        "quantity": "3600"
+    }
+},
+{
+    "pk": 304, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 18, 
+        "product": 10, 
+        "serving_quantity": "75", 
+        "quantity": "2250"
+    }
+},
+{
+    "pk": 305, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 19, 
+        "product": 10, 
+        "serving_quantity": "10000", 
+        "quantity": "300000"
+    }
+},
+{
+    "pk": 306, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 20, 
+        "product": 10, 
+        "serving_quantity": "50", 
+        "quantity": "1500"
+    }
+},
+{
+    "pk": 307, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 21, 
+        "product": 10, 
+        "serving_quantity": "25", 
+        "quantity": "750"
+    }
+},
+{
+    "pk": 308, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 22, 
+        "product": 10, 
+        "serving_quantity": "500", 
+        "quantity": "15000"
+    }
+},
+{
+    "pk": 309, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 23, 
+        "product": 10, 
+        "serving_quantity": "400", 
+        "quantity": "12000"
+    }
+},
+{
+    "pk": 310, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 24, 
+        "product": 10, 
+        "serving_quantity": "200", 
+        "quantity": "6000"
+    }
+},
+{
+    "pk": 311, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 25, 
+        "product": 10, 
+        "serving_quantity": "80", 
+        "quantity": "2400"
+    }
+},
+{
+    "pk": 312, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 27, 
+        "product": 10, 
+        "serving_quantity": "25", 
+        "quantity": "750"
+    }
+},
+{
+    "pk": 313, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 28, 
+        "product": 10, 
+        "serving_quantity": "20", 
+        "quantity": "600"
+    }
+},
+{
+    "pk": 314, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 29, 
+        "product": 10, 
+        "serving_quantity": "400", 
+        "quantity": "12000"
+    }
+},
+{
+    "pk": 315, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 30, 
+        "product": 10, 
+        "serving_quantity": "300", 
+        "quantity": "9000"
+    }
+},
+{
+    "pk": 316, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 31, 
+        "product": 10, 
+        "serving_quantity": "125", 
+        "quantity": "3750"
+    }
+},
+{
+    "pk": 317, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 32, 
+        "product": 10, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 318, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 1, 
+        "product": 11, 
+        "serving_quantity": "26.4", 
+        "quantity": "1188"
+    }
+},
+{
+    "pk": 319, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 2, 
+        "product": 11, 
+        "serving_quantity": "5.6", 
+        "quantity": "252"
+    }
+},
+{
+    "pk": 320, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 3, 
+        "product": 11, 
+        "serving_quantity": "3.2", 
+        "quantity": "144"
+    }
+},
+{
+    "pk": 321, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 4, 
+        "product": 11, 
+        "serving_quantity": "0.0017", 
+        "quantity": "0.0765"
+    }
+},
+{
+    "pk": 322, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 5, 
+        "product": 11, 
+        "serving_quantity": "0.146", 
+        "quantity": "6.57"
+    }
+},
+{
+    "pk": 323, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 6, 
+        "product": 11, 
+        "serving_quantity": "0.0028", 
+        "quantity": "0.126"
+    }
+},
+{
+    "pk": 324, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 7, 
+        "product": 11, 
+        "serving_quantity": "4.1", 
+        "quantity": "184.5"
+    }
+},
+{
+    "pk": 325, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 8, 
+        "product": 11, 
+        "serving_quantity": "0.02", 
+        "quantity": "0.9"
+    }
+},
+{
+    "pk": 326, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 9, 
+        "product": 11, 
+        "serving_quantity": "1.872", 
+        "quantity": "84.24"
+    }
+},
+{
+    "pk": 327, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 10, 
+        "product": 11, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 328, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 11, 
+        "product": 11, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 329, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 12, 
+        "product": 11, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 330, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 13, 
+        "product": 11, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 331, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 14, 
+        "product": 11, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 332, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 15, 
+        "product": 11, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 333, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 16, 
+        "product": 11, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 334, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 17, 
+        "product": 11, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 335, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 18, 
+        "product": 11, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 336, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 19, 
+        "product": 11, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 337, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 20, 
+        "product": 11, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 338, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 21, 
+        "product": 11, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 339, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 22, 
+        "product": 11, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 340, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 23, 
+        "product": 11, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 341, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 24, 
+        "product": 11, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 342, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 25, 
+        "product": 11, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 343, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 27, 
+        "product": 11, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 344, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 28, 
+        "product": 11, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 345, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 29, 
+        "product": 11, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 346, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 30, 
+        "product": 11, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 347, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 31, 
+        "product": 11, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 348, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 32, 
+        "product": 11, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 349, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 1, 
+        "product": 12, 
+        "serving_quantity": "3", 
+        "quantity": "222"
+    }
+},
+{
+    "pk": 350, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 2, 
+        "product": 12, 
+        "serving_quantity": "24", 
+        "quantity": "1776"
+    }
+},
+{
+    "pk": 351, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 3, 
+        "product": 12, 
+        "serving_quantity": "1", 
+        "quantity": "74"
+    }
+},
+{
+    "pk": 352, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 4, 
+        "product": 12, 
+        "serving_quantity": "0.13", 
+        "quantity": "9.62"
+    }
+},
+{
+    "pk": 353, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 5, 
+        "product": 12, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 354, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 6, 
+        "product": 12, 
+        "serving_quantity": "0.2105", 
+        "quantity": "15.577"
+    }
+},
+{
+    "pk": 355, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 7, 
+        "product": 12, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 356, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 8, 
+        "product": 12, 
+        "serving_quantity": "0.08", 
+        "quantity": "5.92"
+    }
+},
+{
+    "pk": 357, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 9, 
+        "product": 12, 
+        "serving_quantity": "0.36", 
+        "quantity": "26.64"
+    }
+},
+{
+    "pk": 358, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 10, 
+        "product": 12, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 359, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 11, 
+        "product": 12, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 360, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 12, 
+        "product": 12, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 361, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 13, 
+        "product": 12, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 362, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 14, 
+        "product": 12, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 363, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 15, 
+        "product": 12, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 364, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 16, 
+        "product": 12, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 365, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 17, 
+        "product": 12, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 366, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 18, 
+        "product": 12, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 367, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 19, 
+        "product": 12, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 368, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 20, 
+        "product": 12, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 369, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 21, 
+        "product": 12, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 370, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 22, 
+        "product": 12, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 371, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 23, 
+        "product": 12, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 372, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 24, 
+        "product": 12, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 373, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 25, 
+        "product": 12, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 374, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 27, 
+        "product": 12, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 375, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 28, 
+        "product": 12, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 376, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 29, 
+        "product": 12, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 377, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 30, 
+        "product": 12, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 378, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 31, 
+        "product": 12, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 379, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 32, 
+        "product": 12, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 380, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 1, 
+        "product": 13, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 381, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 2, 
+        "product": 13, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 382, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 3, 
+        "product": 13, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 383, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 4, 
+        "product": 13, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 384, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 5, 
+        "product": 13, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 385, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 6, 
+        "product": 13, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 386, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 7, 
+        "product": 13, 
+        "serving_quantity": "5", 
+        "quantity": "150"
+    }
+},
+{
+    "pk": 387, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 8, 
+        "product": 13, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 388, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 9, 
+        "product": 13, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 389, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 10, 
+        "product": 13, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 390, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 11, 
+        "product": 13, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 391, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 12, 
+        "product": 13, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 392, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 13, 
+        "product": 13, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 393, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 14, 
+        "product": 13, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 394, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 15, 
+        "product": 13, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 395, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 16, 
+        "product": 13, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 396, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 17, 
+        "product": 13, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 397, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 18, 
+        "product": 13, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 398, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 19, 
+        "product": 13, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 399, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 20, 
+        "product": 13, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 400, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 21, 
+        "product": 13, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 401, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 22, 
+        "product": 13, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 402, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 23, 
+        "product": 13, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 403, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 24, 
+        "product": 13, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 404, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 25, 
+        "product": 13, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 405, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 27, 
+        "product": 13, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 406, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 28, 
+        "product": 13, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 407, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 29, 
+        "product": 13, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 408, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 30, 
+        "product": 13, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 409, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 31, 
+        "product": 13, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 410, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 32, 
+        "product": 13, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 411, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 1, 
+        "product": 14, 
+        "serving_quantity": "47", 
+        "quantity": "846"
+    }
+},
+{
+    "pk": 412, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 2, 
+        "product": 14, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 413, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 3, 
+        "product": 14, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 414, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 4, 
+        "product": 14, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 415, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 5, 
+        "product": 14, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 416, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 6, 
+        "product": 14, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 417, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 7, 
+        "product": 14, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 418, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 8, 
+        "product": 14, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 419, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 9, 
+        "product": 14, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 420, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 10, 
+        "product": 14, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 421, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 11, 
+        "product": 14, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 422, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 12, 
+        "product": 14, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 423, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 13, 
+        "product": 14, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 424, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 14, 
+        "product": 14, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 425, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 15, 
+        "product": 14, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 426, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 16, 
+        "product": 14, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 427, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 17, 
+        "product": 14, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 428, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 18, 
+        "product": 14, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 429, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 19, 
+        "product": 14, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 430, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 20, 
+        "product": 14, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 431, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 21, 
+        "product": 14, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 432, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 22, 
+        "product": 14, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 433, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 23, 
+        "product": 14, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 434, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 24, 
+        "product": 14, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 435, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 25, 
+        "product": 14, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 436, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 27, 
+        "product": 14, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 437, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 28, 
+        "product": 14, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 438, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 29, 
+        "product": 14, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 439, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 30, 
+        "product": 14, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 440, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 31, 
+        "product": 14, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 441, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 32, 
+        "product": 14, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 442, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 1, 
+        "product": 15, 
+        "serving_quantity": "252", 
+        "quantity": "6160.14"
+    }
+},
+{
+    "pk": 443, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 2, 
+        "product": 15, 
+        "serving_quantity": "50", 
+        "quantity": "1222.25"
+    }
+},
+{
+    "pk": 444, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 3, 
+        "product": 15, 
+        "serving_quantity": "4.5", 
+        "quantity": "110.0025"
+    }
+},
+{
+    "pk": 445, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 4, 
+        "product": 15, 
+        "serving_quantity": "0.41", 
+        "quantity": "10.02245"
+    }
+},
+{
+    "pk": 446, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 5, 
+        "product": 15, 
+        "serving_quantity": "1.56", 
+        "quantity": "38.1342"
+    }
+},
+{
+    "pk": 447, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 6, 
+        "product": 15, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 448, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 7, 
+        "product": 15, 
+        "serving_quantity": "4", 
+        "quantity": "97.78"
+    }
+},
+{
+    "pk": 449, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 8, 
+        "product": 15, 
+        "serving_quantity": "0.59", 
+        "quantity": "14.42255"
+    }
+},
+{
+    "pk": 450, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 9, 
+        "product": 15, 
+        "serving_quantity": "8", 
+        "quantity": "195.56"
+    }
+},
+{
+    "pk": 451, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 10, 
+        "product": 15, 
+        "serving_quantity": "0.43", 
+        "quantity": "10.51135"
+    }
+},
+{
+    "pk": 452, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 11, 
+        "product": 15, 
+        "serving_quantity": "150", 
+        "quantity": "3666.75"
+    }
+},
+{
+    "pk": 453, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 12, 
+        "product": 15, 
+        "serving_quantity": "140", 
+        "quantity": "3422.3"
+    }
+},
+{
+    "pk": 454, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 13, 
+        "product": 15, 
+        "serving_quantity": "15", 
+        "quantity": "366.675"
+    }
+},
+{
+    "pk": 455, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 14, 
+        "product": 15, 
+        "serving_quantity": "70", 
+        "quantity": "1711.15"
+    }
+},
+{
+    "pk": 456, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 15, 
+        "product": 15, 
+        "serving_quantity": "1.6", 
+        "quantity": "39.112"
+    }
+},
+{
+    "pk": 457, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 16, 
+        "product": 15, 
+        "serving_quantity": "2", 
+        "quantity": "48.89"
+    }
+},
+{
+    "pk": 458, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 17, 
+        "product": 15, 
+        "serving_quantity": "120", 
+        "quantity": "2933.4"
+    }
+},
+{
+    "pk": 459, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 18, 
+        "product": 15, 
+        "serving_quantity": "75", 
+        "quantity": "1833.375"
+    }
+},
+{
+    "pk": 460, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 19, 
+        "product": 15, 
+        "serving_quantity": "5000", 
+        "quantity": "122225"
+    }
+},
+{
+    "pk": 461, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 20, 
+        "product": 15, 
+        "serving_quantity": "5", 
+        "quantity": "122.225"
+    }
+},
+{
+    "pk": 462, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 21, 
+        "product": 15, 
+        "serving_quantity": "4.8", 
+        "quantity": "117.336"
+    }
+},
+{
+    "pk": 463, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 22, 
+        "product": 15, 
+        "serving_quantity": "60", 
+        "quantity": "1466.7"
+    }
+},
+{
+    "pk": 464, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 23, 
+        "product": 15, 
+        "serving_quantity": "200", 
+        "quantity": "4889"
+    }
+},
+{
+    "pk": 465, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 24, 
+        "product": 15, 
+        "serving_quantity": "30", 
+        "quantity": "733.35"
+    }
+},
+{
+    "pk": 466, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 25, 
+        "product": 15, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 467, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 27, 
+        "product": 15, 
+        "serving_quantity": "4", 
+        "quantity": "97.78"
+    }
+},
+{
+    "pk": 468, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 28, 
+        "product": 15, 
+        "serving_quantity": "50", 
+        "quantity": "1222.25"
+    }
+},
+{
+    "pk": 469, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 29, 
+        "product": 15, 
+        "serving_quantity": "400", 
+        "quantity": "9778"
+    }
+},
+{
+    "pk": 470, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 30, 
+        "product": 15, 
+        "serving_quantity": "300", 
+        "quantity": "7333.5"
+    }
+},
+{
+    "pk": 471, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 31, 
+        "product": 15, 
+        "serving_quantity": "25", 
+        "quantity": "611.125"
+    }
+},
+{
+    "pk": 472, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 32, 
+        "product": 15, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 473, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 1, 
+        "product": 16, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 474, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 2, 
+        "product": 16, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 475, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 3, 
+        "product": 16, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 476, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 4, 
+        "product": 16, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 477, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 5, 
+        "product": 16, 
+        "serving_quantity": "0.54", 
+        "quantity": "70.2"
+    }
+},
+{
+    "pk": 478, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 6, 
+        "product": 16, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 479, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 7, 
+        "product": 16, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 480, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 8, 
+        "product": 16, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 481, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 9, 
+        "product": 16, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 482, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 10, 
+        "product": 16, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 483, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 11, 
+        "product": 16, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 484, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 12, 
+        "product": 16, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 485, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 13, 
+        "product": 16, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 486, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 14, 
+        "product": 16, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 487, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 15, 
+        "product": 16, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 488, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 16, 
+        "product": 16, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 489, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 17, 
+        "product": 16, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 490, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 18, 
+        "product": 16, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 491, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 19, 
+        "product": 16, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 492, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 20, 
+        "product": 16, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 493, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 21, 
+        "product": 16, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 494, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 22, 
+        "product": 16, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 495, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 23, 
+        "product": 16, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 496, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 24, 
+        "product": 16, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 497, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 25, 
+        "product": 16, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 498, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 27, 
+        "product": 16, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 499, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 28, 
+        "product": 16, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 500, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 29, 
+        "product": 16, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 501, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 30, 
+        "product": 16, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 502, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 31, 
+        "product": 16, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 503, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 32, 
+        "product": 16, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 504, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 1, 
+        "product": 17, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 505, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 2, 
+        "product": 17, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 506, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 3, 
+        "product": 17, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 507, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 4, 
+        "product": 17, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 508, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 5, 
+        "product": 17, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 509, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 6, 
+        "product": 17, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 510, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 7, 
+        "product": 17, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 511, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 8, 
+        "product": 17, 
+        "serving_quantity": "0.6", 
+        "quantity": "136.2"
+    }
+},
+{
+    "pk": 512, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 9, 
+        "product": 17, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 513, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 10, 
+        "product": 17, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 514, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 11, 
+        "product": 17, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 515, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 12, 
+        "product": 17, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 516, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 13, 
+        "product": 17, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 517, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 14, 
+        "product": 17, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 518, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 15, 
+        "product": 17, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 519, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 16, 
+        "product": 17, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 520, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 17, 
+        "product": 17, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 521, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 18, 
+        "product": 17, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 522, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 19, 
+        "product": 17, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 523, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 20, 
+        "product": 17, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 524, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 21, 
+        "product": 17, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 525, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 22, 
+        "product": 17, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 526, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 23, 
+        "product": 17, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 527, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 24, 
+        "product": 17, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 528, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 25, 
+        "product": 17, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 529, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 27, 
+        "product": 17, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 530, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 28, 
+        "product": 17, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 531, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 29, 
+        "product": 17, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 532, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 30, 
+        "product": 17, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 533, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 31, 
+        "product": 17, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 534, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 32, 
+        "product": 17, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 535, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 1, 
+        "product": 18, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 536, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 2, 
+        "product": 18, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 537, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 3, 
+        "product": 18, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 538, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 4, 
+        "product": 18, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 539, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 5, 
+        "product": 18, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 540, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 6, 
+        "product": 18, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 541, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 7, 
+        "product": 18, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 542, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 8, 
+        "product": 18, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 543, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 9, 
+        "product": 18, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 544, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 10, 
+        "product": 18, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 545, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 11, 
+        "product": 18, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 546, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 12, 
+        "product": 18, 
+        "serving_quantity": "315", 
+        "quantity": "37485"
+    }
+},
+{
+    "pk": 547, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 13, 
+        "product": 18, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 548, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 14, 
+        "product": 18, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 549, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 15, 
+        "product": 18, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 550, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 16, 
+        "product": 18, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 551, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 17, 
+        "product": 18, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 552, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 18, 
+        "product": 18, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 553, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 19, 
+        "product": 18, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 554, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 20, 
+        "product": 18, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 555, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 21, 
+        "product": 18, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 556, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 22, 
+        "product": 18, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 557, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 23, 
+        "product": 18, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 558, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 24, 
+        "product": 18, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 559, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 25, 
+        "product": 18, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 560, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 27, 
+        "product": 18, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 561, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 28, 
+        "product": 18, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 562, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 29, 
+        "product": 18, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 563, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 30, 
+        "product": 18, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 564, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 31, 
+        "product": 18, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 565, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 32, 
+        "product": 18, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 566, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 1, 
+        "product": 19, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 567, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 2, 
+        "product": 19, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 568, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 3, 
+        "product": 19, 
+        "serving_quantity": "2", 
+        "quantity": "180"
+    }
+},
+{
+    "pk": 569, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 4, 
+        "product": 19, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 570, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 5, 
+        "product": 19, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 571, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 6, 
+        "product": 19, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 572, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 7, 
+        "product": 19, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 573, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 8, 
+        "product": 19, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 574, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 9, 
+        "product": 19, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 575, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 10, 
+        "product": 19, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 576, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 11, 
+        "product": 19, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 577, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 12, 
+        "product": 19, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 578, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 13, 
+        "product": 19, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 579, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 14, 
+        "product": 19, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 580, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 15, 
+        "product": 19, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 581, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 16, 
+        "product": 19, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 582, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 17, 
+        "product": 19, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 583, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 18, 
+        "product": 19, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 584, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 19, 
+        "product": 19, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 585, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 20, 
+        "product": 19, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 586, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 21, 
+        "product": 19, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 587, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 22, 
+        "product": 19, 
+        "serving_quantity": "12", 
+        "quantity": "1080"
+    }
+},
+{
+    "pk": 588, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 23, 
+        "product": 19, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 589, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 24, 
+        "product": 19, 
+        "serving_quantity": "3", 
+        "quantity": "270"
+    }
+},
+{
+    "pk": 590, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 25, 
+        "product": 19, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 591, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 27, 
+        "product": 19, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 592, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 28, 
+        "product": 19, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 593, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 29, 
+        "product": 19, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 594, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 30, 
+        "product": 19, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 595, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 31, 
+        "product": 19, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 596, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 32, 
+        "product": 19, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 597, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 1, 
+        "product": 20, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 598, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 2, 
+        "product": 20, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 599, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 3, 
+        "product": 20, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 600, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 4, 
+        "product": 20, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 601, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 5, 
+        "product": 20, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 602, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 6, 
+        "product": 20, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 603, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 7, 
+        "product": 20, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 604, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 8, 
+        "product": 20, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 605, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 9, 
+        "product": 20, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 606, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 10, 
+        "product": 20, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 607, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 11, 
+        "product": 20, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 608, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 12, 
+        "product": 20, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 609, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 13, 
+        "product": 20, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 610, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 14, 
+        "product": 20, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 611, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 15, 
+        "product": 20, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 612, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 16, 
+        "product": 20, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 613, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 17, 
+        "product": 20, 
+        "serving_quantity": "200", 
+        "quantity": "20000"
+    }
+},
+{
+    "pk": 614, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 18, 
+        "product": 20, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 615, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 19, 
+        "product": 20, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 616, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 20, 
+        "product": 20, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 617, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 21, 
+        "product": 20, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 618, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 22, 
+        "product": 20, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 619, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 23, 
+        "product": 20, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 620, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 24, 
+        "product": 20, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 621, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 25, 
+        "product": 20, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 622, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 27, 
+        "product": 20, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 623, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 28, 
+        "product": 20, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 624, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 29, 
+        "product": 20, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 625, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 30, 
+        "product": 20, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 626, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 31, 
+        "product": 20, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 627, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 32, 
+        "product": 20, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 628, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 1, 
+        "product": 21, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 629, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 2, 
+        "product": 21, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 630, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 3, 
+        "product": 21, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 631, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 4, 
+        "product": 21, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 632, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 5, 
+        "product": 21, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 633, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 6, 
+        "product": 21, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 634, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 7, 
+        "product": 21, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 635, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 8, 
+        "product": 21, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 636, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 9, 
+        "product": 21, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 637, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 10, 
+        "product": 21, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 638, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 11, 
+        "product": 21, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 639, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 12, 
+        "product": 21, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 640, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 13, 
+        "product": 21, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 641, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 14, 
+        "product": 21, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 642, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 15, 
+        "product": 21, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 643, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 16, 
+        "product": 21, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 644, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 17, 
+        "product": 21, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 645, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 18, 
+        "product": 21, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 646, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 19, 
+        "product": 21, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 647, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 20, 
+        "product": 21, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 648, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 21, 
+        "product": 21, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 649, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 22, 
+        "product": 21, 
+        "serving_quantity": "3", 
+        "quantity": "360"
+    }
+},
+{
+    "pk": 650, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 23, 
+        "product": 21, 
+        "serving_quantity": "1000", 
+        "quantity": "120000"
+    }
+},
+{
+    "pk": 651, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 24, 
+        "product": 21, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 652, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 25, 
+        "product": 21, 
+        "serving_quantity": "45", 
+        "quantity": "5400"
+    }
+},
+{
+    "pk": 653, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 27, 
+        "product": 21, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 654, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 28, 
+        "product": 21, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 655, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 29, 
+        "product": 21, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 656, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 30, 
+        "product": 21, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 657, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 31, 
+        "product": 21, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 658, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 32, 
+        "product": 21, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 659, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 1, 
+        "product": 22, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 660, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 2, 
+        "product": 22, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 661, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 3, 
+        "product": 22, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 662, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 4, 
+        "product": 22, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 663, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 5, 
+        "product": 22, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 664, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 6, 
+        "product": 22, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 665, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 7, 
+        "product": 22, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 666, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 8, 
+        "product": 22, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 667, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 9, 
+        "product": 22, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 668, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 10, 
+        "product": 22, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 669, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 11, 
+        "product": 22, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 670, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 12, 
+        "product": 22, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 671, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 13, 
+        "product": 22, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 672, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 14, 
+        "product": 22, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 673, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 15, 
+        "product": 22, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 674, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 16, 
+        "product": 22, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 675, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 17, 
+        "product": 22, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 676, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 18, 
+        "product": 22, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 677, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 19, 
+        "product": 22, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 678, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 20, 
+        "product": 22, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 679, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 21, 
+        "product": 22, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 680, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 22, 
+        "product": 22, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 681, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 23, 
+        "product": 22, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 682, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 24, 
+        "product": 22, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 683, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 25, 
+        "product": 22, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 684, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 27, 
+        "product": 22, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 685, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 28, 
+        "product": 22, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 686, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 29, 
+        "product": 22, 
+        "serving_quantity": "800", 
+        "quantity": "80000"
+    }
+},
+{
+    "pk": 687, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 30, 
+        "product": 22, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 688, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 31, 
+        "product": 22, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 689, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 32, 
+        "product": 22, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 690, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 1, 
+        "product": 23, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 691, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 2, 
+        "product": 23, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 692, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 3, 
+        "product": 23, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 693, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 4, 
+        "product": 23, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 694, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 5, 
+        "product": 23, 
+        "serving_quantity": "0.99", 
+        "quantity": "99"
+    }
+},
+{
+    "pk": 695, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 6, 
+        "product": 23, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 696, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 7, 
+        "product": 23, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 697, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 8, 
+        "product": 23, 
+        "serving_quantity": "0.25", 
+        "quantity": "25"
+    }
+},
+{
+    "pk": 698, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 9, 
+        "product": 23, 
+        "serving_quantity": "9", 
+        "quantity": "900"
+    }
+},
+{
+    "pk": 699, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 10, 
+        "product": 23, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 700, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 11, 
+        "product": 23, 
+        "serving_quantity": "150", 
+        "quantity": "15000"
+    }
+},
+{
+    "pk": 701, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 12, 
+        "product": 23, 
+        "serving_quantity": "40", 
+        "quantity": "4000"
+    }
+},
+{
+    "pk": 702, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 13, 
+        "product": 23, 
+        "serving_quantity": "15", 
+        "quantity": "1500"
+    }
+},
+{
+    "pk": 703, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 14, 
+        "product": 23, 
+        "serving_quantity": "45", 
+        "quantity": "4500"
+    }
+},
+{
+    "pk": 704, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 15, 
+        "product": 23, 
+        "serving_quantity": "2", 
+        "quantity": "200"
+    }
+},
+{
+    "pk": 705, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 16, 
+        "product": 23, 
+        "serving_quantity": "2", 
+        "quantity": "200"
+    }
+},
+{
+    "pk": 706, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 17, 
+        "product": 23, 
+        "serving_quantity": "89.8", 
+        "quantity": "8980"
+    }
+},
+{
+    "pk": 707, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 18, 
+        "product": 23, 
+        "serving_quantity": "25", 
+        "quantity": "2500"
+    }
+},
+{
+    "pk": 708, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 19, 
+        "product": 23, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 709, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 20, 
+        "product": 23, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 710, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 21, 
+        "product": 23, 
+        "serving_quantity": "3", 
+        "quantity": "300"
+    }
+},
+{
+    "pk": 711, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 22, 
+        "product": 23, 
+        "serving_quantity": "60", 
+        "quantity": "6000"
+    }
+},
+{
+    "pk": 712, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 23, 
+        "product": 23, 
+        "serving_quantity": "400", 
+        "quantity": "40000"
+    }
+},
+{
+    "pk": 713, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 24, 
+        "product": 23, 
+        "serving_quantity": "22.5", 
+        "quantity": "2250"
+    }
+},
+{
+    "pk": 714, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 25, 
+        "product": 23, 
+        "serving_quantity": "25", 
+        "quantity": "2500"
+    }
+},
+{
+    "pk": 715, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 27, 
+        "product": 23, 
+        "serving_quantity": "3.4", 
+        "quantity": "340"
+    }
+},
+{
+    "pk": 716, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 28, 
+        "product": 23, 
+        "serving_quantity": "40", 
+        "quantity": "4000"
+    }
+},
+{
+    "pk": 717, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 29, 
+        "product": 23, 
+        "serving_quantity": "400", 
+        "quantity": "40000"
+    }
+},
+{
+    "pk": 718, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 30, 
+        "product": 23, 
+        "serving_quantity": "300", 
+        "quantity": "30000"
+    }
+},
+{
+    "pk": 719, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 31, 
+        "product": 23, 
+        "serving_quantity": "10", 
+        "quantity": "1000"
+    }
+},
+{
+    "pk": 720, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 32, 
+        "product": 23, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 721, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 1, 
+        "product": 24, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 722, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 2, 
+        "product": 24, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 723, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 3, 
+        "product": 24, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 724, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 4, 
+        "product": 24, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 725, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 5, 
+        "product": 24, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 726, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 6, 
+        "product": 24, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 727, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 7, 
+        "product": 24, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 728, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 8, 
+        "product": 24, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 729, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 9, 
+        "product": 24, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 730, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 10, 
+        "product": 24, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 731, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 11, 
+        "product": 24, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 732, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 12, 
+        "product": 24, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 733, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 13, 
+        "product": 24, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 734, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 14, 
+        "product": 24, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 735, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 15, 
+        "product": 24, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 736, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 16, 
+        "product": 24, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 737, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 17, 
+        "product": 24, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 738, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 18, 
+        "product": 24, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 739, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 19, 
+        "product": 24, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 740, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 20, 
+        "product": 24, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 741, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 21, 
+        "product": 24, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 742, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 22, 
+        "product": 24, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 743, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 23, 
+        "product": 24, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 744, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 24, 
+        "product": 24, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 745, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 25, 
+        "product": 24, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 746, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 27, 
+        "product": 24, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 747, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 28, 
+        "product": 24, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 748, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 29, 
+        "product": 24, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 749, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 30, 
+        "product": 24, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 750, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 31, 
+        "product": 24, 
+        "serving_quantity": "0", 
+        "quantity": "0"
+    }
+},
+{
+    "pk": 751, 
+    "model": "product.productnutrient", 
+    "fields": {
+        "nutrient": 32, 
+        "product": 24, 
+        "serving_quantity": "250", 
+        "quantity": "25000"
+    }
+},
+{
+    "pk": 1, 
+    "model": "product.mealplan", 
+    "fields": {
+        "desired_tags": [
+            1, 
+            2
+        ], 
+        "name": "Poor Man's Recipe", 
+        "price": "9.48", 
+        "down_votes": [], 
+        "up_votes": [], 
+        "user": [
+            "victor"
+        ], 
+        "balanced": true, 
+        "number_of_days": 30
+    }
+},
+{
+    "pk": 1, 
+    "model": "product.mealplannutrient", 
+    "fields": {
+        "nutrient": 1, 
+        "minimum": "200", 
+        "meal_plan": 1, 
+        "maximum": "220"
+    }
+},
+{
+    "pk": 2, 
+    "model": "product.mealplannutrient", 
+    "fields": {
+        "nutrient": 2, 
+        "minimum": "50", 
+        "meal_plan": 1, 
+        "maximum": "70"
+    }
+},
+{
+    "pk": 3, 
+    "model": "product.mealplannutrient", 
+    "fields": {
+        "nutrient": 3, 
+        "minimum": "62", 
+        "meal_plan": 1, 
+        "maximum": "100"
+    }
+},
+{
+    "pk": 4, 
+    "model": "product.mealplannutrient", 
+    "fields": {
+        "nutrient": 4, 
+        "minimum": "2.3", 
+        "meal_plan": 1, 
+        "maximum": "2.4"
+    }
+},
+{
+    "pk": 5, 
+    "model": "product.mealplannutrient", 
+    "fields": {
+        "nutrient": 5, 
+        "minimum": "3.4", 
+        "meal_plan": 1, 
+        "maximum": "1000"
+    }
+},
+{
+    "pk": 6, 
+    "model": "product.mealplannutrient", 
+    "fields": {
+        "nutrient": 6, 
+        "minimum": "3.4", 
+        "meal_plan": 1, 
+        "maximum": "3.6"
+    }
+},
+{
+    "pk": 7, 
+    "model": "product.mealplannutrient", 
+    "fields": {
+        "nutrient": 7, 
+        "minimum": "4", 
+        "meal_plan": 1, 
+        "maximum": "40"
+    }
+},
+{
+    "pk": 8, 
+    "model": "product.mealplannutrient", 
+    "fields": {
+        "nutrient": 8, 
+        "minimum": "1", 
+        "meal_plan": 1, 
+        "maximum": "2.5"
+    }
+},
+{
+    "pk": 9, 
+    "model": "product.mealplannutrient", 
+    "fields": {
+        "nutrient": 9, 
+        "minimum": "18", 
+        "meal_plan": 1, 
+        "maximum": "45"
+    }
+},
+{
+    "pk": 10, 
+    "model": "product.mealplannutrient", 
+    "fields": {
+        "nutrient": 10, 
+        "minimum": "0.49", 
+        "meal_plan": 1, 
+        "maximum": "3"
+    }
+},
+{
+    "pk": 11, 
+    "model": "product.mealplannutrient", 
+    "fields": {
+        "nutrient": 11, 
+        "minimum": "150", 
+        "meal_plan": 1, 
+        "maximum": "1100"
+    }
+},
+{
+    "pk": 12, 
+    "model": "product.mealplannutrient", 
+    "fields": {
+        "nutrient": 12, 
+        "minimum": "400", 
+        "meal_plan": 1, 
+        "maximum": "4000"
+    }
+},
+{
+    "pk": 13, 
+    "model": "product.mealplannutrient", 
+    "fields": {
+        "nutrient": 13, 
+        "minimum": "15", 
+        "meal_plan": 1, 
+        "maximum": "48"
+    }
+},
+{
+    "pk": 14, 
+    "model": "product.mealplannutrient", 
+    "fields": {
+        "nutrient": 14, 
+        "minimum": "70", 
+        "meal_plan": 1, 
+        "maximum": "400"
+    }
+},
+{
+    "pk": 15, 
+    "model": "product.mealplannutrient", 
+    "fields": {
+        "nutrient": 15, 
+        "minimum": "2", 
+        "meal_plan": 1, 
+        "maximum": "10"
+    }
+},
+{
+    "pk": 16, 
+    "model": "product.mealplannutrient", 
+    "fields": {
+        "nutrient": 16, 
+        "minimum": "2", 
+        "meal_plan": 1, 
+        "maximum": "11"
+    }
+},
+{
+    "pk": 17, 
+    "model": "product.mealplannutrient", 
+    "fields": {
+        "nutrient": 17, 
+        "minimum": "120", 
+        "meal_plan": 1, 
+        "maximum": "1200"
+    }
+},
+{
+    "pk": 18, 
+    "model": "product.mealplannutrient", 
+    "fields": {
+        "nutrient": 18, 
+        "minimum": "75", 
+        "meal_plan": 1, 
+        "maximum": "2000"
+    }
+},
+{
+    "pk": 19, 
+    "model": "product.mealplannutrient", 
+    "fields": {
+        "nutrient": 19, 
+        "minimum": "5000", 
+        "meal_plan": 1, 
+        "maximum": "25000"
+    }
+},
+{
+    "pk": 20, 
+    "model": "product.mealplannutrient", 
+    "fields": {
+        "nutrient": 20, 
+        "minimum": "2", 
+        "meal_plan": 1, 
+        "maximum": "100"
+    }
+},
+{
+    "pk": 21, 
+    "model": "product.mealplannutrient", 
+    "fields": {
+        "nutrient": 21, 
+        "minimum": "1.5", 
+        "meal_plan": 1, 
+        "maximum": "150"
+    }
+},
+{
+    "pk": 22, 
+    "model": "product.mealplannutrient", 
+    "fields": {
+        "nutrient": 22, 
+        "minimum": "60", 
+        "meal_plan": 1, 
+        "maximum": "2000"
+    }
+},
+{
+    "pk": 23, 
+    "model": "product.mealplannutrient", 
+    "fields": {
+        "nutrient": 23, 
+        "minimum": "400", 
+        "meal_plan": 1, 
+        "maximum": "2000"
+    }
+},
+{
+    "pk": 24, 
+    "model": "product.mealplannutrient", 
+    "fields": {
+        "nutrient": 24, 
+        "minimum": "30", 
+        "meal_plan": 1, 
+        "maximum": "1363"
+    }
+},
+{
+    "pk": 25, 
+    "model": "product.mealplannutrient", 
+    "fields": {
+        "nutrient": 25, 
+        "minimum": "80", 
+        "meal_plan": 1, 
+        "maximum": "800"
+    }
+},
+{
+    "pk": 26, 
+    "model": "product.mealplannutrient", 
+    "fields": {
+        "nutrient": 27, 
+        "minimum": "1.7", 
+        "meal_plan": 1, 
+        "maximum": "170"
+    }
+},
+{
+    "pk": 27, 
+    "model": "product.mealplannutrient", 
+    "fields": {
+        "nutrient": 28, 
+        "minimum": "20", 
+        "meal_plan": 1, 
+        "maximum": "150"
+    }
+},
+{
+    "pk": 28, 
+    "model": "product.mealplannutrient", 
+    "fields": {
+        "nutrient": 29, 
+        "minimum": "400", 
+        "meal_plan": 1, 
+        "maximum": "1300"
+    }
+},
+{
+    "pk": 29, 
+    "model": "product.mealplannutrient", 
+    "fields": {
+        "nutrient": 30, 
+        "minimum": "300", 
+        "meal_plan": 1, 
+        "maximum": "3000"
+    }
+},
+{
+    "pk": 30, 
+    "model": "product.mealplannutrient", 
+    "fields": {
+        "nutrient": 31, 
+        "minimum": "10", 
+        "meal_plan": 1, 
+        "maximum": "100"
+    }
+},
+{
+    "pk": 31, 
+    "model": "product.mealplannutrient", 
+    "fields": {
+        "nutrient": 32, 
+        "minimum": "550", 
+        "meal_plan": 1, 
+        "maximum": "3500"
     }
 },
 {
@@ -750,6 +8797,150 @@
         "action_time": "2013-05-15T04:41:49.857Z", 
         "object_repr": "Soylent", 
         "object_id": "2", 
+        "change_message": "", 
+        "user": [
+            "victor"
+        ], 
+        "content_type": [
+            "product", 
+            "tag"
+        ]
+    }
+},
+{
+    "pk": 3, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 3, 
+        "action_time": "2013-05-16T13:48:23.419Z", 
+        "object_repr": "Thiamin (milligrams)", 
+        "object_id": "26", 
+        "change_message": "", 
+        "user": [
+            "victor"
+        ], 
+        "content_type": [
+            "product", 
+            "nutrient"
+        ]
+    }
+},
+{
+    "pk": 4, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 3, 
+        "action_time": "2013-05-16T13:58:31.886Z", 
+        "object_repr": "Cabral's Soylent", 
+        "object_id": "1", 
+        "change_message": "", 
+        "user": [
+            "victor"
+        ], 
+        "content_type": [
+            "product", 
+            "mealplan"
+        ]
+    }
+},
+{
+    "pk": 5, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 1, 
+        "action_time": "2013-05-17T14:36:54.883Z", 
+        "object_repr": "Vegetarian (0 products)", 
+        "object_id": "3", 
+        "change_message": "", 
+        "user": [
+            "victor"
+        ], 
+        "content_type": [
+            "product", 
+            "tag"
+        ]
+    }
+},
+{
+    "pk": 6, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 1, 
+        "action_time": "2013-05-17T14:36:58.196Z", 
+        "object_repr": "Vegan (0 products)", 
+        "object_id": "4", 
+        "change_message": "", 
+        "user": [
+            "victor"
+        ], 
+        "content_type": [
+            "product", 
+            "tag"
+        ]
+    }
+},
+{
+    "pk": 7, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 1, 
+        "action_time": "2013-05-17T14:37:05.623Z", 
+        "object_repr": "Dairy (0 products)", 
+        "object_id": "5", 
+        "change_message": "", 
+        "user": [
+            "victor"
+        ], 
+        "content_type": [
+            "product", 
+            "tag"
+        ]
+    }
+},
+{
+    "pk": 8, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 1, 
+        "action_time": "2013-05-17T14:37:41.205Z", 
+        "object_repr": "Fruit (0 products)", 
+        "object_id": "6", 
+        "change_message": "", 
+        "user": [
+            "victor"
+        ], 
+        "content_type": [
+            "product", 
+            "tag"
+        ]
+    }
+},
+{
+    "pk": 9, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 1, 
+        "action_time": "2013-05-17T14:37:59.521Z", 
+        "object_repr": "Supplement (0 products)", 
+        "object_id": "7", 
+        "change_message": "", 
+        "user": [
+            "victor"
+        ], 
+        "content_type": [
+            "product", 
+            "tag"
+        ]
+    }
+},
+{
+    "pk": 10, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 1, 
+        "action_time": "2013-05-17T14:39:18.242Z", 
+        "object_repr": "Exotic Fruit (0 products)", 
+        "object_id": "8", 
         "change_message": "", 
         "user": [
             "victor"
