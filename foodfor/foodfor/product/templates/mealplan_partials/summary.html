@@ -1,0 +1,148 @@
+<h2>Summary</h2>
+<table class='table table-striped table-bordered table-hover table-condensed'>
+  <caption>MealPlan: {{ object }}</caption>
+  <thead>
+    <tr>
+      <th>Product</th>
+      <th>Quantity</th>
+      <th>% Used</th>
+      {% for nutrient, A, totals, day_totals, meets_min, meets_max, meets_both in nutrients %}
+	      	<th colspan='3' style="text-align: center;">
+	      		{{ nutrient.nutrient }} {{ nutrient.nutrient.pk }}
+      		</th>
+      {% endfor %}
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="success">
+      <td></td>
+      <td></td>
+      <td></td>
+      {% for nutrient, A, totals, day_totals, meets_min, meets_max, meets_both in nutrients %}
+	      <td style="text-align: center;"><b>minimum</b></td>
+	      <td style="text-align: center;"><b>actual</b></td>
+	      <td style="text-align: center;"><b>maximum</b></td>
+      {% endfor %}
+    </tr>
+    <tr class="info">
+      <td><b>desired&nbsp;daily&nbsp;balanace</b></td>
+      <td></td>
+      <td></td>
+      {% for nutrient, a_row, totals, day_totals, meets_min, meets_max, meets_both in nutrients %}
+			<td style="text-align: center;">
+				{{ nutrient.minimum }}&nbsp;{{ nutrient.nutrient.unit }}<br/>
+			</td>
+			<td style="text-align: center;">
+				{{ day_totals|floatformat:2 }}&nbsp;{{ nutrient.nutrient.unit }}<br/>
+			</td>
+			<td style="text-align: center;">
+				{{ nutrient.maximum }}&nbsp;{{ nutrient.nutrient.unit }}<br/>
+			</td>
+      {% endfor %}
+    </tr>
+    <tr class="info">
+      <td><b>desired&nbsp;balance&nbsp;for&nbsp;{{ object.number_of_days }}&nbsp;days</b></td>
+      <td></td>
+      <td></td>
+      {% for nutrient, a_row, total, day_totals, meets_min, meets_max, meets_both in nutrients %}
+		      <td style="text-align: center;">{% widthratio nutrient.minimum 1 object.number_of_days %}&nbsp;{{ nutrient.nutrient.unit }}</td>
+		      <td style="text-align: center;">{{ total|floatformat:2 }}&nbsp;{{ nutrient.nutrient.unit }}</td>
+		      <td style="text-align: center;">{% widthratio nutrient.maximum 1 object.number_of_days %}&nbsp;{{ nutrient.nutrient.unit }}</td>
+      {% endfor %}
+    </tr>
+    <tr class="info">
+      <td><b>is&nbsp;balanced?</b></td>
+      <td></td>
+      <td></td>
+      {% for nutrient, a_row, total, day_totals, meets_min, meets_max, meets_both in nutrients %}
+			<td style="text-align: center;">
+				{% if meets_min %}
+					<span class="label label-success"><i class="icon-thumbs-up"></i></span>	
+				{% else %}
+					<span class="label label-important"><i class="icon-thumbs-down"></i></span>	
+				{% endif %}
+			</td>
+			<td style="text-align: center;">
+				{% if meets_min and meets_max %}
+					<span class="label label-success"><i class="icon-thumbs-up"></i></span>	
+				{% else %}
+					<span class="label label-important"><i class="icon-thumbs-down"></i></span>	
+				{% endif %}
+			</td>
+			<td style="text-align: center;">
+				{% if meets_max %}
+					<span class="label label-success"><i class="icon-thumbs-up"></i></span>	
+				{% else %}
+					<span class="label label-important"><i class="icon-thumbs-down"></i></span>	
+				{% endif %}
+			</td>
+      {% endfor %}
+    </tr>
+    <tr class="warning">
+      <td><b>totals</b></td>
+      <td></td>
+      <td></td>
+      {% for nutrient, a_row, total, day_total, meets_min, meets_max, meets_both in nutrients %}
+	      	<td colspan="3" style="text-align: center;">
+	      		{{ total|floatformat:2 }}&nbsp;{{ nutrient.nutrient.unit }}<br/>
+	      	</td>
+      {% endfor %}
+    </tr>
+    {% for product, s, a_row, solution_vars_int in solution %}
+    <tr>
+      	<td>
+      		{% if request.user.is_staff %}
+    	  		<a href="{% url 'update_product' product.pk %}">{{ product }}</a>
+      		{% else %}
+	      		{{ product }}
+      		{% endif %}
+		</td>
+      	<td>{{ solution_vars_int.varValue }}</td>
+		<td>{{ s.varValue }}</td>
+      	{% for a in a_row %}
+			<td colspan='3' style="text-align: center;">
+		      	{% if s.varValue > 0 and a.0.quantity > 0 %}
+  					{{ s.varValue }}&nbsp;item&nbsp;x&nbsp;{{ a.0.quantity }}&nbsp;{{ a.0.nutrient.unit }}/item&nbsp;
+	      		{% endif %}
+  			</td>
+      	{% endfor %}
+    </tr>
+    {% endfor %}
+    <tr class="warning">
+      <td><b>what&nbsp;to&nbsp;do?</b></td>
+      <td></td>
+      <td></td>
+      {% for nutrient, a_row, total, day_total, meets_min, meets_max, meets_both in nutrients %}
+	      	<td colspan="3">
+	      		{% if not meets_min %}
+					<div class="alert alert-error">
+		      			You need <b>more</b> {{ nutrient.nutrient.name }}.<br/>
+		      			<ul>
+		      				<li>Either add more tags to the diet.</li>
+		      				<li>or lower the minimum required.</li>
+		      			</ul>
+					</div>
+	      		{% elif not meets_max %}
+					<div class="alert alert-info">
+		      			You have <b>too much</b> {{ nutrient.nutrient.name }}.
+		      			<ul>
+		      				<li>Either add more tags to the diet.</li>
+		      				<li>or raise the maximum allowed.</li>
+		      			</ul>
+					</div>
+	      		{% endif %}
+	      	</td>
+      {% endfor %}
+    </tr>
+    <tr class="warning">
+      <td><b>totals</b></td>
+      <td></td>
+      <td></td>
+      {% for nutrient, a_row, total, day_total, meets_min, meets_max, meets_both in nutrients %}
+	      	<td colspan="3" style="text-align: center;">
+	      		{{ total|floatformat:2 }}&nbsp;{{ nutrient.nutrient.unit }}<br/>
+	      	</td>
+      {% endfor %}
+    </tr>
+  </tbody>
+</table>

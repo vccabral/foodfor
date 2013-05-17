@@ -1,0 +1,45 @@
+<h2>Nutrients</h2>
+<table class="table">
+	<thead>
+		<tr>
+			<th>Nutrient</th>
+			<th>RDI Minimum</th>
+			<th>Balanced Minimum</th>
+			<th>Actual</th>
+			<th>Balanced Maximum</th>
+			<th>RDI Maximum</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for nutrient, a_row, totals, day_totals, meets_min, meets_max, meets_both in nutrients %}
+			<tr>
+				<td>
+					{{ nutrient.nutrient }}
+				</td>
+				<td>
+					{{ nutrient.minimum }}&nbsp;{{ nutrient.nutrient.unit }}
+				</td>
+				<td>
+					{% if meets_min %}
+						<span class="label label-success"><i class="icon-thumbs-up"></i></span>	
+					{% else %}
+						<span class="label label-important"><i class="icon-thumbs-down"></i></span>	
+					{% endif %}
+				</td>
+				<td>
+					{{ day_totals|floatformat:2 }}&nbsp;{{ nutrient.nutrient.unit }}
+				</td>
+				<td>
+					{% if meets_max %}
+						<span class="label label-success"><i class="icon-thumbs-up"></i></span>	
+					{% else %}
+						<span class="label label-important"><i class="icon-thumbs-down"></i></span>	
+					{% endif %}
+				</td>
+				<td>
+					{{ nutrient.maximum }}&nbsp;{{ nutrient.nutrient.unit }}
+				</td>
+			</tr>
+		{% endfor %}
+	</tbody>
+</table>

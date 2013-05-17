@@ -14,6 +14,7 @@
 	<table class="table">
 		<thead>
 			<tr>
+				<th>id</th>
 				<th>nutrient</th>
 				<th>recommended</th>
 				<th>minimum</th>
@@ -25,6 +26,9 @@
 		</thead>
 		{% for formset in formsets %}
 			<tr>
+				<td>
+					{{ formset.instance.nutrient.pk }}
+				</td>
 				<td>
 					{% for value, text in formset.nutrient.field.choices %}
 						{% if value|add:0 == formset.nutrient.value|add:0 %}

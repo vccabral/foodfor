@@ -1,0 +1,30 @@
+<table class="table">
+	<thead>
+		<tr>
+			<th>Product</th>
+			<th>Price</th>
+			<th>Servings per Container</th>
+			<th># to buy</th>
+			<th>How much to use</th>
+		</tr>
+	</thead>
+	<tbody>
+	    {% for product, s, a_row, solution_vars_int, percent in solution %}
+	    	{% if solution_vars_int.varValue > 0 %}
+			    <tr>
+			      	<td>
+			      		{% if request.user.is_staff %}
+			    	  		<a href="{% url 'update_product' product.pk %}">{{ product }}</a>
+			      		{% else %}
+				      		{{ product }}
+			      		{% endif %}
+					</td>
+			      	<td>${{ product.price }}</td>
+			      	<td>{{ product.serving_per_container }}</td>
+			      	<td>{{ solution_vars_int.varValue }}</td>
+					<td>{{ percent|floatformat:2 }}%</td>
+			    </tr>
+		    {% endif %}
+	    {% endfor %}
+    </tbody>
+</table>

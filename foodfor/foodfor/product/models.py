@@ -13,7 +13,7 @@ class Nutrient(models.Model):
     name = models.CharField(max_length=50)
     unit = models.CharField(max_length=50, choices=(("grams","grams"),("milligrams","milligrams"), ("ugrams", "ugrams"), ("IU", "IU"),))
     recommended_min_intake = models.DecimalField(decimal_places=5, max_digits=12)
-    recommended_max_intake = models.DecimalField(decimal_places=5, max_digits=12, blank=True)
+    recommended_max_intake = models.DecimalField(decimal_places=5, max_digits=12, blank=True, null=True)
     __str__ = lambda x: "%s (%s)" % (x.name, x.unit)
     get_absolute_url = lambda x: "/product/nutrient/"
 
@@ -25,7 +25,13 @@ class Product(models.Model):
     up_votes = models.ManyToManyField(User, related_name="product_up", blank=True)
     down_votes = models.ManyToManyField(User, related_name="product_down", blank=True)
     tags = models.ManyToManyField(Tag, blank=True)
-    __str__ = lambda x: x.name
+    def __str__(x): 
+        if not Tag.objects.filter(name=x.name).exists():
+            tag = Tag(name=x.name)
+            tag.save()
+            x.tags.add(tag)
+            x.save()
+        return x.name
     get_absolute_url = lambda x: "/product/product/"
 
 class ProductNutrient(models.Model):
@@ -42,7 +48,8 @@ class MealPlan(models.Model):
     user = models.ForeignKey(User)
     up_votes = models.ManyToManyField(User, related_name="mealplan_up", blank=True)
     down_votes = models.ManyToManyField(User, related_name="mealplan_down", blank=True)
-    desired_tags = models.ManyToManyField(Tag, blank=True)    
+    desired_tags = models.ManyToManyField(Tag, blank=True, related_name="tags")    
+    excluded_tags = models.ManyToManyField(Tag, blank=True, related_name="excluded_tags")
     __str__ = lambda x: x.name
     get_absolute_url = lambda x: "/product/mealplan/%s/details/" % x.pk
 

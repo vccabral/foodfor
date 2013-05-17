@@ -10,6 +10,7 @@
 	<table class="table">
 		<thead>
 			<tr>
+				<th>id</th>
 				<th>name</th>
 				<th>unit</th>
 				<th>minimum recommended</th>
@@ -18,6 +19,7 @@
 		</thead>
     	{% for object in object_list %}
     	<tr>
+    		<td>{{ object.pk }}</td>
     		<td>{% if request.user.is_staff %}<a href="{% url 'read_nutrient' object.pk %}">{{ object }}</a>{% else %}{{ object }}{% endif %}</td>
     		<td>{{ object.unit }}</td>
     		<td>{{ object.recommended_min_intake }} {{ object.unit }}</td>
