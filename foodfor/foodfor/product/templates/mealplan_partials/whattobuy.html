@@ -25,7 +25,7 @@
 			      	<td>${{ product.price }}</td>
 			      	<td>{{ product.serving_per_container }}</td>
 			      	<td>{{ solution_vars_int.varValue }}</td>
-					<td>{{ percent|floatformat:2 }}%</td>
+					<td>{{ percent }}/{% widthratio product.serving_per_container 1 solution_vars_int.varValue %} servings</td>
 			    </tr>
 		    {% endif %}
 	    {% endfor %}

@@ -112,23 +112,26 @@ class ProductCreateView(CreateView):
             return self.render_to_response(self.get_context_data(form=form))
 
 
-def solve_soylent(A, b, p, b_max, error_to_min=True):
+def solve_soylent(A, b, p, b_max, p_servings, error_to_min=True):
     prob = LpProblem("soylentcost", LpMinimize)
     x = []
     x_serving = []
     for index in range(0,len(b)):
         x.append(LpVariable("x_"+str(index),0, None, "Integer"))
-        x_serving.append(LpVariable("x_"+str(index)+"_servings",0, None))
+        x_serving.append(LpVariable("x_"+str(index)+"_servings",0, None, "Integer"))
     if error_to_min:
-        prob += reduce(lambda x,y: x+y, [x_var*float(p_constant)+0.0000001*x_serve for x_var, p_constant, x_serve in zip(x, p, x_serving)]) #+ reduce(lambda x,y: x+y, [-x_serve for x_serve in x_serving])
+        prob += reduce(lambda x,y: x+y, [x_var * float(p_constant) + 0.0000001 * x_serve for x_var, p_constant, x_serve in zip(x, p, x_serving)]) 
     else:
-        prob += reduce(lambda x,y: x+y, [x_var*float(p_constant)-0.0000001*x_serve for x_var, p_constant, x_serve in zip(x, p, x_serving)]) #+ reduce(lambda x,y: x+y, [-x_serve for x_serve in x_serving])
+        prob += reduce(lambda x,y: x+y, [x_var * float(p_constant) - 0.0000001 * x_serve for x_var, p_constant, x_serve in zip(x, p, x_serving)]) 
+
     for row, b_constant, b_max_constant in zip(A, b, b_max):
-        prob += reduce(lambda x,y: x+y, [x_var*rc_constant for x_var,rc_constant in zip(x,row)]) >= b_constant
-        prob += reduce(lambda x,y: x+y, [x_serv*rc_constant for x_serv,rc_constant in zip(x_serving,row)]) >= b_constant
-        prob += reduce(lambda x,y: x+y, [x_serv*rc_constant for x_serv,rc_constant in zip(x_serving,row)]) <= (b_max_constant*Decimal(1))
-    for x_serv, x_var in zip(x_serving, x):
-        prob += x_serv - x_var <= 0 
+        prob += reduce(lambda x,y: x+y, [x_var * rc_constant for x_var, rc_constant in zip(x, row)]) >= b_constant
+        prob += reduce(lambda x,y: x+y, [x_serv * rc_constant / p_serve for x_serv, rc_constant, p_serve in zip(x_serving, row, p_servings)]) >= b_constant
+        prob += reduce(lambda x,y: x+y, [x_serv * rc_constant / p_serve for x_serv, rc_constant, p_serve in zip(x_serving, row, p_servings)]) <= (b_max_constant * Decimal(1))
+    
+    for x_serv, x_var, p_serve in zip(x_serving, x, p_servings):
+        prob += x_serv / p_serve - x_var <= 0 
+    
     GLPK().solve(prob)
     return prob.variables(), value(prob.objective), re.split(r"(MINIMIZE|SUBJECT TO|_C|VARIABLES|Integer)", str(prob))
 
@@ -145,17 +148,22 @@ def nutrient_is_undermax(daytotal, nutrient, solution_vars, products):
 def get_object_context(self_object, multiplier):
     products = Product.objects.filter(tags__in=self_object.desired_tags.values_list("pk", flat=True)).exclude(tags__in=self_object.excluded_tags.values_list("pk", flat=True)).distinct().order_by("name")
     nutrients = self_object.mealplannutrient_set.all().order_by("pk")
-    p = [product.price for product in products] #map(lambda x: x.price, products)
-    b = [self_object.number_of_days * nutrient.minimum for nutrient in nutrients] #map(lambda x: self.object.number_of_days * x.minimum, nutrients)
+    p = [product.price for product in products] 
+    p_servings = [product.serving_per_container for product in products]
+    b = [self_object.number_of_days * nutrient.minimum for nutrient in nutrients] 
     b_max = [self_object.number_of_days * nutrient.maximum * multiplier for nutrient in nutrients]
     A = [[ProductNutrient.objects.get(nutrient=nutrient.nutrient.pk,product=product.pk).quantity if ProductNutrient.objects.filter(nutrient=nutrient.nutrient.pk,product=product.pk).exists() else 0 for product in products] for nutrient in nutrients]
-    solution, cost, output = solve_soylent(A, b, p, b_max)
+    solution, cost, output = solve_soylent(A, b, p, b_max, p_servings)
+    
     solution_vars = sorted([solved for solved in solution if solved.name.endswith("_servings")], key=lambda x: int(x.name.split('_')[1]))
     solution_vars_ints = sorted([solved for solved in solution if not solved.name.endswith("_servings")], key=lambda x: int(x.name.split('_')[1]))
-    solution_vars_percent = [solved.varValue*100/solved_int.varValue if solved_int.varValue != 0 else 0 for solved, solved_int in zip(solution_vars,solution_vars_ints)]
-    totals = [reduce(lambda x,y: x+y[0]*Decimal(y[1].varValue), zip(x,solution_vars),0) for x in A]
-    day_totals = [reduce(lambda x,y: x+y[0]*Decimal(y[1].varValue)/self_object.number_of_days, zip(x,solution_vars),0) for x in A]
+    solution_vars_percent = [solved.varValue if solved_int.varValue != 0 else 0 for solved, solved_int, p_serve in zip(solution_vars, solution_vars_ints, p_servings)]
+    
+    totals = [reduce(lambda x,y: x+y[0]*Decimal(y[1].varValue/y[2]), zip(x,solution_vars, p_servings),0) for x in A]
+    day_totals = [reduce(lambda x,y: x+y[0]*Decimal(y[1].varValue/y[2])/self_object.number_of_days, zip(x,solution_vars, p_servings),0) for x in A]
+    
     day_totals_int = [reduce(lambda x,y: x+y[0]*Decimal(y[1].varValue)/self_object.number_of_days, zip(x,solution_vars_ints),0) for x in A]
+    
     meets_min = [daytotal >= (nutrient.minimum-Decimal(.1)) for daytotal,nutrient in zip(day_totals,nutrients)] 
     meets_max = [nutrient_is_undermax(daytotal, nutrient, solution_vars, products) for daytotal,nutrient in zip(day_totals,nutrients)]
     meets_both = [a and b for a, b in zip(meets_min, meets_max)]
