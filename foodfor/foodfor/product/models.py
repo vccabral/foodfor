@@ -65,4 +65,10 @@ class MealPlanNutrient(models.Model):
     minimum = models.DecimalField(decimal_places=2, max_digits=10)
     maximum = models.DecimalField(blank=True, null=True, decimal_places=2, max_digits=10)
     
+class Feedback(models.Model):
+    email = models.EmailField()
+    title = models.CharField(max_length=100) 
+    body = models.CharField(max_length=2000) 
+    get_absolute_url = lambda x: "/product/feedback/create/"
+
     

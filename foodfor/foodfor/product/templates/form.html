@@ -1,20 +1,5 @@
-{% extends "banner_base.html" %}
-
 {% load bootstrap_tags %}
-{% load i18n %}
 
-{% block head_title %}{% trans "Welcome" %}{% endblock %}
-
-{% block body_class %}edit{% endblock %}
-
-{% block banner %}
-<form method="POST" action='.'>{% csrf_token %}
+<form id="feedback_form" method="POST" action='.'>{% csrf_token %}
 	{{ form|as_bootstrap }}
-	{{ formsets.management_form }}
-	{% for formset in formsets %}
-		{{ formset|as_bootstrap }}
-	{% endfor %}
-	<br/>
-	<input type="submit" value="submit" />
 </form>
-{% endblock %}

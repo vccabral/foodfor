@@ -6,8 +6,8 @@ from django.forms.models import inlineformset_factory
 from django.db.models import Q
 from django.contrib.auth.decorators import login_required, user_passes_test
 from django.http import HttpResponseRedirect, Http404
-from product.models import MealPlan, Product, Nutrient, MealPlanNutrient, ProductNutrient, MealPlanProduct, Tag
-from product.forms import NutrientForm, ProductForm, MealPlanForm, MealPlanNutrientForm, ProductNutrientForm
+from product.models import MealPlan, Product, Nutrient, MealPlanNutrient, ProductNutrient, MealPlanProduct, Tag, Feedback
+from product.forms import NutrientForm, ProductForm, MealPlanForm, MealPlanNutrientForm, ProductNutrientForm, FeedbackForm
 from product.views import getinfo, vote_for, product_count
 from decimal import Decimal
 from pulp import *
@@ -276,4 +276,7 @@ urlpatterns = patterns('',
                        url(r'^nutrient/create/$', staff_required(CreateView.as_view(form_class=NutrientForm, template_name="nutrient_form.html")), name="create_nutrient"),
                        url(r'^nutrient/(?P<pk>\d+)/details/$',  DetailView.as_view(model=Nutrient, template_name="nutrient_detail.html"), name="read_nutrient"),
                        url(r'^nutrient/(?P<pk>\d+)/edit/$', staff_required(UpdateView.as_view(model=Nutrient,form_class=NutrientForm, template_name="nutrient_form.html")), name="update_nutrient"),
+                       #feedback
+                       url(r'^feedback/create/$', CreateView.as_view(form_class=FeedbackForm, template_name="form.html"), name="create_feedback"),
+                       
 )

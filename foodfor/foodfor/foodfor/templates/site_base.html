@@ -17,6 +17,36 @@
 {% endblock %}
 
 {% block extra_body_base %}
+
+<!-- Modal -->
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Feedback</h3>
+  </div>
+  <div id="modal_body" class="modal-body">
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">close</button>
+    <button id="submit_feedback" class="btn btn-primary">give feedback</button>
+  </div>
+</div>
+
+<script>
+$(document).ready(function(){
+	$("#feed_back").live("click", function(){
+		event.preventDefault();
+		$("#modal_body").load("{% url 'create_feedback' %}");
+	});
+	$("#submit_feedback").live("click", function(){
+		var post_vars = $("#feedback_form").serialize();
+		$.post("{% url 'create_feedback' %}", post_vars, function(data){
+			$("#modal_body").html(data);
+			if($(data).find(".help-inline").length==0) $("#myModal").modal("hide");
+		});
+	});
+});	
+</script>
     {% analytics %}
     {% block extra_body %}{% endblock %}
 {% endblock %}

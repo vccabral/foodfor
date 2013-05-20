@@ -1,6 +1,6 @@
 from django.forms import ModelForm
-from product.models import Nutrient, Product, MealPlan, MealPlanNutrient, ProductNutrient
-from django.forms.widgets import HiddenInput, TextInput, CheckboxSelectMultiple
+from product.models import Nutrient, Product, MealPlan, MealPlanNutrient, ProductNutrient, Feedback
+from django.forms.widgets import HiddenInput, TextInput, CheckboxSelectMultiple, Textarea
 
 class NutrientForm(ModelForm):
     class Meta:
@@ -45,5 +45,15 @@ class MealPlanForm(ModelForm):
                    "number_of_days": TextInput(attrs={"class":"span1"}), 
                    "desired_tags": CheckboxSelectMultiple(), 
                    "excluded_tags": CheckboxSelectMultiple(),
-                   "must_have_tags": CheckboxSelectMultiple()}  
+                   "must_have_tags": CheckboxSelectMultiple()
+                   }  
+
+class FeedbackForm(ModelForm):
+    class Meta:
+        model = Feedback
+        widgets = {
+                   "email": TextInput(attrs={"class":"span5"}), 
+                   "title": TextInput(attrs={"class":"span5"}), 
+                   "body": Textarea(attrs={"class":"span5"}), 
+                   }
     
