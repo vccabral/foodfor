@@ -22,6 +22,8 @@
 			<tr>
 				<th>id</th>
 				<th>nutrient</th>
+				<th>RDI</th>
+				<th>% RDI</th>
 				<th>per serving</th>
 				<th>total</th>
 			</tr>
@@ -37,6 +39,25 @@
 						{{ text }}
 					{% endif %}
 				{% endfor %}
+			</td>
+			<td>
+				{% if formset.instance %}
+					<span id="q_{{ formset.id.auto_id }}">{{ formset.instance.nutrient.recommended_min_intake }}</span> 
+					{{ formset.instance.nutrient.unit }}
+				{% else %}
+					<span id="q_{{ formset.id.auto_id }}">
+						{{ formset.initial.nutrient.recommended_min_intake }}
+					</span> 
+					{{ formset.initial.nutrient.unit }}
+				{% endif %}
+			</td>
+			<td>
+				<div class="control-group">
+					<div class="controls">
+						<label>% RDI/serving</label>
+						<input class="span1 rdi_percent" id="p_{{ formset.id.auto_id }}" type="text" value="{% if formset.instance.percent %}{{ formset.instance.percent }}{% else %}0{% endif %}"/>
+					</div>
+				</div>
 			</td>
 			<td>
 				{{ formset.id }}
@@ -69,6 +90,9 @@
 function round_me(d){
 	return Math.round(d * 100000) / 100000;
 }
+function round_percent(d){
+	return Math.round(d * 10000) / 100;
+}
 function get_value(item, d){
 	var r = item.val();
 	var q = d;
@@ -80,14 +104,33 @@ $(document).ready(function(){
 	function change_servings(){
 		var t = get_value($(this), 0);
 		var c = get_value($("#id_serving_per_container"),1);
+		var id = $(this).attr("id").replace("quantity", "serving_quantity")
 		var partial_id = "#"+$(this).attr("id").replace("quantity", "serving_quantity");
 		$(partial_id).val(round_me(t/c));
+		var id_rdi = "#q_"+$(this).attr("id").replace("quantity", "id");
+		var id_percent = id_rdi.replace("q_", "p_");
+		var v = round_me(t/c);
+		var rdi = parseFloat($(id_rdi).html());
+		$(id_percent).val(round_percent(v/rdi));
+		//$(partial_id).trigger("change");
 	}
 	$(".serving").live("change", function(){
 		var s = get_value($(this), 0);
 		var c = get_value($("#id_serving_per_container"),1);
 		var total_id = "#"+$(this).attr("id").replace("serving_quantity", "quantity");
+		var total_q_id = "#q_"+$(this).attr("id").replace("serving_quantity", "id");
 		$(total_id).val(round_me(s*c));
+		var daily_intake = $(total_q_id).html();
+		var percent_id = "#p_"+$(this).attr("id").replace("serving_quantity", "id");
+		$(percent_id).val(round_percent(s/parseFloat(daily_intake)));
+	});
+	$(".rdi_percent").live("change", function(){
+		var t = get_value($(this), 0);
+		var total_q_id = "#"+$(this).attr("id").replace("p_", "q_");
+		var daily_intake = $(total_q_id).html();
+		var id = "#"+$(this).attr("id").replace("p_","").replace("-id", "-serving_quantity");
+		$(id).val(round_me(parseFloat(daily_intake)*t/100));
+		$(id).trigger("change");
 	});
 	$(".total").live("change", change_servings);
 	$("#id_serving_per_container").live("change", function(){

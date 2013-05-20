@@ -24,14 +24,9 @@ class Product(models.Model):
     serving_per_container = models.DecimalField(decimal_places=5, max_digits=12)
     up_votes = models.ManyToManyField(User, related_name="product_up", blank=True)
     down_votes = models.ManyToManyField(User, related_name="product_down", blank=True)
+    votes = models.IntegerField(default=0)
     tags = models.ManyToManyField(Tag, blank=True)
-    def __str__(x): 
-        if not Tag.objects.filter(name=x.name).exists():
-            tag = Tag(name=x.name)
-            tag.save()
-            x.tags.add(tag)
-            x.save()
-        return x.name
+    __str__ = lambda x: x.name
     get_absolute_url = lambda x: "/product/product/"
 
 class ProductNutrient(models.Model):
@@ -39,8 +34,11 @@ class ProductNutrient(models.Model):
     nutrient = models.ForeignKey(Nutrient)
     serving_quantity = models.DecimalField(decimal_places=5, max_digits=12)
     quantity = models.DecimalField(decimal_places=5, max_digits=12)
+    def percent(self):
+        return round(100*self.serving_quantity/self.nutrient.recommended_min_intake,2) if self.serving_quantity!=0 and self.nutrient.recommended_min_intake!=0 else 0
     
 class MealPlan(models.Model):
+    is_cached = models.BooleanField(default=False)
     name = models.CharField(max_length=50)
     number_of_days = models.IntegerField()
     balanced = models.BooleanField()
@@ -48,6 +46,8 @@ class MealPlan(models.Model):
     user = models.ForeignKey(User)
     up_votes = models.ManyToManyField(User, related_name="mealplan_up", blank=True)
     down_votes = models.ManyToManyField(User, related_name="mealplan_down", blank=True)
+    votes = models.IntegerField(default=0)
+    must_have_tags = models.ManyToManyField(Tag, blank=True, related_name="must_tags")
     desired_tags = models.ManyToManyField(Tag, blank=True, related_name="tags")    
     excluded_tags = models.ManyToManyField(Tag, blank=True, related_name="excluded_tags")
     __str__ = lambda x: x.name
@@ -57,6 +57,7 @@ class MealPlanProduct(models.Model):
     meal_plan = models.ForeignKey(MealPlan)
     product = models.ForeignKey(Product)
     quantity = models.IntegerField()
+    servings_to_use = models.IntegerField()
     
 class MealPlanNutrient(models.Model):
     meal_plan = models.ForeignKey(MealPlan)

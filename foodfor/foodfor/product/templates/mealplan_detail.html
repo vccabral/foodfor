@@ -39,7 +39,9 @@
 				Not yet.
 			{% endif %}
 		</td>
-		<td>{{ object.number_of_days }}</td>
+		<td>
+			{{ object.number_of_days }}
+		</td>
 		<td>
 			${{ cost|floatformat:2 }}
 		</td>
@@ -112,6 +114,16 @@
 {% block extra_body %}
 <script>
 $(document).ready(function(){
+	var has_been_edited=false;
+	$("[action_url]").live("click", function(){
+		event.preventDefault();
+		var obj = $(this);
+		var url = obj.attr("action_url");
+		$.getJSON(url, {},function(data){
+			var id_name = "#"+obj.attr("targeted");
+			$(id_name).html(data["votes"]);
+		});
+	});
 });	
 </script>
 {% endblock %}

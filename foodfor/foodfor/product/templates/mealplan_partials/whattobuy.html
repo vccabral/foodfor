@@ -3,6 +3,7 @@
 	<thead>
 		<tr>
 			<th>product</th>
+			<th>popularity</th>
 			<th>see</th>
 			<th>price</th>
 			<th>servings per container</th>
@@ -21,7 +22,12 @@
 				      		{{ product }}
 			      		{% endif %}
 					</td>
-			      	<td><a href="{{ product.url }}">live site</a></td>
+	    			<td>
+	    				<span id="votes_{{ product.pk }}">{{ product.votes }}</span>
+	    				<a href="#" targeted="votes_{{ product.pk }}" action_url="{% url 'vote' pk=product.pk model='product' direction='up' %}"><i class="icon-thumbs-up"></i></a>
+	    				<a href="#" targeted="votes_{{ product.pk }}" action_url="{% url 'vote' pk=product.pk model='product' direction='down' %}"><i class="icon-thumbs-down"></i></a>
+					</td>
+			      	<td><a href="{{ product.url }}" target="product_{{ product.pk }}">see product</a></td>
 			      	<td>${{ product.price }}</td>
 			      	<td>{{ product.serving_per_container }}</td>
 			      	<td>{{ solution_vars_int.varValue }}</td>

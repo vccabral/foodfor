@@ -8,6 +8,11 @@
 {% block body_class %}edit{% endblock %}
 
 {% block body %}
+{% if form.instance.pk %}
+	<h2>Updating a Meal Plan</h2>
+{% else %}
+	<h2>Creating a Meal Plan</h2>
+{% endif %}
 <form method="POST" action='.'>{% csrf_token %}
 	{% if False %}
 		{{ form|as_bootstrap }}
@@ -23,24 +28,53 @@
 		    </div>
 		{% endif %}
 		{{ form.user }}		
-		{{ form.user }}		
 	    {% include "bootstrap/field.html" with field=form.name %}
 	    {% include "bootstrap/field.html" with field=form.number_of_days %}
 	    <div class="row">
-	    	<div class="span6">
+	    	<div class="span4">
+	    	</div>
+	    	<div class="span4">
+	    		<h4># Products Available: <span id="product_count">*</span></h4>
+	    	</div>
+	    </div>
+	    <div class="row">
+	    	<div class="span4">
+				<div class="alert alert-error">
+				  	<button type="button" class="close" data-dismiss="alert">&times;</button>
+	    			<h4>Musts</h4>
+	    			Every product in the meal plan will have <strong>EVERY</strong> single one of these tags. Choose one of these tags for
+	    			severe restrictions. For example, if you require <strong>ALL</strong> your food to be vegan. If you do not choose any tags, then no restrictions will be placed.
+				</div>
+		    </div>
+	    	<div class="span4">
+				<div class="alert alert-success">
+				  	<button type="button" class="close" data-dismiss="alert">&times;</button>
+	    			<h4>Desires</h4>
+					Any product that has <strong>ONE</strong> of these tags will be considered while attempting to balance your meal plan. 				    			
+					Unless, of course, it does not have <strong>ALL</strong> of the musts tags. Choose tags you generally want to be included in your meal plan. 
+					Add enough tags here to have a good basket of products.	
+				</div>
 	    		<label class="checkbox">
       				<input id="select_all" type="checkbox"> select all
     			</label>
 		    </div>
-	    	<div class="span6">
-	    		
+	    	<div class="span4">
+				<div class="alert alert-info">
+				  	<button type="button" class="close" data-dismiss="alert">&times;</button>
+	    			<h4>Excludes</h4>
+	    			Any product that is tagged with <strong>ANY</strong> one of these tags will not be considered while attempting to balance your meal plan. Choose one of these 
+	    			tags if you have allergies like dairy. Do not choose too many of these tags or you will not have enough products to build a meal plan.
+				</div>
 		    </div>
 		</div>
 	    <div class="row">
-	    	<div class="span6">
+	    	<div class="span4">
+			    {% include "bootstrap/field.html" with field=form.must_have_tags %}
+		    </div>
+	    	<div class="span4">
 			    {% include "bootstrap/field.html" with field=form.desired_tags %}
 		    </div>
-	    	<div class="span6">
+	    	<div class="span4">
 			    {% include "bootstrap/field.html" with field=form.excluded_tags %}
 		    </div>
 		</div>
@@ -107,6 +141,16 @@ $(document).ready(function(){
 		var checked = $(this).is(':checked');
 		$("input[name='desired_tags']").prop('checked', checked);
 	});
+	function product_count(){
+		var post_form = $("form").serialize();
+		$.getJSON("{% url 'product_count' %}", post_form, function(data){
+			$("#product_count").html(data["count"]);
+		});
+	}
+	$("input[type='checkbox']").live("change", function(){
+		product_count();
+	});
+	product_count();
 });	
 </script>
 {% endblock %}

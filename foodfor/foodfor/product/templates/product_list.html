@@ -11,6 +11,7 @@
     	<thead>
     		<tr>
     			<th>product</th>
+				<th>popularity</th>
     			<th>price</tH>
     			<th>see</th>
     			<th>tags</th>
@@ -19,8 +20,13 @@
     	{% for object in object_list %}
     		<tr>
     			<td>{% if request.user.is_authenticated %}<a href="{% url 'update_product' object.pk %}">{{ object }}</a>{% else %}{{ object }}{% endif %}</td>
+    			<td>
+    				<span id="votes_{{ object.pk }}">{{ object.votes }}</span>
+    				<a href="#" targeted="votes_{{ object.pk }}" action_url="{% url 'vote' pk=object.pk model='product' direction='up' %}"><i class="icon-thumbs-up"></i></a>
+    				<a href="#" targeted="votes_{{ object.pk }}" action_url="{% url 'vote' pk=object.pk model='product' direction='down' %}"><i class="icon-thumbs-down"></i></a>
+				</td>
     			<td>${{ object.price|floatformat:2 }}</td>
-    			<td><a href="{{ object.url }}">live site</a></td>
+    			<td><a href="{{ object.url }}" target="product_{{ object.pk }}">see product</a></td>
     			<td>{% for tag in object.tags.all %}{{ tag.name }}{% if not forloop.last %}, {% endif %}{% endfor %}</td>
     		</tr>
     		</li>
@@ -30,3 +36,20 @@
     	<a href="{% url 'create_product' %}" class="btn btn-primary">add new product</a>
 	{% endif %}
 {% endblock %}
+{% block extra_body %}
+<script>
+$(document).ready(function(){
+	$("[action_url]").live("click", function(){
+		event.preventDefault();
+		var obj = $(this);
+		var url = obj.attr("action_url");
+		$.getJSON(url, {},function(data){
+			var id_name = "#"+obj.attr("targeted");
+			$(id_name).html(data["votes"]);
+		});
+	});
+});	
+</script>
+{% endblock %}
+
+
