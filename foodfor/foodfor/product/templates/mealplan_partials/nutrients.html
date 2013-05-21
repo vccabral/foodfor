@@ -2,6 +2,7 @@
 <table class="table">
 	<thead>
 		<tr>
+			<th>#</th>
 			<th>Nutrient</th>
 			<th>RDI Minimum</th>
 			<th>Balanced Minimum</th>
@@ -13,6 +14,9 @@
 	<tbody>
 		{% for nutrient, a_row, totals, day_totals, meets_min, meets_max, meets_both in nutrients %}
 			<tr>
+				<td>
+					{{ nutrient.nutrient.pk }}
+				</td>
 				<td>
 					{{ nutrient.nutrient }}
 				</td>

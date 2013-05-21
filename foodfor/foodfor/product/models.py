@@ -41,6 +41,7 @@ class MealPlan(models.Model):
     is_cached = models.BooleanField(default=False)
     name = models.CharField(max_length=50)
     number_of_days = models.IntegerField()
+    require_at_least_one_serving_per_day = models.BooleanField(default=False)
     balanced = models.BooleanField()
     price = models.DecimalField(decimal_places=2, max_digits=10, blank=True, null=True)
     user = models.ForeignKey(User)

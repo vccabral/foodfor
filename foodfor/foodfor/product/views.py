@@ -23,6 +23,7 @@ def product_count(request):
         for must_tag in musts:
             product_queryset = product_queryset.filter(tags=must_tag)
     response_data["count"] = product_queryset.distinct().count()
+    response_data["percent"] = int(response_data["count"] * 100 / Product.objects.all().count())
     return HttpResponse(json.dumps(response_data), content_type="application/json")    
     
 

@@ -206,7 +206,7 @@ class MealPlanDetailView(DetailView):
         if not product_queryset.exists():
             context['has_products'] = False
         else:
-            if self.object.is_cached:
+            if self.object.is_cached and False:
                 mp_products = MealPlanProduct.objects.filter(meal_plan=self.object).order_by("product__name")
                 products = [meal_plan_product.product for meal_plan_product in MealPlanProduct.objects.filter(meal_plan=self.object).order_by("product__name")]
                 nutrients = self.object.mealplannutrient_set.all().order_by("pk")

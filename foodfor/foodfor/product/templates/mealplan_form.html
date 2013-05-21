@@ -27,14 +27,16 @@
 		        {% endfor %}
 		    </div>
 		{% endif %}
-		{{ form.user }}		
+		{{ form.user }}	
 	    {% include "bootstrap/field.html" with field=form.name %}
 	    {% include "bootstrap/field.html" with field=form.number_of_days %}
+	    {% include "bootstrap/field.html" with field=form.require_at_least_one_serving_per_day %}
+	    <div><h4>Warning!</h4>This feature is experimental.</div>
 	    <div class="row">
 	    	<div class="span4">
 	    	</div>
-	    	<div class="span4">
-	    		<h4># Products Available: <span id="product_count">*</span></h4>
+	    	<div class="span8">
+	    		<h4># products still available: <span id="product_count">*</span></h4>
 	    	</div>
 	    </div>
 	    <div class="row">
@@ -83,12 +85,12 @@
 	<table class="table">
 		<thead>
 			<tr>
-				<th>id</th>
+				<th>#</th>
 				<th>nutrient</th>
-				<th>recommended</th>
+				<th>RDI minimum</th>
 				<th>minimum</th>
 				<th></th>
-				<th>recommended</th>
+				<th>RDI maximum</th>
 				<th>maximum</th>
 				<th></th>
 			</tr>
@@ -144,7 +146,7 @@ $(document).ready(function(){
 	function product_count(){
 		var post_form = $("form").serialize();
 		$.getJSON("{% url 'product_count' %}", post_form, function(data){
-			$("#product_count").html(data["count"]);
+			$("#product_count").html(data["count"]+" ("+data["percent"]+"% of all product)");
 		});
 	}
 	$("input[type='checkbox']").live("change", function(){
